@@ -7,7 +7,6 @@ import Footer from './page/Footer/Footer'
 import Home from './page/Home'
 import Navbar from './page/Navbar'
 import Service from './page/service/Service'
-
 function Welcome() {
   return (
     <div>
@@ -22,5 +21,4 @@ function Welcome() {
     </div>
   )
 }
-
 export default Welcome
