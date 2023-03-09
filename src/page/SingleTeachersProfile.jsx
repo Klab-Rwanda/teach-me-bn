@@ -5,25 +5,26 @@ import BB from "../aseets/willian.jpg"
 import '../css/SingleTeachersProfile.css'
 import { FcAlarmClock } from 'react-icons/fc';
 import { FcSms } from 'react-icons/fc';
+import Footer from './Footer/Footer'
 function SingleTeachersProfile() {
-  const [showForm, setShowForm] = useState(false);
-  const [successMessage, setSuccessMessage] = useState(false);
+  function BookingModal({ showModal, closeModal }) {
+    return (
+      <div className="modal" style={{ display: showModal ? 'block' : 'none' }}>
+        <div className="modal-content">
+          <span className="close" onClick={closeModal}>&times;</span>
+          <p>Hello! You have successfully made a booking.</p>
+        </div>
+      </div>
+    );
+  }
+  const [showModal, setShowModal] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add code to handle form submission
-    // You can use a library like axios to make a post request to your server
-    setSuccessMessage(true);
-  };
-
-  const handlePopup = () => {
-    setShowForm(!showForm);
-  };
-
-  const handleCancel = () => {
-    setShowForm(false);
-    setSuccessMessage(false);
-  };
+  function handleBookNow() {
+    setShowModal(true);
+  }
+  function handleCloseModal() {
+    setShowModal(false);
+  }
   return (
     <div>
       <div className="menu">
@@ -52,39 +53,11 @@ function SingleTeachersProfile() {
         <div className="upperside_header">
             <p><FcAlarmClock/>100 hours</p>
             <p><FcSms/>4.9(80 views)</p>
-            <button className="button" onClick={handlePopup}>Book now</button>
-      {showForm && (
-        <div className="popup-form-container">
-          <form className="popup-form" onSubmit={handleSubmit}>
-            <h2>Book the Teachers now</h2>
-            <div className="form-group">
-              <label htmlFor="parent-name">Parent Name:</label>
-              <input type="text" id="parent-name" name="parent-name" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message:</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <div className="form-group">
-              <div className="for">
-                 <button type="submit">Send</button>
-              <button type="button" onClick={handleCancel}>Cancel</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      )}
-      {successMessage && (
-        <div className="success-message">
-          <p>Success! Your booking has been made.</p>
-          <button className="button" onClick={() => setSuccessMessage(false)}>Close</button>
-        </div>
-      )}
-            {/* <button>BOOK NOW </button> */}
+            {/*   my pop   */}
+         
+            <button onClick={handleBookNow}>BOOK NOW</button>
+            <BookingModal showModal={showModal} closeModal={handleCloseModal} />
+            {/*  */}
            </div>
            <h3>History mentor/ sciences in advanced level </h3>
            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -154,6 +127,7 @@ function SingleTeachersProfile() {
        </div>
        {/*  */}
     </div>
+    <Footer/>
     </div>
   )
 }

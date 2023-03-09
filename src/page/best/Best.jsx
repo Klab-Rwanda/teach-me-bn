@@ -5,14 +5,12 @@ import BB from '../../aseets/certificate.jpg';
 import VV from '../../aseets/figama34.jpg';
 import MTE from '../../aseets/creative.jpg';
 import "./Best.css";
-import data from "./data.js";
-
 function Best() {
   return (
     <div className="container">
       <div className="upperCards">
         <div className="upperCard">
-          <h1>Why we are the best from others ?</h1>
+          <h2>Why we are the best from others  ?</h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
           <button className="startButton">Start now</button>
         </div>

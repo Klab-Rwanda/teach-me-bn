@@ -7,12 +7,12 @@
 .upperCard{
   padding: 1rem 2rem;
   border-radius: 1rem;
-  /* box-shadow: 1px 2px 0px 0px; */
+  
 }
 .upperCard1{
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-  /* box-shadow: 1px 2px 0px 0px; */
+  
 }
 img{
   width: 100%;
@@ -30,7 +30,7 @@ img{
 .lowerCard{
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-  /* box-shadow: 1px 2px 0px 0px; */
+  
 }
 .startButton {
   background-color: #FFCF59;

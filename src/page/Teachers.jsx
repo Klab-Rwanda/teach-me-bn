@@ -73,8 +73,7 @@ function Teachers() {
             </div>
           </form>
         </div>
-           )}
-                 
+           )}  
                  {/* <button className="button" onClick={() => { alert(`Book now with ${row.name}`)}}><Link to ="../bookform"  style={{color: 'inherit', textDecoration: 'inherit'}}>Book Now</Link></button> */}
 
                 </td>
