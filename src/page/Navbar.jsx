@@ -19,7 +19,7 @@ function Navbar() {
           <a href="#blog">Blog </a>
           <Link to="/teachers">Teachers</Link>
           <button>
-          <Link to="/signin">Sign in</Link>
+          <Link to="/#">Sign in</Link>
           <Link to="/signup">Sign up</Link>
           </button>
         </div>

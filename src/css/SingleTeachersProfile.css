@@ -1,0 +1,146 @@
+.singleteachersProfile .upper {
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+  .singleteachersProfile .upperphoto {
+    width: 200px;
+    height: 300px;
+    margin-right: 20px;
+    overflow: hidden;
+    /* border-radius: 50%; */
+  }
+  
+  .singleteachersProfile .upperphoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .singleteachersProfile .upperside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+  
+  .singleteachersProfile .upperside_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .singleteachersProfile .upperside_header p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .singleteachersProfile .upperside_header button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .singleteachersProfile .upperside h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .singleteachersProfile .upperside p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .singleteachersProfile .stillupper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .singleteachersProfile .stillupperexprience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .singleteachersProfile .stillupperexprience p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .singleteachersProfile .stillupper button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .singleteachersProfile .stillupper button:hover {
+    background-color: #FFCF59;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* styles for the lower section of the component */
+  .lowerspace {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .details {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details h5 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #FFCF59;
+    font-size: 23px;
+  }
+  
+  .details p {
+    margin-bottom: 5px;
+  }
+  
+  .details ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .details li {
+    margin-bottom: 5px;
+  }
+.for{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+  
