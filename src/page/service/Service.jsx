@@ -4,7 +4,7 @@ import data from './data.js';
 import courseData from './courseData';
 import { BsFillPlayCircleFill } from 'react-icons/bs';
 import KK from '../../aseets/scienceforkids.jpg'
-import { BsPersonCircle } from 'react-icons/bs';
+import { MdPeopleAlt } from 'react-icons/md';
 import { IoHeartCircleOutline } from 'react-icons/io5';
 function Service() {
   return (
@@ -34,8 +34,8 @@ function Service() {
           <div className="courseid">
             <p>{course.price}</p>
             <div className="iconfy">
-            <IoHeartCircleOutline size={32} color="#525FE1" />
-            <BsPersonCircle size={32} color="#525FE1" />
+            <IoHeartCircleOutline />
+            <MdPeopleAlt  />
             </div>
           </div>
         </div>

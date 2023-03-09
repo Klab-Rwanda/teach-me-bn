@@ -6,7 +6,7 @@ function About() {
   return (
     <section>
     <div className='container' id="about">
-       <p className='about_container'> OUR BEST ONE  MENTOR </p>
+       <p className='about_container'>The future of education starts with our teachers</p>
       <div className="cards">
         {data.map((card, index) => (
           <div className="card" key={index}>
