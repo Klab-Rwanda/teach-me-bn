@@ -52,3 +52,24 @@ img{
   color:yellow;
 }
 
+@media screen and (max-width: 767px) {
+  .upperCards{
+    grid-template-columns: 100%;
+  }
+  .upperCard{
+    padding: 1rem;
+  }
+  .upperCard1{
+    padding: 1rem;
+  }
+  .loweCards{
+    grid-template-columns:100%;
+  }
+  .lowerCard{
+    padding: 1rem;
+  }
+  .startButton {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}

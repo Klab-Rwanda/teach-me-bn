@@ -4,18 +4,23 @@
     justify-content: space-between;
     background-color: #525FE1;
     color: #fff;
-    padding: 30px;
-    height: 300px;
-    
+    padding: 20px;
   }
   .About,
   .Courses,
   .Services {
     flex: 1;
-    margin-right: 50px;
+    margin-right: 20px;
+  }
+  .About,
+  .Courses,
+  .Services:hover {
+    flex: 1;
+    margin-right: 20px;
+   
   }
   .About {
-    margin-right: 40px;
+    margin-right: 20px;
   }
   .Courses h5,
   .Services h5 {
@@ -47,6 +52,14 @@
     color: white;
     text-decoration: none;
   }
+  ul li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    transition: text-decoration 0.3s ease-in-out;
+    color: #FFCF59;
+  }
+  
   
   .subscribe {
     flex: 1;
@@ -58,7 +71,7 @@
   }
   
   .subscribe input[type="email"] {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 20px;
     border: none;
@@ -72,18 +85,80 @@
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+    margin-bottom: 15px;
   }
   
   .social-networks {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px;
     cursor: pointer;
   }
   
   .social-networks svg {
     font-size: 24px;
     color: #fff;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-bottom: 12px;
   }
   
+
+  /* Media query for small screens */
+@media only screen and (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .About,
+  .Courses,
+  .Services,
+  .subscribe {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .About {
+    order: 1;
+  }
+  
+  .Courses {
+    order: 2;
+  }
+  
+  .Services {
+    order: 3;
+  }
+  
+  .subscribe {
+    order: 4;
+  }
+  
+  .social-networks {
+    margin-top: 50px;
+  }
+}
+
+/* Media query for medium and large screens */
+@media only screen and (min-width: 768px) {
+  .footer {
+    justify-content: space-between;
+  }
+  
+  .About,
+  .Courses,
+  .Services {
+    margin-right: 20px;
+    width: calc(33.33% - 20px);
+  }
+  
+  .subscribe {
+    width: calc(33.33% - 20px);
+  }
+  
+  .social-networks {
+    margin-top: 0;
+  }
+}

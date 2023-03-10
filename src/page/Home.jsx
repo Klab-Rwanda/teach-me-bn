@@ -5,7 +5,7 @@ import ME from "../aseets/rightsphoto.jpg";
 import { BsFillPlayCircleFill } from "react-icons/bs"
 function Home() {
   return (
- <div>
+   <div>
     <div className=" container" id="home">
       <div className="home">
         <div className="left">
@@ -41,7 +41,6 @@ function Home() {
       <span class="experts">310K+<br/><p className="sub_container_experts">Trendy Subjects</p></span>
     </div>
     </div>
-
   );
 }
 export default Home;

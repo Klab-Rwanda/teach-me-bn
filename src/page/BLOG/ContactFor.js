@@ -1,8 +1,12 @@
 import React from 'react'
 import ME from '../../aseets/niganze.png'
+import Footer from '../Footer/Footer'
+import Navbar from '../Navbar'
 import './Contactw.css'
 const ContactFor = () => {
   return (
+    <div className="ContactForg">
+      {/* <Navbar/> */}
     <div className='container'id="contactfor">
                <h1>CONTACT US </h1>
          <div className="contactfor">
@@ -28,6 +32,8 @@ const ContactFor = () => {
              </form>
           </div>
          </div>
+    </div>
+    {/* <Footer/> */}
     </div>
   )
 }

@@ -1,8 +1,126 @@
 .menu {
-  position: fixed;
-  top: 0;
-  /* left: 0; */
-  /* width: 100%; */
-  /* background-color: #fff;  */
-  /* z-index: 100;  */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px;
 }
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+}
+.logo span {
+  color: #525FE1;
+}
+menu .link{
+margin-left: 200px;
+}
+.link a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: bold;
+  font-family: "Poppins", sans-serif;
+}
+.join-container {
+  display: flex;
+  align-items: center;
+}
+.join-container button {
+  margin-right: 10px;
+} 
+.join {
+  background-color: #FFCF59;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #050505;
+  font-size: 16px;
+  border: 20px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+.join-container .play-icon {
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color:#525FE1;
+  cursor: pointer;
+}
+span {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.link button {
+  background-color: transparent;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.link button a {
+  color: #000000;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.link button a:last-child {
+  background-color: #ffcf59;
+  color: #000000;
+} 
+.toggle-btn {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E90FF;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    color: #fff;
+  }
+  
+  .link {
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .link.show {
+    display: flex;
+  }
+  
+  .toggle-btn {
+    display: block;
+    font-size: 2rem;
+    margin-right: 20px;
+    color: #cf2020;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .pass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+

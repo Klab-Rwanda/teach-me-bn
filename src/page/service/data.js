@@ -28,7 +28,7 @@ const data = [
         image: BBO,
         category: "MATHEMATICS",
         title: "Be one the best one"
-    }
+    },
   ];
 
 export default data;  

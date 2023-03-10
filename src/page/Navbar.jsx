@@ -1,24 +1,34 @@
-
+import '../css/Navbar.css'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'; // Import useState hook
 
-
-
-// import '../css/Navbar.css'
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Initialize state for menu toggle
+
+  // Function to toggle menu state
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   return (
     <div className="container">
       <div className="menu">
         <div className="logo">
-          Teach<span>me</span>
+         <Link to="/#" style={{color: 'inherit', textDecoration: 'inherit'}}>Teach<span>me</span></Link> 
         </div>
-        <div className="link">
-          <a href=" #">Home</a>
+        {/* Toggle button for small devices */}
+        <button className="toggle-btn" onClick={toggleMenu}>
+          {isMenuOpen ? 'Close' : 'Menu'}
+        </button>
+        <div className={`link ${isMenuOpen ? 'show' : ''}`}>
+          {/* Links for all devices */}
+          <a href="#">Home</a>
           <a href="#about">Aboutus</a>
-          <a href="#contactfor">Contact</a>
-          <a href="#service ">Service </a>
-          <a href="#blog">Blog </a>
+          <Link  to="./contact"><a href="#contactfor">Contact</a></Link>
+          <a href="#service">Service</a>
+          <a href="#blog">Blog</a>
           <Link to="/teachers">Teachers</Link>
-          <button>
+          <button  className='pass'>
           <Link to="/#">Sign in</Link>
           <Link to="/signup">Sign up</Link>
           </button>

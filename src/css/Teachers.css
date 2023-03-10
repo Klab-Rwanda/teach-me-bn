@@ -1,4 +1,4 @@
-table {
+/* table {
     border-collapse: collapse;
     width: 100%;
   }
@@ -52,4 +52,106 @@ table {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  } */
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
   }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  td img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  td a {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  td a:hover {
+    text-decoration: underline;
+  }
+  
+  .button {
+    background-color: #FFCF59;
+    color: black;
+    border: none;
+    padding: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .button:hover {
+    background-color: #0062cc;
+  }
+  
+  .button:active {
+    background-color: #005cbf;
+    box-shadow: none;
+  }
+  
+  .FLX{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* Adjust table layout for small screens */
+    table {
+      font-size: 5px;
+    }
+    td.FLX {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+    
+    button {
+      font-size: 10px;
+      padding: 5px 5px;
+    }
+    
+    td,
+    th {
+      padding: 1px;
+    }
+  
+    td:last-child {
+      padding-right: 0;
+    }
+  
+    td:first-child {
+      padding-left: 0;
+    }
+  
+    td:nth-child(2) {
+      display: none;
+    }
+  
+    th:nth-child(2) {
+      display: none;
+    }
+  }
+  

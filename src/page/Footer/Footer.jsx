@@ -12,7 +12,6 @@ import { BsFillTelephoneInboundFill } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 import { IoSchoolSharp } from 'react-icons/io5';
 import { GiTeacher } from 'react-icons/gi';
-import { SlEnvolopeLetter } from 'react-icons/si';
 function Footer() {
   return (
     <div className='footer'>
@@ -52,7 +51,7 @@ function Footer() {
         </div> 
         <div className="subscribe">
             <h5>SUBSCRIBE TO OUR NEWS PAPER</h5>
-            <input type="email" placeholder= 'example@gmail.com'/>
+            <input type="email" placeholder= 'abashurgroupexample@gmail.com'/>
             <button>SUBCRIBE</button>
             <div class="social-networks">
             <AiFillFacebook/>
@@ -64,5 +63,4 @@ function Footer() {
     </div>
   )
 }
-
 export default Footer

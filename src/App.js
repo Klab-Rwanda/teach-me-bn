@@ -6,6 +6,7 @@ import Welcome from "./Welcome";
 import Teachers from "./page/Teachers";
 import SingleTeachersProfile from "./page/SingleTeachersProfile";
 import PopUpform from "./page/PopUpform";
+import ContactFor from "./page/BLOG/ContactFor";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
         <Route path={"/teachers"}element={<Teachers/>} />
         <Route path={"/single"}element={<SingleTeachersProfile/>} />
         <Route path={"/bookform"}element={<PopUpform/>} />
+        <Route path={"/contact"}element={<ContactFor/>}/>
        </Routes>
      </BrowserRouter>
     </div>

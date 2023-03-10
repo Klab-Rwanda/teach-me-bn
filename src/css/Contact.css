@@ -1,126 +1,204 @@
-/* .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  } */
-  
+/* Default styles */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container_contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container_contact_left {
+  flex-basis: 50%;
+  padding-right: 40px;
+}
+
+.container_contact_right {
+  flex-basis: 50%;
+}
+
+.container_contact h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.container_contact p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.container_contact button {
+  display: inline-block;
+  background-color: #FFCF59;
+  color: black;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.container_contact button:hover {
+  background-color: #3e47b1;
+  color: yellow;
+}
+
+.container_contact_right img {
+  max-width: 100%;
+  height: 417px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.blog .div1 .subdiv1 img {
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 70%;
+}
+
+.blog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.div2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: none;
+  border-radius: 10px;
+}
+
+.div2 img {
+  border-radius: 40%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  padding: none !important;
+}
+
+.div2 h6 {
+  margin-top: 1px;
+}
+
+.div2 h5 {
+  margin-top: 1px;
+}
+
+.div2 p {
+  margin-top: 1px;
+}
+
+.Partners {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.too_logo img {
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Partners .too_logo img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.Partners .too_logo img + img {
+  margin-left: 20px;
+}
+
+.next {
+  background-color: #525FE1;
+  border-radius: 100%;
+  color: white;
+  font-size: 1.4em;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.next:hover {
+  background-color: #FFCF59;
+  color: #525FE1;
+}
+
+
+/* Responsive styles */
+
+@media only screen and (max-width: 1024px) {
   .container_contact {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+    flex-direction: column;
+  }
+  .container_contact_left, .container_contact_right {
+    flex-basis: 100%;
+    padding: 0;
     margin-bottom: 20px;
-  }
-  
-  .container_contact_left {
-    flex-basis: 50%;
-    padding-right: 40px;
-  }
-  
-  .container_contact_right {
-    flex-basis: 50%;
-  }
-  
-  .container_contact h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    line-height: 1.2;
-  }
-  
-  .container_contact p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 40px;
-  }
-  
-  .container_contact button {
-    display: inline-block;
-    background-color: #FFCF59;
-    color: black;
-    padding: 16px 32px;
-    border-radius: 30px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  .container_contact button:hover {
-    background-color: #3e47b1;
-    color:yellow;
+    text-align: center;
   }
   .container_contact_right img {
-    max-width: 100%;
-    height: 417px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    height: auto;
+    width: 100%;
   }
-  .blog .div1 .subdiv1 img{
-   border-radius: 100%;
-   height: 100px;
-   width: 100px;
-   margin-bottom: 70%;
+}
+
+@media only screen and (max-width: 768px) {
+  .container_contact h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
   }
-  .blog{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .container_contact p {
+    font-size: 16px;
+    margin-bottom: 20px;
   }
-  .div2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: none;
-    border-radius: 10px;
+  .container_contact button {
+    font-size: 16px;
+    padding: 12px 24px;
   }
-  
   .div2 img {
-    border-radius: 40%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    padding: none !important;
-  }
-  .div2 h6 {
-    margin-top: 1px;
-  }
-  .div2 h5 {
-    margin-top: 1px;
-  }
-  .div2 p {
-    margin-top: 1px;
-  }
-  .Partners {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 150px;
+    height: 150px;
   }
   .too_logo img {
-    width: 100px;
-    height: 80px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 60px;
+    height: 50px;
   }
-  .Partners .too_logo img:hover {
-    transform: scale(1.1); /* increase image size on hover */
-    transition: all 0.3s ease-in-out; /* add smooth transition */
-  }
-  
-  .Partners .too_logo img + img {
-    margin-left: 20px; /* add spacing between images */
-  }
-  .next {
-   background-color: #525FE1;
-   border-radius: 100%;
-   color: white;
-   font-size: 1.4em; 
-   transform: scale(1.5);
-   cursor: pointer;
-  }
-  .next:hover{
-    background-color: #FFCF59;
-    color:#525FE1 ;
-  }
- 
+}
 
-  
+@media only screen and (max-width: 480px) {
+  .container_contact h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .container_contact p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .container_contact button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .div2 img {
+    width: 120px;
+    height: 120px;
+  }
+  .too_logo img {
+    width: 50px;
+    height: 40px;
+  }
+}
+

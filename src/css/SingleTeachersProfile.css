@@ -184,3 +184,41 @@
 .close:hover {
   color: #ff6600;
 }
+    /* responsivenesss */
+
+
+
+    @media (max-width: 768px) {
+      .singleteachersProfile .upper {
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+      }
+    
+      .singleteachersProfile .upperphoto {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    
+      .singleteachersProfile .upperside_header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .singleteachersProfile .upperside_header button {
+        margin-top: 10px;
+        align-self: center;
+      }
+    
+      .singleteachersProfile .stillupper {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .details {
+        width: 100%;
+      }
+    }
+    
