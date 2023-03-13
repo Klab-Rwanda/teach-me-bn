@@ -51,7 +51,7 @@ function Footer() {
         </div> 
         <div className="subscribe">
             <h5>SUBSCRIBE TO OUR NEWS PAPER</h5>
-            <input type="email" placeholder= 'abashurgroupexample@gmail.com'/>
+            <input type="email" placeholder= 'example@gmail.com'/>
             <button>SUBCRIBE</button>
             <div class="social-networks">
             <AiFillFacebook/>

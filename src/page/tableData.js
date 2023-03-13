@@ -197,6 +197,21 @@ const tableData = [
     viewMoreLink: "https://example.com/teacher2",
     bookNowLink: "https://example.com/book/teacher",
   },
+
+  {
+    id: 13,
+    imageSrc: BB,
+    name: "John Doe",
+    cvLink: "path/to/cv1.pdf",
+    timeAvailable: "Full-time",
+    experience: "5 years",
+    level: "Expert",
+    course: "React.js",
+    phoneNumber: "123-456-7890",
+    email: "jane.smith@email.com",
+    viewMoreLink: "https://example.com/teacher2",
+    bookNowLink: "https://example.com/book/teacher",
+  },
   {
     id: 13,
     imageSrc: BB,

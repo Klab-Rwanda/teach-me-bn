@@ -7,9 +7,9 @@ function About() {
     <section>
     <div className='container' id="about">
        <p className='about_container'>The future of education starts with our teachers</p>
-      <div className="cards">
+      <div className="cardds">
         {data.map((card, index) => (
-          <div className="card" key={index}>
+          <div className="small_card_teachers" key={index}>
             <img src={card.imgSrc} alt='connection failed '/>
             <h4>{card.name}</h4>
             <p>{card.description}</p>

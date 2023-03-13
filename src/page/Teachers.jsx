@@ -20,48 +20,34 @@ function Teachers() {
   return (
     <div className="containerfooterf">
       <Navbar/>
-    <div className='container'>
-    <div className="teachers_container">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Image</th>
-              <th>Name</th>
-              <th>CV</th>
-              <th>Time Available</th>
-              <th>Experience</th>
-              <th>Level</th>
-              <th>Course</th>
-              <th>Phone Number</th>
-              <th>Email</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tableData.map((row) => (
-              <tr key={row.id}>
-                <td>{row.id}</td>
-                <td><img src={row.imageSrc} alt="Image" /></td>
-                <td>{row.name}</td>
-                <td><a href={row.cvLink}>Download</a></td>
-                <td>{row.timeAvailable}</td>
-                <td>{row.experience}</td>
-                <td>{row.level}</td>
-                <td>{row.course}</td>
-                <td>{row.phoneNumber}</td>
-                <td>{row.email}</td>
-                <td className='FLX'>
-                <button className="button" onClick={() => { alert(`View more about ${row.name}`)}}><Link to ="../single" style={{color: 'inherit', textDecoration: 'inherit'}}>View More</Link></button>
-                 <button className="button" onClick={() => { alert(`Book now with ${row.name}`)}}><Link to ="../bookform"  style={{color: 'inherit', textDecoration: 'inherit'}}>Book Now</Link></button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className='container'>
+        <div className="teachers_container">
+          {tableData.map((row) => (
+            <div className="teacher_card" key={row.id}>
+              <img src={row.imageSrc} alt="  connection failed " />
+              <div className="teacher_info">
+                <h3>{row.name}</h3>
+                <p><a href={row.cvLink}>Download CV</a></p>
+                <p><strong>Time Available: </strong>{row.timeAvailable}</p>
+                <p><strong>Experience: </strong>{row.experience}</p>
+                <p><strong>Level: </strong>{row.level}</p>
+                <p><strong>Course: </strong>{row.course}</p>
+                <p><strong>Phone Number: </strong>{row.phoneNumber}</p>
+                <p><strong>Email: </strong>{row.email}</p>
+                <div className='FLX'>
+                  <button className="button" onClick={() => { alert(`View more about ${row.name}`)}}>
+                    <Link to ="../single" style={{color: 'inherit', textDecoration: 'inherit'}}>View More</Link>
+                  </button>
+                  <button className="button" onClick={() => { alert(`Book now with ${row.name}`)}}>
+                    <Link to ="../bookform" style={{color: 'inherit', textDecoration: 'inherit'}}>Book Now</Link>
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-    <Footer/>
+      <Footer/>
     </div>
   )
 }
