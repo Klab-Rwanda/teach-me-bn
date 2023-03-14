@@ -12,6 +12,7 @@ import { BsFillTelephoneInboundFill } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 import { IoSchoolSharp } from 'react-icons/io5';
 import { GiTeacher } from 'react-icons/gi';
+import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div className='footer'>
@@ -20,7 +21,7 @@ function Footer() {
          <ul>
           <li><a href="#"><MdEmail/>teachme@gmail.com</a></li>
           <li><a href="#"><BsFillTelephoneInboundFill/>+250 123 457 236</a></li>
-          <li><a href="#"><GiTeacher/>Become an instructor</a></li>
+          <li><Link  to ="/teacherinfo" ><GiTeacher/>Become an instructor</Link></li>
           <li><a href="#"><IoSchoolSharp/>Become an student</a></li>
           <li><p>@2023 TeachmeAll rights reserved</p></li>
           </ul>

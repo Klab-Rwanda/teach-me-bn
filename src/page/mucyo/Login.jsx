@@ -1,9 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
 import '../../css/login.css';
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar";
 const Login = () => {
+  const  {register,handleSubmit ,reset }  =  useForm();
+  const  navigate =  useNavigate();
+
+  const onSubmit =(data) =>{
+    if(data.email ==="student@gmail.com"){
+      navigate("/teacherInfo")
+    }
+    else{
+      navigate("/studentinfo")
+
+    }
+  } 
   return (
     <div className="main">
       <Navbar/>
@@ -19,13 +32,14 @@ const Login = () => {
           <input className="input" type="submit" value="SIGN UP" />
         </Link>
       </div>
-      <div className="container2">
+      <form onSubmit={handleSubmit(onSubmit)} className="container2">
         <h1 className="h1">Login Here</h1>
-        <input className="input" type="text" placeholder="Email" />
+        <input className="input" {...register("email")} type="text" placeholder="Email" />
         <br />
-        <input className="input" type="password" placeholder="Password" />
-        <input className="input" type="submit" value="SIGN IN" />
-      </div>
+        <input className="input" {...register("password")} type="password" placeholder="Password" />
+        
+         <input className="input"  type="submit" value="SIGN IN" />
+      </form>
     </div>
     <Footer/>
     </div>

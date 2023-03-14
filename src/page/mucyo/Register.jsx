@@ -14,7 +14,10 @@ const Register = () => {
             <br />
             just glad you're back with us.”
           </p>
+          <Link to ='/login'>   
           <input className="input" type="submit" value="SIGN IN" />
+          </Link>
+       
         </div>
         <div className="container2">
           <h1 className="h1">Create Account</h1>
@@ -40,7 +43,7 @@ const Register = () => {
             <option value="blue">Male</option>
           </select>
 
-          <Link to="/Studentinfo">
+          <Link to="/login">
             {" "}
             <input className="input" type="submit" value="SIGN UP" />
           </Link>

@@ -10,6 +10,7 @@ import ContactFor from "./page/BLOG/ContactFor";
 import Login from "./page/mucyo/Login";
 import Register from "./page/mucyo/Register";
 import Studentinfo from "./page/mucyo/Studentinfo";
+import Teacherinfo from "./page/mucyo/Teacherinfo";
 function App() {
   return (
     <div className="App">
@@ -23,8 +24,9 @@ function App() {
         <Route path={"/bookform"}element={<PopUpform/>} />
         <Route path={"/contact"}element={<ContactFor/>}/>
         <Route path={"/login"}element={<Login/>}/>
-        <Route path={"/register"}element={<Register/>}/>
+        <Route path={"/regiter"}element={<Register/>}/>
         <Route path={"/Studentinfo"}element={<Studentinfo/>}/>
+        <Route path={"/teacherinfo"}element={<Teacherinfo/>}/>
        </Routes>
      </BrowserRouter> 
     </div>

@@ -35,7 +35,7 @@ function Best() {
       <div className="loweCards">
         <div className="lowerCard"></div>
         <div className="lowerCard">
-        <div className="img">
+        <div className=".img">
             <img src={VV} alt="Me-1" />
           </div>
           <h4>Best course</h4>
@@ -43,7 +43,7 @@ function Best() {
             about your success every step of the way</p>
         </div>
         <div className="lowerCard">
-        <div className="img">
+        <div className=".img">
             <img src={ME} alt="Me-1" />
           </div>
           <h4>Creative Skills </h4>
@@ -52,7 +52,7 @@ function Best() {
             thinking and practical skill</p>
         </div>
         <div className="lowerCard">
-        <div className="img">
+        <div className=".img">
             <img src={MTE} alt="Me-1" />
           </div>
           <h4>Talent Show </h4>

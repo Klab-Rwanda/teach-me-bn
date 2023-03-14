@@ -1,12 +1,10 @@
 import React from 'react'
-import '../css/teacherinfo.css';
+import '../../css/teacherinfo.css';
 const Teacherinfo = () => {
   return (
-    
          <div className='body'>
         <div className='container5'>
            <h1>Information details for teacher Profile</h1>
-           
             <input type="text" placeholder='Name'/>
             <input type="file" placeholder='Profile'/><br />
             <input type="text" placeholder='Email'/>
@@ -15,13 +13,11 @@ const Teacherinfo = () => {
                <option value="red">8:00-12:00</option>
                 <option value="blue">14:00-16:00</option>
             </select><br />  
-           
             <input type="text" placeholder='Address'/>
             <select name="user" >
                <option value="red" className='placeholder' >PaymentMethod</option>
                <option value="red">Bank Account</option>
                 <option value="blue">Mobile Number</option>
-                
             </select><br />
             <select name="user" >
                <option value="red" className='placeholder' >TeachingStyle</option>
