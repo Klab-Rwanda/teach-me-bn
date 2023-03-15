@@ -25,7 +25,7 @@ function App() {
         <Route path={"/contact"}element={<ContactFor/>}/>
         <Route path={"/login"}element={<Login/>}/>
         <Route path={"/regiter"}element={<Register/>}/>
-        <Route path={"/Studentinfo"}element={<Studentinfo/>}/>
+        <Route path={"/studentinfo"}element={<Studentinfo/>}/>
         <Route path={"/teacherinfo"}element={<Teacherinfo/>}/>
        </Routes>
      </BrowserRouter> 

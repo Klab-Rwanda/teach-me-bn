@@ -17,7 +17,7 @@ function Footer() {
   return (
     <div className='footer'>
         <div className='About'>
-         <h5 className='logo'><FcHome/>Teachme</h5>
+         <h5 className='logo'><FcHome/><Link to ="/#">Teachme</Link></h5>
          <ul>
           <li><a href="#"><MdEmail/>teachme@gmail.com</a></li>
           <li><a href="#"><BsFillTelephoneInboundFill/>+250 123 457 236</a></li>
