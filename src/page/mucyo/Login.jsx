@@ -19,17 +19,17 @@ const Login = () => {
     .then((response) => {
       // Redirect to teacherinfo page if usertype is " Teachers", otherwise redirect to studentinfo page
       if (response.data.usertype === "teacher") {
-        console.log("NNNNNNN")
+     
         navigate("/teacherinfo");
       } else {
-        navigate("/studentinfo");
+        navigate("/teacherinfo");
       }
     })
     .catch((error) => {
       console.log(error);
     });
   };
-
+console.log("gkhjjhkgjjh");
   return (
     <div className="main">
       <Navbar/>

@@ -70,10 +70,8 @@ const ContactFor = () => {
           <div className="leftside">
             <img src={ME} alt="connection failure" />
             <p>
-              "We help dedicated parents to hire Trustworthy and Highly
-              Effective Tutors so their's children marks can imporve
-              significantly within 28 days without giving up their hobbies and
-              play time."
+              "Transform your learning experience with one-on-one guidance from
+               the best teachers in your field. Contact us now to get started"
             </p>
           </div>
           <div className="rightside">
@@ -82,7 +80,7 @@ const ContactFor = () => {
             ) : (
               <>
                 <h5>Send message to Teachme</h5>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="send">
                   <label htmlFor="name">Name</label>
                   <input
                     type="text"

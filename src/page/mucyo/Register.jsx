@@ -1,43 +1,44 @@
-import React, { useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate,Link} from 'react-router-dom'
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar";
+// import  {yupResolver} from "@hookform/resolvers/yup"
+import { useForm } from 'react-hook-form';
+// import * as yup  from "yup"
 import axios from "axios";
 
-const REGISTER_URL = "https://teachmeapi.onrender.com/api/v1/signup";
+const REGISTER_URL =  "https://teachmeapi.onrender.com/api/v1/signup";
+
+// const schema = yup
+//   .object()
+//   .shape({
+//     username: yup.string().required(),
+//     email: yup.string().email().required(),
+//     password:yup.string().min(6).max(12).required(),
+//     // usertype:yup.string().required(),
+//     // gender:yup.string().required()
+//   })
 
 const Register = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    Usertype: "",
-  
-  
-  });
-
-  const handleChange = (event) => {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  };
  
-  const navigate = useNavigate();
+  const  {register ,handleSubmit ,formState :{errors}} =  useForm({
+    // resolver:yupResolver(schema)
+  })
+ 
+  const navigate  = useNavigate();
+  const   onSubmit  = async  (data) =>{
+      console.log(data);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    axios
-      .post(REGISTER_URL, formData)
-      .then((response) => {
-        console.log(response.data);
-        // Redirect to login page after successful registration
-        navigate("/login");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+      try {
+        const  response  = await  axios.post(REGISTER_URL,data)
+        console.log(response);
+        navigate("/login")
+
+      } catch (error) {
+        console.log(data);
+        console.log(error.response);
+      }
+  }
 
   return (
     <div className="main">
@@ -56,14 +57,13 @@ const Register = () => {
         </div>
         <div className="container2">
           <h1 className="h1">Create Account</h1>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <input
               className="input"
               type="text"
               placeholder="Name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
+             autoComplete="off"
+             {...register("name")}
             />
             <br />
             <input
@@ -71,8 +71,7 @@ const Register = () => {
               type="text"
               placeholder="Email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
+              {...register("email")}
             />
             <br />
             <input
@@ -80,37 +79,40 @@ const Register = () => {
               type="password"
               placeholder="Password"
               name="password"
-              value={formData.password}
-              onChange={handleChange}
+              {...register("password")}
             />
             <br />
-            <select
+            <select 
               name="Usertype"
               placeholder="User Type"
-              value={formData.Usertype}
-              onChange={handleChange}
+
+            {...register("usertype")}
+
             >
               <option value="" className="placeholder">
                 User Type
               </option>
-              <option value="Parent">Parent</option>
-              <option value="Teacher">Teacher</option>
+              <option value="parent">Parent</option>
+              <option value="teacher">Teacher</option>
             </select>
+          
+
             <br />
-            <select
+           {/* <select
               name="gender"
               placeholder="Gender"
-              value={formData.gender}
-              onChange={handleChange}
-            >
+            {...register("gender")}
+              
+              >
               <option value="" className="placeholder">
                 Gender
               </option>
               <option value="Female">Female</option>
               <option value="Male">Male</option>
-            </select>
+         
+            </select> */}
             <br />
-            <input className="input" type="submit" value="SIGN UP" />
+            <input className="input" type="submit" value="SIGN IN" />
           </form>
         </div>
       </div>

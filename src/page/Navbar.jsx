@@ -9,14 +9,14 @@ function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   }
-
   return (
     <div className="container">
       <div className="menu">
         <div className="logo">
          <Link to="/#" style={{color: 'inherit', textDecoration: 'inherit'}}>Teach<span>me</span></Link> 
         </div>
-        {/* Toggle button for small devices */}
+     
+
         <button className="toggle-btn" onClick={toggleMenu}>
           {isMenuOpen ? 'Close' : 'Menu'}
         </button>
@@ -24,7 +24,7 @@ function Navbar() {
           {/* Links for all devices */}
           <a href="#">Home</a>
           <a href="#about">Aboutus</a>
-          <Link  to="./contact"><a href="#contactfor">Contact</a></Link>
+          <a href="#contactfor">Contact</a>
           <a href="#service">Service</a>
           <a href="#blog">Blog</a>
           <Link to="/teachers">Teachers</Link>
@@ -37,5 +37,4 @@ function Navbar() {
     </div>
   );
 }
-
 export default Navbar;

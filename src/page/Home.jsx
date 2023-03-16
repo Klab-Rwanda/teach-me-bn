@@ -35,10 +35,10 @@ function Home() {
       </div>
     </div>
     <div className="sub_container">
-      <span class="experts">8K+<br/><p className="sub_container_experts">Success Stories</p></span>
-      <span class="experts">200+<br/><p className="sub_container_experts">Expert instructor</p></span>
-      <span class="experts">108K+<br/><p className="sub_container_experts">Worldwide Students</p></span>
-      <span class="experts">310K+<br/><p className="sub_container_experts">Trendy Subjects</p></span>
+      <span className="experts">8K+<br/><p className="sub_container_experts">Success Stories</p></span>
+      <span className="experts">200+<br/><p className="sub_container_experts">Expert instructor</p></span>
+      <span className="experts">108K+<br/><p className="sub_container_experts">Worldwide Students</p></span>
+      <span className="experts">310K+<br/><p className="sub_container_experts">Trendy Subjects</p></span>
     </div>
     </div>
   );

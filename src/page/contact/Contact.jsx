@@ -24,10 +24,11 @@ function Contact() {
         <div className="container_contact_left">
           <h1>We Have Highly Expert & Experienced Tutors</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry. Lorem Ipsum{" "}
+          Expert teachers at your fingertips - unlock your potential today,
+          Discover the transformative impact of great teachers - join our platform today!,
+          When it comes to finding the best teachers, look no further than our 
+          platform. Get started now!"
+          {" "}
           </p>
           <button>Enroll Now</button>
         </div>

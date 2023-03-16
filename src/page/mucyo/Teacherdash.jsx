@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/teacherdash.css';
+import '../../css/teacherdash.css';
 const Teacherdash = () => {
   return (
     <div className='body1'>
@@ -74,8 +74,9 @@ const Teacherdash = () => {
                       <div className='sub3'></div>
                     </div>
                     </div>
-                    <div className='dash22'></div>
-                    
+                    <div className='dash22'>
+                      
+                    </div>
                 </div>
                 
             </div>

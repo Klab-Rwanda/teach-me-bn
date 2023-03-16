@@ -48,7 +48,7 @@
     box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
-.input{
+input{
     width: 25rem;
     margin-left: 3rem;
     height: 1.2rem;

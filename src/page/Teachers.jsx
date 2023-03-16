@@ -1,45 +1,104 @@
-import React, { useState } from "react";
-import tableData from "./tableData";
-import Navbar from './Navbar'
-import  "../css/Teachers.css"
-import { Link } from 'react-router-dom';
-import Footer from './Footer/Footer'
+import React, { useState, useEffect } from "react";
+import Navbar from "./Navbar";
+import "../css/Teachers.css";
+import { Link } from "react-router-dom";
+import Footer from "./Footer/Footer";
+import axios from "axios";
 function Teachers() {
-  const [showForm, setShowForm] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-
-    // Add code to handle form submission
-    // You can use a library like axios to make a post request to your server
+  const [profiles, setProfiles] = useState([]);
+   console.log(profiles)
+   const fetchProfiles = async () => {
+    try {
+      const response = await axios.get(
+        "https://teachmeapi.onrender.com/api/v1/getAllprofile"
+      );
+      console.log(response);
+      setProfiles(response.data.Profile);
+    } catch (error) {
+      console.error(error);
+    }
   };
-  const handlePopup = () => {
-    setShowForm(!showForm);
-  };
+  useEffect(() => {
+ console.log("hello");
+
+    fetchProfiles();
+  }, []);
   return (
     <div className="containerfooterf">
-      <Navbar/>
-      <div className='container'>
+      <Navbar />
+      <div className="container">
         <div className="teachers_container">
-          {tableData.map((row) => (
+          {profiles && profiles?.map((row) => (
             <div className="teacher_card" key={row.id}>
-              <img src={row.imageSrc} alt="  connection failed " />
+              <img src={row.image} alt="connection failed" />
               <div className="teacher_info">
                 <h3>{row.name}</h3>
-                <p><a href={row.cvLink}>Download CV</a></p>
-                <p><strong>Time Available: </strong>{row.timeAvailable}</p>
-                <p><strong>Experience: </strong>{row.experience}</p>
-                <p><strong>Level: </strong>{row.level}</p>
-                <p><strong>Course: </strong>{row.course}</p>
-                <p><strong>Phone Number: </strong>{row.phoneNumber}</p>
-                <p><strong>Email: </strong>{row.email}</p>
-                <div className='FLX'>
-                  <button className="button" onClick={() => { alert(`View more about ${row.name}`)}}>
-                    <Link to ="../single" style={{color: 'inherit', textDecoration: 'inherit'}}>View More</Link>
+                <p>
+                  <strong>Fullname: </strong>
+                  {row.fullname}
+                </p>
+                {/* <p>
+                  <strong>profile picture: </strong>
+                  {row.image}
+                </p> */}
+                <p>
+                  <strong>Email: </strong>
+                  {row.email}
+                </p>
+                <p>
+                  <strong>TimeAvailable: </strong>
+                  {row.timeAvailable}
+                </p>
+                <p>
+                  <strong>Course: </strong>
+                  {row.course}
+                </p>
+                <p>
+                  <strong>Address: </strong>
+                  {row.adress}
+                </p>
+                <p>
+                  <strong>Gender: </strong>
+                  {row.gender}
+                </p>
+                <p>
+                  <strong>Studying Style: </strong>
+                  {row.studyingstyle}
+                </p>
+                <p>
+                  <strong>expreince: </strong>
+                  {row.exprience}
+                </p>
+                <p>
+                  <strong>Date: </strong>
+                  {row.date}
+                </p>
+                <div className="FLX">
+                  <button
+                    className="button"
+                    onClick={() => {
+                      alert(`View more about ${row.name}`);
+                    }}
+                  >
+                    <Link
+                      to={`/${row?._id}`}
+                      style={{ color: "inherit", textDecoration: "inherit" }}
+                    >
+                      View More
+                    </Link>
                   </button>
-                  <button className="button" onClick={() => { alert(`Book now with ${row.name}`)}}>
-                    <Link to ="../bookform" style={{color: 'inherit', textDecoration: 'inherit'}}>Book Now</Link>
+                  <button
+                    className="button"
+                    onClick={() => {
+                      alert(`Book now with ${row?._id}`);
+                    }}
+                  >
+                    <Link
+                      to={`/bookform/${row.id}`}
+                      style={{ color: "inherit", textDecoration: "inherit" }}
+                    >
+                      Book Now
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -47,9 +106,9 @@ function Teachers() {
           ))}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default Teachers
+export default Teachers;
