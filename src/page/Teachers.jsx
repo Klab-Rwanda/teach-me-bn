@@ -37,10 +37,6 @@ function Teachers() {
                   <strong>Fullname: </strong>
                   {row.fullname}
                 </p>
-                {/* <p>
-                  <strong>profile picture: </strong>
-                  {row.image}
-                </p> */}
                 <p>
                   <strong>Email: </strong>
                   {row.email}

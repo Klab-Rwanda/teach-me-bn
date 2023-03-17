@@ -18,10 +18,11 @@ const Teacherdash = () => {
             </div>
             <div className='dash_container2'>
                 <div className='sub_dash1'>
-                    <div className='dash1'><p><b> Hello,</b>  Doctor <br />MUCYO <br /><br />update for student studies</p></div>
+                    <div className='dash1'><p><b> Hello,</b>  student <br /> student1 <br /><br/>update for student studies</p></div>
                     <div className='dash2'></div>
                     <div className='dash3'>
                     <center> <h3>list of all students in your course<input type="submit" value="full list"/></h3>
+             
                     </center>
                     <div className='sn'>
                     <p>sn</p>

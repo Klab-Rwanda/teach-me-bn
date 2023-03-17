@@ -3,12 +3,14 @@ import "../../css/teacherinfo.css";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar";
 import axios from 'axios'
+import Modal from 'react-modal';
 import { useForm } from 'react-hook-form'
 
 const Teacherinfo = () => {
   const [teachers, setTeachers] = useState([]);
   const { register, handleSubmit, reset } = useForm();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const onSubmit = async (data) => {
     console.log(data);
 
@@ -54,9 +56,10 @@ const Teacherinfo = () => {
         _id: response.data._id,
       };
       setTeachers([...teachers, newTeacher]);
-      
-      reset();
-      alert("Successfully submitted");
+
+    reset();
+
+    setIsModalOpen(true);
     } catch (error) {
       console.error(error.response);
       alert("Error occurred while submitting the form");
@@ -152,6 +155,11 @@ const Teacherinfo = () => {
       
     </div>
     <Footer/>
+    <Modal isOpen={isModalOpen}>
+  <h2>Success!</h2>
+  <p>Thank you for uploading your information! You will receive an acceptance message on your email.</p>
+  <button onClick={() => setIsModalOpen(false)}>Close</button>
+</Modal>
     </div>
   );
 };

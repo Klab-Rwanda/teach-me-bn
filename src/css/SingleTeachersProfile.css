@@ -1,3 +1,9 @@
+
+.singleteachersProfile{
+  width: 91%;
+  margin:  0 auto;
+}
+
 .singleteachersProfile .upper {
     display: flex;
     margin: 20px;
@@ -11,7 +17,7 @@
     height: 300px;
     margin-right: 20px;
     overflow: hidden;
-    /* border-radius: 50%; */
+  
   }
   
   .singleteachersProfile .upperphoto img {
