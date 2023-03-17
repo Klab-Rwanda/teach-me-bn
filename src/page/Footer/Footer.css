@@ -69,15 +69,24 @@
   
   .subscribe h5 {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   
-  .subscribe input[type="email"] {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 20px;
+  .footer-input {
+    background-color: #f2f2f2;
     border: none;
     border-radius: 5px;
+    color: #333333;
+    font-size: 1rem;
+    padding: 10px;
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .footer-input:focus {
+    outline: none;
   }
   
   .subscribe button {

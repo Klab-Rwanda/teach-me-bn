@@ -90,7 +90,7 @@ function Teachers() {
                   <button
                     className="button"
                     onClick={() => {
-                      alert(`Book now with ${row?._id}`);
+                      alert(`Book now with ${row?._fullname}`);
                     }}
                   >
                     <Link
