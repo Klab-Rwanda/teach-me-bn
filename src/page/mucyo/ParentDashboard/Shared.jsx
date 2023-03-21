@@ -9,7 +9,11 @@ import { MdReportProblem } from 'react-icons/md';
 import { MdRequestQuote } from 'react-icons/md';
 import { GiSatelliteCommunication } from 'react-icons/gi';
 import { RiLogoutCircleFill } from 'react-icons/ri';
-import { FaSearch } from 'react-icons/fa';
+import { MdAccountBalance } from 'react-icons/md';
+import { GrResources } from 'react-icons/gr';
+import { ImProfile } from 'react-icons/im';
+import { GrUserManager } from 'react-icons/gr';
+import { GiProgression } from 'react-icons/gi';
 import LOGO from '../../../../src/aseets/logoproject.png';
 import '../../../css/shared.css';
 
@@ -27,13 +31,15 @@ const Dashboard = () => {
         <div className="navbar-left">
         <div className="navbar-center">
          <img src={LOGO} alt="connection  problem " />
+         <span className='teachme'>TEACH ME</span>
         </div>
           {/* <button className="menu-btn" onClick={handleSidebarToggle}>
             {sidebarOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
           </button> */}
         </div>
         <div className="seasrching">
-       <input type="search" placeholder='searching'/><FaSearch className="search-icon" />
+        <input type="text" id="search" name="search" placeholder="Search..."/>
+        {/* <button className='search-button' type="submit">Search</button> */}
         </div>
        
         <div className="navbar-right">
@@ -73,7 +79,7 @@ const Dashboard = () => {
         </div>
         <ul className="sidebar-menu">
           <li className="sidebar-item">
-            <Link to="/parentdashboard/account"><AiFillSetting className='dashboard-icon'/>Setting</Link>
+            <Link to="/parentdashboard/setting"><AiFillSetting className='dashboard-icon'/>Setting</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/parentdashboard/payment"><MdPayments className='dashboard-icon'/>Payment</Link>
@@ -83,6 +89,21 @@ const Dashboard = () => {
           </li>
           <li className="sidebar-item">
             <Link to="parentdashboard/request"><MdRequestQuote className='dashboard-icon'/>Request</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to="parentdashboard/account"><MdAccountBalance className='dashboard-icon'/>Create account</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to="parentdashboard/request"><GrUserManager className='dashboard-icon'/>Manage account</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to="parentdashboard/request"><ImProfile className='dashboard-icon'/>Teacher Profiles</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to="parentdashboard/request"><GrResources className='dashboard-icon'/>Resource Center</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to="/parentdashboard/communication"><GiProgression className='dashboard-icon'/>Progress Tracking</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/parentdashboard/communication"><GiSatelliteCommunication className='dashboard-icon'/>Communication</Link>

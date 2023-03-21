@@ -23,6 +23,7 @@ import Payment from "./page/mucyo/ParentDashboard/Payment";
 import Report from "./page/mucyo/ParentDashboard/Report";
 import Communication from "./page/mucyo/ParentDashboard/Communication";
 import Request from "./page/mucyo/ParentDashboard/Request";
+import Studentinfo from "./page/mucyo/Studentinfo";
 function App() {
   return (
     <div className="App">
@@ -44,7 +45,8 @@ function App() {
        <Route  path="/parentdashboard"   element={<Shared/> }>
         {/* <Route index   element={<Parentdash/>}/> */}
       
-        <Route path={"/parentdashboard/account"}element={<Setting/>} />
+        <Route path={"/parentdashboard/setting"}element={<Setting/>} />
+        <Route path={"/parentdashboard/account"}element={<Studentinfo/>} />
         <Route path={"/parentdashboard/payment"}element={<Payment/>} />
         <Route path={"/parentdashboard/report"}element={<Report/>} />
         <Route path={"/parentdashboard/request"}element={<Request/>} />

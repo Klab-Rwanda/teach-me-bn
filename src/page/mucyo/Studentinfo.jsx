@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import myImage from "../../aseets/image1.png";
+// import myImage from "../../aseets/image1.png";
 import "../../css/studentinfo.css";
-import Footer from "../Footer/Footer";
-import Navbar from "../Navbar";
 import axios from "axios";
 const initialFormState = {
   fullName: "",
@@ -53,11 +51,11 @@ const Studentinfo = () => {
 
   return (
     <div className="main">
-      <Navbar/>
-    <div className="body">
-      <div className="container3">
-        <img src={myImage} alt="connection failed" />
-      </div>
+    
+    <div className="body1">
+      {/* <div className="container3"> */}
+        {/* <img src={myImage} alt="connection failed" /> */}
+      {/* </div> */}
       <div className="container4">
         <h1>Student Registration Form</h1>
         {submitSuccess && (
@@ -82,6 +80,7 @@ const Studentinfo = () => {
               name="fullName"
               onChange={handleChange}
             />
+            <br />
           <input
               className="input"
               type="text"
@@ -111,7 +110,15 @@ const Studentinfo = () => {
               name="profile"
               onChange={handleChange}
             />
+            <br />
                <input
+              className="input"
+              type="text"
+              placeholder="StudyingStyle"
+              name="studyingStyle"
+              onChange={handleChange}
+            />
+            <input
               className="input"
               type="text"
               placeholder="StudyingStyle"
@@ -170,7 +177,7 @@ const Studentinfo = () => {
       
       </div>
     </div>
-  <Footer/>
+ 
     </div>
   );
 };
