@@ -1,0 +1,136 @@
+.teacher-dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .teacher-dashboard__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 60px;
+    padding: 0 30px;
+  }
+  
+  .teacher-dashboard__header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  .teacher-dashboard__header__nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .teacher-dashboard__header__nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .teacher-dashboard__header__nav li {
+    margin-right: 20px;
+  }
+  
+  .teacher-dashboard__header__nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .teacher-dashboard__header__nav a:hover {
+    color: #0077c2;
+  }
+  
+  .teacher-dashboard__content {
+    display: flex;
+    flex: 1;
+    padding: 30px;
+    background-color: #f2f2f2;
+  }
+  
+  .teacher-dashboard__content__sidebar {
+    min-width: 250px;
+    margin-right: 30px;
+  }
+  
+  .teacher-dashboard__content__sidebar h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .teacher-dashboard__content__sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .teacher-dashboard__content__sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .teacher-dashboard__content__sidebar a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .teacher-dashboard__content__sidebar a:hover {
+    color: #0077c2;
+  }
+  
+  .teacher-dashboard__content__main {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .teacher-dashboard__content__main h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .teacher-dashboard__content__main p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .teacher-dashboard__content__main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .teacher-dashboard__content__main li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .teacher-dashboard__content__main a {
+    text-decoration: none;
+    color: #0077c2;
+    transition: color 0.3s ease;
+  }
+  
+  .teacher-dashboard__content__main a:hover {
+    color: #004466;
+  }
+  

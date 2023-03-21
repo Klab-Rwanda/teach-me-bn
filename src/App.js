@@ -16,14 +16,16 @@ import QuizForm from "./page/mucyo/TeacherDashboard/QuizForm";
 import QuizList from "./page/mucyo/TeacherDashboard/QuizList";
 import AllAssignmentsPage from "./page/mucyo/TeacherDashboard/AllAssignmentsPage";
 import Shared from "./page/mucyo/ParentDashboard/Shared";
-
+import SharedT from "./page/mucyo/TeacherDashboard/SharedT";
 
 import Setting from "./page/mucyo/ParentDashboard/Setting";
 import Payment from "./page/mucyo/ParentDashboard/Payment";
 import Report from "./page/mucyo/ParentDashboard/Report";
 import Communication from "./page/mucyo/ParentDashboard/Communication";
 import Request from "./page/mucyo/ParentDashboard/Request";
+import Manage from "./page/mucyo/ParentDashboard/Manage";
 import Studentinfo from "./page/mucyo/Studentinfo";
+import Teacherdash from "./page/mucyo/TeacherDashboard/Teacherdash";
 function App() {
   return (
     <div className="App">
@@ -43,19 +45,25 @@ function App() {
         <Route path={"/teacherinfo"}element={<Teacherinfo/>}/>
 
        <Route  path="/parentdashboard"   element={<Shared/> }>
-        {/* <Route index   element={<Parentdash/>}/> */}
+        <Route index   element={<Parentdash/>}/>
       
         <Route path={"/parentdashboard/setting"}element={<Setting/>} />
         <Route path={"/parentdashboard/account"}element={<Studentinfo/>} />
         <Route path={"/parentdashboard/payment"}element={<Payment/>} />
         <Route path={"/parentdashboard/report"}element={<Report/>} />
         <Route path={"/parentdashboard/request"}element={<Request/>} />
-        <Route path={"/parentdashboard/communication"}element={<Communication/>} />
+        <Route path={"/parentdashboard/communication"}element={<Communication/>}/>
+        <Route path={"/parentdashboard/manage"}element={<Manage/>}/>
         <Route path={"students"}element={<StudentAccount/>} />
+       
+        </Route>
+        <Route path={"/TeacherDashboard"} element={<SharedT/>}>
+        {/* <Route index   element={<Teacherdash/>}/> */}
         <Route path={"assignment"}element={<AssignmentForm/>} />
         <Route path={"notebook"}element={<QuizForm/>} />
         <Route path={"quizlist"}element={<QuizList/>} />
         <Route path={"allAssignmentsPage"}element={<AllAssignmentsPage/>} />
+
         </Route>
        </Routes>
      </BrowserRouter> 

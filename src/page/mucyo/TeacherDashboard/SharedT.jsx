@@ -82,34 +82,34 @@ const Dashboard = () => {
             <Link to="/parentdashboard/setting"><AiFillSetting className='dashboard-icon'/>Setting</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/parentdashboard/payment"><MdPayments className='dashboard-icon'/>Payment</Link>
+            <Link to=""><MdPayments className='dashboard-icon'/>live zooming</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/parentdashboard/report"><MdReportProblem className='dashboard-icon'/>Schools Report</Link>
+            <Link to=""><MdReportProblem className='dashboard-icon'/>Note</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/request"><MdRequestQuote className='dashboard-icon'/>Request</Link>
+            <Link to=""><MdRequestQuote className='dashboard-icon'/>Assignment</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/account"><MdAccountBalance className='dashboard-icon'/>Create account</Link>
+            <Link to=""><MdAccountBalance className='dashboard-icon'/>Create account</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/manage"><GrUserManager className='dashboard-icon'/>Manage account</Link>
+            <Link to=""><GrUserManager className='dashboard-icon'/>Marks</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/request"><ImProfile className='dashboard-icon'/>Teacher Profiles</Link>
+            <Link to=""><ImProfile className='dashboard-icon'/>My student</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/request"><GrResources className='dashboard-icon'/>Resource Center</Link>
+            <Link to=""><GrResources className='dashboard-icon'/>classroom</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/parentdashboard/communication"><GiProgression className='dashboard-icon'/>Progress Tracking</Link>
+            <Link to=""><GiProgression className='dashboard-icon'/>Report</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/parentdashboard/communication"><GiSatelliteCommunication className='dashboard-icon'/>Communication</Link>
+            <Link to=""><GiSatelliteCommunication className='dashboard-icon'/></Link>
           </li>
           <li className='sidebar_item'>
-          <Link to="/parentdashboard/communication"><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>
+          <Link to=""><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>
           </li>
         </ul>
       </aside>
