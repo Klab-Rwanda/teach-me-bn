@@ -12,8 +12,8 @@
 }
 .body{
 
-    height: 100vh;
-    width: 100vw;
+        height: 100vh;
+        width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -49,8 +49,8 @@
 }
 
 input{
-    width: 25rem;
-    margin-left: 3rem;
+    width: 80%;
+    margin-left: 7%;
     height: 1.2rem;
     margin-top: 1rem;
     box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
@@ -73,8 +73,8 @@ input[type="submit"]{
     margin-left: 15rem;
 }
 select{
-    width: 27rem;
-    margin-left: 3rem;
+    width: 86%;
+    margin-left: 8%;
     height: 3rem;
     margin-top: 1rem;
     box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
@@ -95,3 +95,41 @@ select{
    height: 100%;
    object-fit: cover; 
 }
+@media screen AND (max-width: 1040px) {
+    .body {
+        height: 130vh;
+        width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: fa2;
+    }
+    .container1{
+        background-color:white;
+        width: 100%;
+        /* margin-top: 0rem; */
+        /* margin-bottom: 1rem; */
+        height:35%;
+        border-radius: 0px 0px 0px 0px;
+        box-shadow:    0px 0px 0px 0px rgba(0, 0, 0, 0.25);
+    }
+    .container2{
+        background-color: #F5F6FF;
+        width: 100%;
+        
+        margin-bottom: 0rem;
+        height: 50%;
+        border-radius: 0px 0px 0px 0px;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
+    }
+    h1{
+        text-align: center;
+        margin-top: 1rem;
+        color: #525FE1;
+        font-size: 3rem;
+    }
+    /* input{
+        margin-left: 1.5rem;
+    } */
+
+  }

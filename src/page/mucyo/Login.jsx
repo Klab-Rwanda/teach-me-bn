@@ -5,11 +5,10 @@ import axios from "axios"; // import Axios library
 import '../../css/login.css';
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar";
-
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
-
+  
   const onSubmit = (data) => {
     // Make a POST request to the API endpoint with user's email and password
     axios.post("https://teachmeapi.onrender.com/api/v1/signin", {
@@ -17,19 +16,24 @@ const Login = () => {
       password: data.password,
     })
     .then((response) => {
-      // Redirect to teacherinfo page if usertype is " Teachers", otherwise redirect to studentinfo page
-      if (!response.data.usertype === "teacher") {
-     
-        navigate("/teacherinfo");
+     console.log(response.data.userSign.Usertype );
+     console.log(response.data.userSign.Usertype );
+     // Redirect to teacherinfo page if usertype is " Teachers", otherwise redirect to studentinfo page
+      if (response.data.userSign.Usertype === "parents"  || response.data.userSign.Usertype === "PARENTS") {
+        navigate("/parentdashboard");
       } else {
         navigate("/teacherinfo");
       }
     })
     .catch((error) => {
+      if (error.response && error.response.data && error.response.data.message) {
+        alert(error.response.data.message);
+      } else {
+        console.log(error);
+      }
       console.log(error);
     });
   };
-console.log("gkhjjhkgjjh");
   return (
     <div className="main">
       <Navbar/>

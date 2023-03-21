@@ -56,13 +56,13 @@ span {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-.link button {
+.link bututon {
   background-color: transparent;
   border: none;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-.link button a {
+.link bututon a {
   color: #000000;
   border-radius: 20px;
   padding: 10px 20px;
@@ -73,7 +73,7 @@ span {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-.link button a:last-child {
+.link bututon a:last-child {
   background-color: #ffcf59;
   color: #000000;
 } 

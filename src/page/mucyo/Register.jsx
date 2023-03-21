@@ -83,20 +83,18 @@ const Register = () => {
             />
             <br />
             <select 
-              name="Usertype"
+              name="usertype"
               placeholder="User Type"
 
-            {...register("usertype")}
+            {...register("Usertype")}
 
             >
               <option value="" className="placeholder">
                 User Type
               </option>
-              <option value="parent">Parent</option>
-              <option value="teacher">Teacher</option>
+              <option value="parents">parents</option>
+              <option value="teacher">teacher</option>
             </select>
-          
-
             <br />
            {/* <select
               name="gender"

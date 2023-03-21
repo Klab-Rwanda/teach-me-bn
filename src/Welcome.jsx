@@ -5,6 +5,7 @@ import ContactFor from './page/BLOG/ContactFor'
 import Contact from './page/contact/Contact'
 import Footer from './page/Footer/Footer'
 import Home from './page/Home'
+import Teacherdash from './page/mucyo/TeacherDashboard/Teacherdash'
 import Navbar from './page/Navbar'
 import Service from './page/service/Service'
 function Welcome() {
@@ -18,6 +19,8 @@ function Welcome() {
     <ContactFor/>
     <Contact/>
     <Footer/>
+ 
+    {/* <StudentDash/> */}
     </div>
   )
 }

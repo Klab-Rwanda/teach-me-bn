@@ -16,7 +16,6 @@ function Navbar() {
          <Link to="/#" style={{color: 'inherit', textDecoration: 'inherit'}}>Teach<span>me</span></Link> 
         </div>
      
-
         <button className="toggle-btn" onClick={toggleMenu}>
           {isMenuOpen ? 'Close' : 'Menu'}
         </button>
@@ -28,10 +27,12 @@ function Navbar() {
           <a href="#service">Service</a>
           <a href="#blog">Blog</a>
           <Link to="/teachers">Teachers</Link>
-          <button  className='pass'>
+
+          <bututon  className='pass'>
           <Link to="/login">Sign in</Link>
           <Link to="/regiter">Sign up</Link>
-          </button>
+          </bututon>
+          
         </div>
       </div>
     </div>

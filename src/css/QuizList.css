@@ -1,0 +1,35 @@
+.quiz-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .quiz-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quiz-list li:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .quiz-list li::before {
+    content: "\f15c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+  }
+  
+  .quiz-list li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .quiz-list h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  

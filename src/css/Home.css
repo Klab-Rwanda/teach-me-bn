@@ -122,11 +122,13 @@ span {
   align-items: center;
   flex-wrap: wrap;
   margin: 0 -10px; 
+  cursor: pointer;
 }
 .experts{
   color: white;
 
 }
+
 .sub_container span {
   display: flex;
   flex-direction: column;

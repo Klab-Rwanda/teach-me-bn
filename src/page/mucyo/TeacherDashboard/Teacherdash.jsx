@@ -1,5 +1,6 @@
 import React from 'react';
-import '../../css/teacherdash.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import '../../../css/teacherdash.css';
 const Teacherdash = () => {
   return (
     <div className='body1'>
@@ -7,8 +8,10 @@ const Teacherdash = () => {
             <div className='dash_container1'>
              <a href="e">Setting</a>
              <a href="e">Live Zooming</a>
-             <a href="e">Note</a>
-             <a href="e">Assignmet</a>
+             <Link  to ="./notebook">Notebook summary</Link>
+             <Link  to ="./assignment">Assignmet</Link>
+             <Link  to ="./quizlist">quizlist</Link>
+             <Link  to ="./allAssignmentsPage">AllAssignmentsPage</Link>
              <a href="e">Marks</a>
              <a href="e">My Student</a>
              <a href="e">ClassRoom</a>
@@ -18,11 +21,10 @@ const Teacherdash = () => {
             </div>
             <div className='dash_container2'>
                 <div className='sub_dash1'>
-                    <div className='dash1'><p><b> Hello,</b> Parent <br />MUCYO <br /><br />update for student studies</p></div>
+                    <div className='dash1'><p><b> Hello,</b>  Doctor <br />MUCYO <br /><br />update for student studies</p></div>
                     <div className='dash2'></div>
                     <div className='dash3'>
                     <center> <h3>list of all students in your course<input type="submit" value="full list"/></h3>
-                     
                     </center>
                     <div className='sn'>
                     <p>sn</p>
@@ -75,7 +77,6 @@ const Teacherdash = () => {
                 </div>
             </div>
             </div> 
-
     </div>
   )
 }
