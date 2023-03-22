@@ -8,6 +8,7 @@ import Home from './page/Home'
 import Teacherdash from './page/mucyo/TeacherDashboard/Teacherdash'
 import Navbar from './page/Navbar'
 import Service from './page/service/Service'
+
 function Welcome() {
   return (
     <div>
@@ -19,6 +20,8 @@ function Welcome() {
     <ContactFor/>
     <Contact/>
     <Footer/>
+   
+    
  
     {/* <StudentDash/> */}
     </div>

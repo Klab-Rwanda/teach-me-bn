@@ -16,7 +16,7 @@ import QuizForm from "./page/mucyo/TeacherDashboard/QuizForm";
 import QuizList from "./page/mucyo/TeacherDashboard/QuizList";
 import AllAssignmentsPage from "./page/mucyo/TeacherDashboard/AllAssignmentsPage";
 import Shared from "./page/mucyo/ParentDashboard/Shared";
-
+import AdminDash from"./page/mucyo/Admindashboard/AdminDash";
 
 import Setting from "./page/mucyo/ParentDashboard/Setting";
 import Payment from "./page/mucyo/ParentDashboard/Payment";
@@ -43,7 +43,7 @@ function App() {
         <Route path={"/teacherinfo"}element={<Teacherinfo/>}/>
 
        <Route  path="/parentdashboard"   element={<Shared/> }>
-        {/* <Route index   element={<Parentdash/>}/> */}
+        <Route index   element={<Parentdash/>}/>
       
         <Route path={"/parentdashboard/setting"}element={<Setting/>} />
         <Route path={"/parentdashboard/account"}element={<Studentinfo/>} />
@@ -56,7 +56,10 @@ function App() {
         <Route path={"notebook"}element={<QuizForm/>} />
         <Route path={"quizlist"}element={<QuizList/>} />
         <Route path={"allAssignmentsPage"}element={<AllAssignmentsPage/>} />
+
+        
         </Route>
+        <Route path={"/AdminDash"}element={<AdminDash/>} />
        </Routes>
      </BrowserRouter> 
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/teacherdash.css';
+import '../../../css/teacherdash.css';
 const Teacherdash = () => {
   return (
     <div className='body1'>
