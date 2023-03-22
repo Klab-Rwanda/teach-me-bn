@@ -300,3 +300,8 @@ position: absolute;
 right: 0;
 padding-top: 10vh;
 }
+
+
+.dropdown-content.show {
+  display: block;
+}

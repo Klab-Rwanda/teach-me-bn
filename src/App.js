@@ -1,7 +1,7 @@
 import "./App.css";
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Welcome from "./Welcome";
-import Teachers from "./page/Teachers";
+import Teachers from "./page/mucyo/Admin dashboard/Teachers";
 import SingleTeachersProfile from "./page/SingleTeachersProfile";
 import PopUpform from "./page/PopUpform";
 import ContactFor from "./page/BLOG/ContactFor";
@@ -26,6 +26,8 @@ import Request from "./page/mucyo/ParentDashboard/Request";
 import Manage from "./page/mucyo/ParentDashboard/Manage";
 import Studentinfo from "./page/mucyo/Studentinfo";
 import Teacherdash from "./page/mucyo/TeacherDashboard/Teacherdash";
+import SharedA from "./page/mucyo/Admin dashboard/SharedA";
+import AdminDash from "./page/mucyo/Admin dashboard/AdminDash";
 function App() {
   return (
     <div className="App">
@@ -59,11 +61,15 @@ function App() {
         </Route>
         <Route path={"/TeacherDashboard"} element={<SharedT/>}>
         {/* <Route index   element={<Teacherdash/>}/> */}
-        <Route path={"assignment"}element={<AssignmentForm/>} />
-        <Route path={"notebook"}element={<QuizForm/>} />
-        <Route path={"quizlist"}element={<QuizList/>} />
-        <Route path={"allAssignmentsPage"}element={<AllAssignmentsPage/>} />
+        <Route path={"/TeacherDashboard/assignment"}element={<AssignmentForm/>} />
+        <Route path={"/TeacherDashboard/notebook"}element={<QuizForm/>} />
+        <Route path={"/TeacherDashboard/quizlist"}element={<QuizList/>} />
+        <Route path={"/TeacherDashboard/allAssignmentsPage"}element={<AllAssignmentsPage/>} />
 
+        </Route>
+        <Route path={"/admindashboard"} element={<SharedA/>}>
+         <Route index   element={<AdminDash/>}/>
+         <Route path={"/admindashboard/Teachers"}element={<Teachers/>} />
         </Route>
        </Routes>
      </BrowserRouter> 

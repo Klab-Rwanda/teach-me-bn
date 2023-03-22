@@ -4,20 +4,22 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FiBell } from 'react-icons/fi';
 import { FaUserCircle } from 'react-icons/fa';
 import { AiFillSetting } from 'react-icons/ai';
-import { MdLiveTv } from 'react-icons/md';
+import { FcManager } from 'react-icons/fc';
 import { TfiNotepad } from 'react-icons/tfi';
-import { MdAssignmentAdd } from 'react-icons/md';
-import { GiSatelliteCommunication } from 'react-icons/gi';
-import { RiLogoutCircleFill } from 'react-icons/ri';
+import { BsPersonWorkspace } from 'react-icons/bs';
+import { TbBrandBooking } from 'react-icons/tb';
+import { FcCustomerSupport } from 'react-icons/fc';
 import { ImProfile } from 'react-icons/im';
-import { GrResources } from 'react-icons/gr';
-import { CgProfile } from 'react-icons/cg';
+import { FaHouseUser } from 'react-icons/fa';
+import { FaAssistiveListeningSystems } from 'react-icons/fa';
 import { GrUserManager } from 'react-icons/gr';
-import { GiProgression } from 'react-icons/gi';
+import { FaHireAHelper } from 'react-icons/fa';
+import { FcFeedIn } from 'react-icons/fc';
+import { SiPrometheus } from 'react-icons/si';
 import LOGO from '../../../../src/aseets/logoproject.png';
 import '../../../css/shared.css';
 
-const Dashboard = () => {
+const SharedA = () => {
   const [manageDropdown, setManageDropdown] = useState(false);
 
   const toggleManageDropdown = () => {
@@ -90,46 +92,46 @@ const Dashboard = () => {
         </div>
         <ul className="sidebar-menu">
           <li className="sidebar-item">
-            <Link to="/parentdashboard/setting"><AiFillSetting className='dashboard-icon'/>Setting</Link>
+            <Link to=""><AiFillSetting className='dashboard-icon'/>Setting</Link>
+          </li>
+         
+          <li className="sidebar-item">
+            <Link to="/admindashboard/Teachers"><TfiNotepad className='dashboard-icon'/>Teachers</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><MdLiveTv className='dashboard-icon'/>live zooming</Link>
+            <Link to=""><BsPersonWorkspace className='dashboard-icon'/>application</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><TfiNotepad className='dashboard-icon'/>Note</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to="/TeacherDashboard/assignment"><MdAssignmentAdd className='dashboard-icon'/>Assignment</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to="/TeacherDashboard/notebook"><GiSatelliteCommunication className='dashboard-icon'/>Quiz</Link>
-          </li>
-          <Link to="/" onClick={toggleManageDropdown}>
-  <GiSatelliteCommunication className='dashboard-icon'/>Manage
-</Link>
-<div className={`dropdown-content ${manageDropdown ? 'show' : ''}`}>
-  <Link to="/">Class Schedule</Link>
-  <Link to="/">Attendance</Link>
-  <Link to="/">Performance</Link>
-</div>
-          <li className="sidebar-item">
-            <Link to=""><CgProfile className='dashboard-icon'/>my profile</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to=""><GrUserManager className='dashboard-icon'/>Marks</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to=""><ImProfile className='dashboard-icon'/>My student</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to=""><GrResources className='dashboard-icon'/>classroom</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to=""><GiProgression className='dashboard-icon'/>Report</Link>
+            <Link to=""><TbBrandBooking className='dashboard-icon'/>Parents booking</Link>
           </li>
           
+          <li className="sidebar-item">
+            <Link to=""><GrUserManager className='dashboard-icon'/>Resources</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to=""><ImProfile className='dashboard-icon'/>Analytics</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to=""><FaHouseUser className='dashboard-icon'/>Users</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to=""><SiPrometheus className='dashboard-icon'/>Marketing</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to=""><FcFeedIn className='dashboard-icon'/>Feedback</Link>
+          </li>
+  
+          <li className="sidebar-item">
+            <Link to=""><FcManager className='dashboard-icon'/>Payment Management</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to=""><FaAssistiveListeningSystems className='dashboard-icon'/>System Maintenance:</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to=""><FaHireAHelper className='dashboard-icon'/>Support</Link>
+          </li>
           <li className='sidebar_item'>
-          <Link to=""><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>
+          <Link to=""><FcCustomerSupport className='dashboard-icon'/>Logout</Link>
           </li>
         </ul>
       </aside>
@@ -141,7 +143,7 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default SharedA;
 
 
 

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar";
-import "../css/Teachers.css";
+
+import "../../../css/Teachers.css";
 import { Link } from "react-router-dom";
-import Footer from "./Footer/Footer";
+
 import axios from "axios";
 function Teachers() {
   const [profiles, setProfiles] = useState([]);
@@ -25,7 +25,7 @@ function Teachers() {
   }, []);
   return (
     <div className="containerfooterf">
-      <Navbar />
+
       <div className="container">
         <div className="teachers_container">
           {profiles && profiles?.map((row) => (
@@ -102,7 +102,7 @@ function Teachers() {
           ))}
         </div>
       </div>
-      <Footer />
+  
     </div>
   );
 }
