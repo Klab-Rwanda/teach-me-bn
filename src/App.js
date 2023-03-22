@@ -27,7 +27,9 @@ import Manage from "./page/mucyo/ParentDashboard/Manage";
 import Studentinfo from "./page/mucyo/Studentinfo";
 import Teacherdash from "./page/mucyo/TeacherDashboard/Teacherdash";
 import SharedA from "./page/mucyo/Admin dashboard/SharedA";
+import SharedSt from "./page/mucyo/StudentDashboard/SharedSt";
 import AdminDash from "./page/mucyo/Admin dashboard/AdminDash";
+import StudentDash from "./page/mucyo/StudentDashboard/StudentDash";
 function App() {
   return (
     <div className="App">
@@ -70,6 +72,10 @@ function App() {
         <Route path={"/admindashboard"} element={<SharedA/>}>
          <Route index   element={<AdminDash/>}/>
          <Route path={"/admindashboard/Teachers"}element={<Teachers/>} />
+        </Route>
+        <Route path={"/studentdashboard"} element={<SharedSt/>}>
+        <Route index   element={<StudentDash/>}/>
+        
         </Route>
        </Routes>
      </BrowserRouter> 
