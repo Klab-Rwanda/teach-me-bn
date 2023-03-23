@@ -1,7 +1,7 @@
 import "./App.css";
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Welcome from "./Welcome";
-import Teachers from "./page/Teachers";
+
 import SingleTeachersProfile from "./page/SingleTeachersProfile";
 import PopUpform from "./page/PopUpform";
 import ContactFor from "./page/BLOG/ContactFor";
@@ -24,6 +24,7 @@ import Report from "./page/mucyo/ParentDashboard/Report";
 import Communication from "./page/mucyo/ParentDashboard/Communication";
 import Request from "./page/mucyo/ParentDashboard/Request";
 import Studentinfo from "./page/mucyo/Studentinfo";
+import Teachers from "./page/mucyo/Admindashboard/Teachers";
 function App() {
   return (
     <div className="App">
@@ -32,7 +33,7 @@ function App() {
         <Route path="/" element={<Welcome/>}/>
         <Route path={"/teachers"}element={<Teachers/>}/>
         <Route path={"/signin"}element={<login/>} />
-        <Route path={"/teachers"}element={<Teachers/>} />
+     
         <Route path={"/:id"}element={<SingleTeachersProfile/>}/>
         <Route path={"/bookform"}element={<PopUpform/>}/>
         <Route path={"/contact"}element={<ContactFor/>}/>

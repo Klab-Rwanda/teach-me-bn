@@ -4,25 +4,38 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FiBell } from 'react-icons/fi';
 import { FaUserCircle } from 'react-icons/fa';
 import { AiFillSetting } from 'react-icons/ai';
-import { MdPayments } from 'react-icons/md';
-import { MdReportProblem } from 'react-icons/md';
-import { MdRequestQuote } from 'react-icons/md';
-import { GiSatelliteCommunication } from 'react-icons/gi';
-import { RiLogoutCircleFill } from 'react-icons/ri';
-import { MdAccountBalance } from 'react-icons/md';
-import { GrResources } from 'react-icons/gr';
+import { FcManager } from 'react-icons/fc';
+import { TfiNotepad } from 'react-icons/tfi';
+import { BsPersonWorkspace } from 'react-icons/bs';
+import { TbBrandBooking } from 'react-icons/tb';
+import { FcCustomerSupport } from 'react-icons/fc';
 import { ImProfile } from 'react-icons/im';
+import { FaHouseUser } from 'react-icons/fa';
+import { FaAssistiveListeningSystems } from 'react-icons/fa';
 import { GrUserManager } from 'react-icons/gr';
-import { GiProgression } from 'react-icons/gi';
+import { FaHireAHelper } from 'react-icons/fa';
+import { FcFeedIn } from 'react-icons/fc';
+import { SiPrometheus } from 'react-icons/si';
 import LOGO from '../../../../src/aseets/logoproject.png';
 import '../../../css/shared.css';
 
-const Dashboard = () => {
-  // const [sidebarOpen, setSidebarOpen] = React.useState(false);
+const SharedA = () => {
+  const [manageDropdown, setManageDropdown] = useState(false);
+
+  const toggleManageDropdown = () => {
+    setManageDropdown(!manageDropdown);
+  };
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleSidebarToggle = () => {
-    // setSidebarOpen(!sidebarOpen);
+    setSidebarOpen(!sidebarOpen);
   };
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  // const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
+ 
 
   return (
     <div className="dashboard">
@@ -79,69 +92,58 @@ const Dashboard = () => {
         </div>
         <ul className="sidebar-menu">
           <li className="sidebar-item">
-            <Link to="/parentdashboard/setting"><AiFillSetting className='dashboard-icon'/>Setting</Link>
+            <Link to=""><AiFillSetting className='dashboard-icon'/>Setting</Link>
+          </li>
+         
+          <li className="sidebar-item">
+            <Link to="/admindashboard/Teachers"><TfiNotepad className='dashboard-icon'/>Teachers</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/parentdashboard/payment"><MdPayments className='dashboard-icon'/>Payment</Link>
+            <Link to=""><BsPersonWorkspace className='dashboard-icon'/>application</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/parentdashboard/report"><MdReportProblem className='dashboard-icon'/>Schools Report</Link>
+            <Link to=""><TbBrandBooking className='dashboard-icon'/>Parents booking</Link>
+          </li>
+          
+          <li className="sidebar-item">
+            <Link to=""><GrUserManager className='dashboard-icon'/>Resources</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/request"><MdRequestQuote className='dashboard-icon'/>Request</Link>
+            <Link to=""><ImProfile className='dashboard-icon'/>Analytics</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/account"><MdAccountBalance className='dashboard-icon'/>Create account</Link>
+            <Link to=""><FaHouseUser className='dashboard-icon'/>Users</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/manage"><GrUserManager className='dashboard-icon'/>Manage account</Link>
+            <Link to=""><SiPrometheus className='dashboard-icon'/>Marketing</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/request"><ImProfile className='dashboard-icon'/>Teacher Profiles</Link>
+            <Link to=""><FcFeedIn className='dashboard-icon'/>Feedback</Link>
+          </li>
+  
+          <li className="sidebar-item">
+            <Link to=""><FcManager className='dashboard-icon'/>Payment Management</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/request"><GrResources className='dashboard-icon'/>Resource Center</Link>
+            <Link to=""><FaAssistiveListeningSystems className='dashboard-icon'/>System Maintenance:</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/parentdashboard/communication"><GiProgression className='dashboard-icon'/>Progress Tracking</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to="/parentdashboard/communication"><GiSatelliteCommunication className='dashboard-icon'/>Communication</Link>
+            <Link to=""><FaHireAHelper className='dashboard-icon'/>Support</Link>
           </li>
           <li className='sidebar_item'>
-          <Link to="/parentdashboard/communication"><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>
+          <Link to=""><FcCustomerSupport className='dashboard-icon'/>Logout</Link>
           </li>
         </ul>
       </aside>
       <div className='datas'>
         <Outlet/>
       </div>
-      {/* Main Content */}
-      {/* <main className="main-content">
-        <div className="cards">
-          <div className="card">
-            <h2>Communicate with Teacher</h2>
-            <p>Send a message to your child's teacher.</p>
-            <Link to="/communication">Message Teacher</Link>
-          </div>
-          <div className="card">
-            <h2>Payment History</h2>
-            <p>View your payment history for this term.</p>
-            <Link to="/payment">View Payment History</Link>
-          </div>
-          <div className="card">
-            <h2>School Report</h2>
-            <p>View your child's school report for this term.</p>
-            <Link to="/schools-report">View School Report</Link>
-          </div> 
-   </div>
-   </main> */}
    
    </div>
   );
 };
 
-export default Dashboard;
+export default SharedA;
 
 
 

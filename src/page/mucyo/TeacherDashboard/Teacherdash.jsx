@@ -1,84 +1,90 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import '../../../css/teacherdash.css';
-const Teacherdash = () => {
-  return (
-    <div className='body1'>
-        <div className='dash_container'>
-            <div className='dash_container1'>
-             <a href="e">Setting</a>
-             <a href="e">Live Zooming</a>
-             <Link  to ="./notebook">Notebook summary</Link>
-             <Link  to ="./assignment">Assignmet</Link>
-             <Link  to ="./quizlist">quizlist</Link>
-             <Link  to ="./allAssignmentsPage">AllAssignmentsPage</Link>
-             <a href="e">Marks</a>
-             <a href="e">My Student</a>
-             <a href="e">ClassRoom</a>
-             <a href="e">Report</a>
-             <a href="e">Request</a>
-             <a href="e">Logout</a>
-            </div>
-            <div className='dash_container2'>
-                <div className='sub_dash1'>
-                    <div className='dash1'><p><b> Hello,</b>  Doctor <br />MUCYO <br /><br />update for student studies</p></div>
-                    <div className='dash2'></div>
-                    <div className='dash3'>
-                    <center> <h3>list of all students in your course<input type="submit" value="full list"/></h3>
-                    </center>
-                    <div className='sn'>
-                    <p>sn</p>
-                    <p>fullname</p>
-                    <p>course</p>
-                    <p>level</p>
-                    </div>
-                    <div className='sn'>
-                    <p>1</p>
-                    <p>nizere alain </p>
-                    <p>english </p>
-                    <p>level2</p>
-                    
-                    </div>
-                    <div className='sn'>
-                    <p>1</p>
-                    <p>nizere alain </p>
-                    <p>english </p>
-                    <p>level2</p>
-                    
-                    </div>
-                    <div className='sn'>
-                    <p>1</p>
-                    <p>nizere alain </p>
-                    <p>english </p>
-                    <p>level2</p>
-                    
-                    </div>
-                    <div className='sn'>
-                    <p>1</p>
-                    <p>nizere alain </p>
-                    <p>english </p>
-                    <p>level2</p>
-                    
-                    </div>
-                    </div>
-                    <div className='dash4'></div>
-                </div>
-                <div className='sub_dash2'>
-                    <div className='dash21'>
-                    <div className='dash211'></div>
-                    <div className='dash212'>
-                      <div className='sub1'></div>
-                      <div className='sub2'></div>
-                      <div className='sub3'></div>
-                    </div>
-                    </div>
-                    <div className='dash22'>
-                    </div>
-                </div>
-            </div>
-            </div> 
-    </div>
-  )
-}
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+// import '../../../css2/teacherdashr.css';
 
-export default Teacherdash
+// const TeacherDashboard = () => {
+//   return (
+//     <div className="teacher-dashboard">
+//       <h1 className="teacher-dashboard__title">Welcome to your Teacher Dashboard</h1>
+
+//       <div className="teacher-dashboard__stats">
+//         <div className="teacher-dashboard__stat">
+//           <h2>Number of Students</h2>
+//           <p className="teacher-dashboard__stat-number">24</p>
+//         </div>
+//         <div className="teacher-dashboard__stat">
+//           <h2>Number of Classes</h2>
+//           <p className="teacher-dashboard__stat-number">4</p>
+//         </div>
+//         <div className="teacher-dashboard__stat">
+//           <h2>Number of Assignments</h2>
+//           <p className="teacher-dashboard__stat-number">16</p>
+//         </div>
+//       </div>
+
+//       <div className="teacher-dashboard__classes">
+//         <h2>Your Classes</h2>
+
+//         <ul>
+//           <li>
+//             <Link to="/dashboard/classes/1" className="teacher-dashboard__class-link">
+//               <h3>Mathematics</h3>
+//               <p>Classroom 101</p>
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/dashboard/classes/2" className="teacher-dashboard__class-link">
+//               <h3>English</h3>
+//               <p>Classroom 102</p>
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/dashboard/classes/3" className="teacher-dashboard__class-link">
+//               <h3>Science</h3>
+//               <p>Classroom 103</p>
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/dashboard/classes/4" className="teacher-dashboard__class-link">
+//               <h3>History</h3>
+//               <p>Classroom 104</p>
+//             </Link>
+//           </li>
+//         </ul>
+//       </div>
+
+//       <div className="teacher-dashboard__assignments">
+//         <h2>Your Assignments</h2>
+
+//         <ul>
+//           <li>
+//             <Link to="/dashboard/assignments/1" className="teacher-dashboard__assignment-link">
+//               <h3>Math Quiz</h3>
+//               <p>Due: 3/25/2023</p>
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/dashboard/assignments/2" className="teacher-dashboard__assignment-link">
+//               <h3>English Essay</h3>
+//               <p>Due: 3/28/2023</p>
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/dashboard/assignments/3" className="teacher-dashboard__assignment-link">
+//               <h3>Science Project</h3>
+//               <p>Due: 4/5/2023</p>
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/dashboard/assignments/4" className="teacher-dashboard__assignment-link">
+//               <h3>History Presentation</h3>
+//               <p>Due: 4/10/2023</p>
+//             </Link>
+//           </li>
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default TeacherDashboard;

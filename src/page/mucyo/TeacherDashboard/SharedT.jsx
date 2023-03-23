@@ -4,25 +4,36 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FiBell } from 'react-icons/fi';
 import { FaUserCircle } from 'react-icons/fa';
 import { AiFillSetting } from 'react-icons/ai';
-import { MdPayments } from 'react-icons/md';
-import { MdReportProblem } from 'react-icons/md';
-import { MdRequestQuote } from 'react-icons/md';
+import { MdLiveTv } from 'react-icons/md';
+import { TfiNotepad } from 'react-icons/tfi';
+import { MdAssignmentAdd } from 'react-icons/md';
 import { GiSatelliteCommunication } from 'react-icons/gi';
 import { RiLogoutCircleFill } from 'react-icons/ri';
-import { MdAccountBalance } from 'react-icons/md';
-import { GrResources } from 'react-icons/gr';
 import { ImProfile } from 'react-icons/im';
+import { GrResources } from 'react-icons/gr';
+import { CgProfile } from 'react-icons/cg';
 import { GrUserManager } from 'react-icons/gr';
 import { GiProgression } from 'react-icons/gi';
 import LOGO from '../../../../src/aseets/logoproject.png';
 import '../../../css/shared.css';
 
 const Dashboard = () => {
-  // const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const [manageDropdown, setManageDropdown] = useState(false);
+
+  const toggleManageDropdown = () => {
+    setManageDropdown(!manageDropdown);
+  };
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleSidebarToggle = () => {
-    // setSidebarOpen(!sidebarOpen);
+    setSidebarOpen(!sidebarOpen);
   };
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  // const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
+ 
 
   return (
     <div className="dashboard">
@@ -82,60 +93,49 @@ const Dashboard = () => {
             <Link to="/parentdashboard/setting"><AiFillSetting className='dashboard-icon'/>Setting</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/parentdashboard/payment"><MdPayments className='dashboard-icon'/>Payment</Link>
+            <Link to=""><MdLiveTv className='dashboard-icon'/>live zooming</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/parentdashboard/report"><MdReportProblem className='dashboard-icon'/>Schools Report</Link>
+            <Link to=""><TfiNotepad className='dashboard-icon'/>Note</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/request"><MdRequestQuote className='dashboard-icon'/>Request</Link>
+            <Link to="/TeacherDashboard/assignment"><MdAssignmentAdd className='dashboard-icon'/>Assignment</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/account"><MdAccountBalance className='dashboard-icon'/>Create account</Link>
+            <Link to="/TeacherDashboard/notebook"><GiSatelliteCommunication className='dashboard-icon'/>Quiz</Link>
+          </li>
+          <Link to="/" onClick={toggleManageDropdown}>
+  <GiSatelliteCommunication className='dashboard-icon'/>Manage
+</Link>
+<div className={`dropdown-content ${manageDropdown ? 'show' : ''}`}>
+  <Link to="/">Class Schedule</Link>
+  <Link to="/">Attendance</Link>
+  <Link to="/">Performance</Link>
+</div>
+          <li className="sidebar-item">
+            <Link to=""><CgProfile className='dashboard-icon'/>my profile</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/manage"><GrUserManager className='dashboard-icon'/>Manage account</Link>
+            <Link to=""><GrUserManager className='dashboard-icon'/>Marks</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/request"><ImProfile className='dashboard-icon'/>Teacher Profiles</Link>
+            <Link to=""><ImProfile className='dashboard-icon'/>My student</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="parentdashboard/request"><GrResources className='dashboard-icon'/>Resource Center</Link>
+            <Link to=""><GrResources className='dashboard-icon'/>classroom</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/parentdashboard/communication"><GiProgression className='dashboard-icon'/>Progress Tracking</Link>
+            <Link to=""><GiProgression className='dashboard-icon'/>Report</Link>
           </li>
-          <li className="sidebar-item">
-            <Link to="/parentdashboard/communication"><GiSatelliteCommunication className='dashboard-icon'/>Communication</Link>
-          </li>
+          
           <li className='sidebar_item'>
-          <Link to="/parentdashboard/communication"><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>
+          <Link to=""><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>
           </li>
         </ul>
       </aside>
       <div className='datas'>
         <Outlet/>
       </div>
-      {/* Main Content */}
-      {/* <main className="main-content">
-        <div className="cards">
-          <div className="card">
-            <h2>Communicate with Teacher</h2>
-            <p>Send a message to your child's teacher.</p>
-            <Link to="/communication">Message Teacher</Link>
-          </div>
-          <div className="card">
-            <h2>Payment History</h2>
-            <p>View your payment history for this term.</p>
-            <Link to="/payment">View Payment History</Link>
-          </div>
-          <div className="card">
-            <h2>School Report</h2>
-            <p>View your child's school report for this term.</p>
-            <Link to="/schools-report">View School Report</Link>
-          </div> 
-   </div>
-   </main> */}
    
    </div>
   );
