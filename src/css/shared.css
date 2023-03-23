@@ -209,19 +209,23 @@
   margin-bottom: 0;
 }
 
-.sidebar-link {
-  display: flex;
-  align-items: center;
+.sidebar-item a {
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  /* color: #333; */
-  padding: 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  display: inline-block;
+  padding: 4px 10px;
+  /* font-weight: bold; */
+  /* background-color: #4caf50;  */
+  border-radius: 4px; 
+  transition: background-color 0.3s; 
 }
 
-.sidebar-link:hover {
-  background-color: #ddd;
+.sidebar-item a:hover {
+  background-color: #525FE1; 
+  text-decoration: none;
 }
+
 
 .dashboard-icon {
   font-size: 20px;

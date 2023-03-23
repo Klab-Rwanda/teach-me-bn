@@ -104,15 +104,8 @@ const SharedA = () => {
           <li className="sidebar-item">
             <Link to=""><TbBrandBooking className='dashboard-icon'/>Parents booking</Link>
           </li>
-          
           <li className="sidebar-item">
-            <Link to=""><GrUserManager className='dashboard-icon'/>Resources</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to=""><ImProfile className='dashboard-icon'/>Analytics</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to=""><FaHouseUser className='dashboard-icon'/>Users</Link>
+            <Link to="/admindashboard/user"><FaHouseUser className='dashboard-icon'/>Users</Link>
           </li>
           <li className="sidebar-item">
             <Link to=""><SiPrometheus className='dashboard-icon'/>Marketing</Link>
@@ -128,7 +121,7 @@ const SharedA = () => {
             <Link to=""><FaAssistiveListeningSystems className='dashboard-icon'/>System Maintenance:</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><FaHireAHelper className='dashboard-icon'/>Support</Link>
+            <Link to="/admindashboard/support"><FaHireAHelper className='dashboard-icon'/>Support</Link>
           </li>
           <li className='sidebar_item'>
           <Link to=""><FcCustomerSupport className='dashboard-icon'/>Logout</Link>

@@ -18,26 +18,14 @@ import LOGO from '../../../../src/aseets/logoproject.png';
 import '../../../css/shared.css';
 
 const Dashboard = () => {
-  const [manageDropdown, setManageDropdown] = useState(false);
-
-  const toggleManageDropdown = () => {
-    setManageDropdown(!manageDropdown);
-  };
-
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  const handleSidebarToggle = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  // const [sidebarOpen, setSidebarOpen] = React.useState(false);
+ 
+ 
 
  
 
   return (
     <div className="dashboard">
-      {/* Navbar */}
+   
       <nav className="navbar">
         <div className="navbar-left">
         <div className="navbar-center">
@@ -104,14 +92,12 @@ const Dashboard = () => {
           <li className="sidebar-item">
             <Link to="/TeacherDashboard/notebook"><GiSatelliteCommunication className='dashboard-icon'/>Quiz</Link>
           </li>
-          <Link to="/" onClick={toggleManageDropdown}>
-  <GiSatelliteCommunication className='dashboard-icon'/>Manage
-</Link>
-<div className={`dropdown-content ${manageDropdown ? 'show' : ''}`}>
-  <Link to="/">Class Schedule</Link>
-  <Link to="/">Attendance</Link>
-  <Link to="/">Performance</Link>
-</div>
+          <li className="sidebar-item">
+            <Link to="/TeacherDashboard/allAssignmentsPage"><GiSatelliteCommunication className='dashboard-icon'/>AllAssignmentsPage</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to="/TeacherDashboard/quizlist"><GiSatelliteCommunication className='dashboard-icon'/>allquiz</Link>
+          </li>
           <li className="sidebar-item">
             <Link to=""><CgProfile className='dashboard-icon'/>my profile</Link>
           </li>
@@ -121,13 +107,6 @@ const Dashboard = () => {
           <li className="sidebar-item">
             <Link to=""><ImProfile className='dashboard-icon'/>My student</Link>
           </li>
-          <li className="sidebar-item">
-            <Link to=""><GrResources className='dashboard-icon'/>classroom</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to=""><GiProgression className='dashboard-icon'/>Report</Link>
-          </li>
-          
           <li className='sidebar_item'>
           <Link to=""><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>
           </li>
@@ -136,11 +115,9 @@ const Dashboard = () => {
       <div className='datas'>
         <Outlet/>
       </div>
-   
    </div>
   );
 };
-
 export default Dashboard;
 
 

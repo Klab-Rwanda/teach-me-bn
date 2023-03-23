@@ -7,7 +7,7 @@ function Home() {
   return (
    <div>
     <div className=" container" id="home">
-      <div className="home">
+      <div className="homew">
         <div className="left">
           <div className="flx">
             <img className="logo2" src={LOGO} alt="logoo" />

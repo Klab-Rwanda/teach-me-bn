@@ -10,7 +10,7 @@ import { MdRequestQuote } from 'react-icons/md';
 import { GiSatelliteCommunication } from 'react-icons/gi';
 import { RiLogoutCircleFill } from 'react-icons/ri';
 import { MdAccountBalance } from 'react-icons/md';
-import { GrResources } from 'react-icons/gr';
+import { MdPlayLesson } from 'react-icons/md';
 import { ImProfile } from 'react-icons/im';
 import { GrUserManager } from 'react-icons/gr';
 import { AiFillSchedule } from 'react-icons/ai';
@@ -79,37 +79,40 @@ const Dashboard = () => {
         </div>
         <ul className="sidebar-menu">
           <li className="sidebar-item">
-            <Link to=""><AiFillSetting className='dashboard-icon'/>Setting</Link>
+            <Link to="/studentdashboard/setting"><AiFillSetting className='dashboard-icon'/>Setting</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><MdPayments className='dashboard-icon'/>profile </Link>
+            <Link to="/studentdashboard/profile"><MdPayments className='dashboard-icon'/>profile </Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><MdReportProblem className='dashboard-icon'/>walllet</Link>
+            <Link to="/studentdashboard/profile"><MdPayments className='dashboard-icon'/>live zooming </Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><MdRequestQuote className='dashboard-icon'/>anatyics</Link>
+            <Link to="/studentdashboard/wallet"><MdReportProblem className='dashboard-icon'/>wallet</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><MdAccountBalance className='dashboard-icon'/>My teachers</Link>
+            <Link to="/studentdashboard/anatyics"><MdRequestQuote className='dashboard-icon'/>Anatyics</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><GrUserManager className='dashboard-icon'/>Assignment post</Link>
+            <Link to="/studentdashboard/teahers"><MdAccountBalance className='dashboard-icon'/>My teachers</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><ImProfile className='dashboard-icon'/>Quiz post</Link>
+            <Link to="/studentdashboard/assignment"><GrUserManager className='dashboard-icon'/>Assignment post</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><GrResources className='dashboard-icon'/>My courses</Link>
+            <Link to="/studentdashboard/quiz"><ImProfile className='dashboard-icon'/>Quiz post</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><AiFillSchedule className='dashboard-icon'/>schedule</Link>
+            <Link to="/studentdashboard/courses"><MdPlayLesson className='dashboard-icon'/>My courses</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><GiSatelliteCommunication className='dashboard-icon'/>help center</Link>
+            <Link to="/studentdashboard/schedule"><AiFillSchedule className='dashboard-icon'/>schedule</Link>
+          </li>
+          <li className="sidebar-item">
+            <Link to="/studentdashboard/help_center"><GiSatelliteCommunication className='dashboard-icon'/>help center</Link>
           </li>
           <li className='sidebar_item'>
-          <Link to=""><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>
+          <Link to="/studentdashboard/logout"><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>
           </li>
         </ul>
       </aside>

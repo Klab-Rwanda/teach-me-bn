@@ -1,46 +1,40 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import "../../css/QuizList.css";
-function QuizList({ teacherId }) {
+
+function AllQuizzesPage() {
   const [quizzes, setQuizzes] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
 
   useEffect(() => {
-    const fetchData = async () => {
+    async function fetchQuizzes() {
       try {
         const response = await axios.get(
-          `https://teachmeapi.onrender.com/api/v1/getAllAssignment?teacherId=${teacherId}`
+          "https://teachmeapi.onrender.com/api/v1/getAllQuiz"
         );
-        setQuizzes(response.data);
-        setLoading(false);
+        // console.log(response.data.Quiz);
+        setQuizzes(response.data.Quiz);
       } catch (error) {
-        setError("Error fetching quizzes. Please try again later.");
-        setLoading(false);
+        console.error(error);
       }
-    };
-
-    fetchData();
-  }, [teacherId]);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>{error}</div>;
-  }
+    }
+    fetchQuizzes();
+  }, []);
 
   return (
-    <div>
-      <h2>Quizzes</h2>
-      <ul className="quiz-list">
-        {quizzes.map((quiz) => (
-          <li key={quiz.id}>{quiz.name}</li>
-        ))}
-      </ul>
+    <div className="all-quizzes-page">
+      <h1>All Quizzes</h1>
+      {quizzes.map((Quiz) => (
+        <div className="Quiz-card" key={Quiz._id}>
+          {/* <h2>{Quiz.image}</h2> */}
+          <p>{Quiz.quiztopic}</p>
+          <p>{Quiz.quizdescription}</p>
+          <p>{Quiz.mark}</p>
+          <p>Published Date: {Quiz.date}</p>
+          <p>Due Date: {Quiz.date}</p>
+        </div>
+      ))}
     </div>
   );
 }
 
-export default QuizList;
+export default AllQuizzesPage;
+

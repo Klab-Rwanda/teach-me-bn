@@ -2,27 +2,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .assignment-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  width: 500px;
-  max-width: 90%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
 }
 
-.assignment-card h2 {
-  font-size: 24px;
+h2 {
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
-.assignment-card p {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.assignment-card p:last-of-type {
-  margin-bottom: 0;
+p {
+  margin-bottom: 10px;
 }

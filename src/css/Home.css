@@ -80,7 +80,7 @@ span {
   background-color: #ffcf59;
   color: #000000;
 }
-.home{
+.homew{
   padding: 10px;
   margin-top: 2rem;
   width: 100%;
@@ -90,28 +90,28 @@ span {
   gap: 10px;
 }
 
-.home .left{
+.homew .left{
   width: 30%;
 }
-.home .right img{
+.homew .right img{
   width: 110%;
   height: 350px;
   margin-left: 50%;
   border-radius: 9px;
 }
-.home .left .flx .logo2{
+.homew .left .flx .logo2{
   font-size: 0px;
   height: 42px;
   width: 38px;
 }
-.home .left .flx{
+.homew .left .flx{
  display: flex;
  flex-direction: row;
  flex-wrap: wrap;
  gap: 5px;
 
 }
- .home .left .gettinglabel .label{
+ .homew .left .gettinglabel .label{
   font-weight: 600;
   font-size: 40px;
  }
@@ -157,23 +157,23 @@ span {
 
 /* Styles for smaller screens */
 @media (max-width: 768px) {
-  .home {
+  .homew {
     flex-direction: column;
     align-items: center;
     gap: 0;
   }
   
-  .home .left, .home .right {
+  .homew .left, .homew .right {
     width: 100%;
   }
   
-  .home .right img {
+  .homew .right img {
     width: 100%;
     height: auto;
     margin-left: 0;
   }
   
-  .home .left .flx {
+  .homew .left .flx {
     flex-direction: column;
     gap: 10px;
   }

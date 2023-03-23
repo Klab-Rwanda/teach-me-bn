@@ -50,14 +50,14 @@ function AssignmentForm({ onSave }) {
        // Reset the form after 2 seconds
 
        setTimeout(() => {
-        setSuccess(''); // Clear the success message
-        e.target.reset(); // Reset the form
-      }, 5000); // Wait for 5 seconds before clearing the message
+        setSuccess(''); 
+        e.target.reset(); 
+      }, 5000); 
       
       // Add the following line after the setTimeout function to automatically clear the success message when the user clicks on it
       setTimeout(() => {
         setSuccess('');
-      }, 1000); // Wait for 10 seconds before clearing the message
+      }, 1000); 
 
     } catch (error) {
         setError('Error creating assignment. Please try again later.');

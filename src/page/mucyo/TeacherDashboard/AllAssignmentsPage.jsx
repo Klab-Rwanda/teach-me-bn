@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import "../../css/AllAssignmentsPage.css";
+import "../../../css/AllAssignmentsPage.css";
 function AllAssignmentsPage() {
   const [Assignment, setAssignments] = useState([]);
 
