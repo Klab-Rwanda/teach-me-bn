@@ -118,6 +118,9 @@ const SharedA = () => {
             <Link to=""><FcManager className='dashboard-icon'/>Payment Management</Link>
           </li>
           <li className="sidebar-item">
+            <Link to="/admindashboard/Allapplication"><FcManager className='dashboard-icon'/>Allapplication</Link>
+          </li>
+          <li className="sidebar-item">
             <Link to=""><FaAssistiveListeningSystems className='dashboard-icon'/>System Maintenance:</Link>
           </li>
           <li className="sidebar-item">

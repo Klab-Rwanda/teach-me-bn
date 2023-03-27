@@ -32,6 +32,9 @@ import AdminDash from "./page/mucyo/Admin dashboard/AdminDash";
 import StudentDash from "./page/mucyo/StudentDashboard/StudentDash";
 import Support from "./page/mucyo/Admin dashboard/Support";
 import User from "./page/mucyo/Admin dashboard/User";
+import Allapplication from "./page/mucyo/Admin dashboard/Allapplication";
+
+
 function App() {
   return (
     <div className="App">
@@ -76,6 +79,7 @@ function App() {
          <Route path={"/admindashboard/Teachers"}element={<Teachers/>} />
          <Route path={"/admindashboard/support"}element={<Support/>} />
          <Route path={"/admindashboard/user"}element={<User/>} />
+         <Route path={"/admindashboard/Allapplication"}element={<Allapplication/>} />
         </Route>
         <Route path={"/studentdashboard"} element={<SharedSt/>}>y
         <Route index   element={<StudentDash/>}/>
