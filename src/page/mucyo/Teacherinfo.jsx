@@ -68,7 +68,7 @@ const Teacherinfo = () => {
   return (
     <div className="main">
         <Navbar/>
-    <div className="body">
+    <div className="studentbody">
       <div className="container5">
         <h1>Information details for teacher Profile</h1>
         <form action=""onSubmit={handleSubmit(onSubmit)}>

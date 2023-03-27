@@ -1,4 +1,4 @@
-/* Style for the heading */
+Style for the heading
 h2 {
     font-size: 2rem;
     text-align: center;
@@ -34,4 +34,76 @@ h2 {
       font-size: 1rem;
     }
   }
+  
+   /* New css for mucyo */
+
+   .admin_container{
+    /* background-color: white  ; */
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 27%);
+    grid-template-areas: "header header header";
+    grid-gap: 1rem;
+
+   }
+   .admin_recent{
+    grid-area: header;
+    background-color:white;
+    width: auto;
+    height: auto;
+   }
+   .admin_users{
+    /* grid-area: header; */
+    background-color:white;
+    width: auto;
+    height: auto;
+   }
+   .admin_active{
+    /* grid-area: header; */
+    background-color:white;
+    width: auto;
+    height: auto;
+   }
+   .admin_unactive{
+    /* grid-area: header; */
+    background-color:white;
+    width: auto;
+    height: auto;
+   }
+   .admin_orders{
+    /* grid-area: header; */
+    background-color:white;
+    width: auto;
+    height: auto;
+   }
+   .admin_pending{
+    /* grid-area: header; */
+    background-color:white;
+    width: auto;
+    height: auto;
+   }
+   .admin_completed{
+    /* grid-area: header; */
+    background-color:white;
+    width: auto;
+    height: auto;
+   }
+   .admin_all h1{
+    text-align: center;
+   }
+   .admin_all p{
+    text-align: center;
+   }
+   .admin_all li{
+    text-align: center;
+   }  
+   .admin_container p{
+    font-weight: bold;
+    font-size: x-large;
+   }
+
+  
+  
+  
   

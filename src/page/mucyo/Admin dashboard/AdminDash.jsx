@@ -32,26 +32,43 @@ const AdminDash = () => {
   // };
 
   return (
-    <div>
-      <h2>Welcome back, Admin!</h2>
+    <div className='admin_all'>
+    
+      {/* <div></div> */}
+      <h1>Welcome back, Admin!</h1>
       <p>Here are some important statistics:</p>
-      <ul>
-        <li>Total number of users: 1000</li>
-        <li>Number of active users: 500</li>
-        <li>Number of inactive users: 500</li>
-        <li>Total number of orders: 5000</li>
-        <li>Number of pending orders: 1000</li>
-        <li>Number of completed orders: 4000</li>
-      </ul>
-      {/* <div style={{ width: '50%', margin: 'auto' }}>
-        <Bar data={chartData} options={{ maintainAspectRatio: false }} />
-      </div> */}
-      <p>Recent activity:</p>
+      <div className='admin_container'>
+      <div className='admin_recent'>
+      <h1>Recent activity:</h1> 
       <ul>
         <li>User John Doe created an account</li>
         <li>User Jane Smith made a purchase</li>
         <li>User Mike Johnson edited their profile</li>
-      </ul>
+      </ul></div>
+      <div className='admin_users'><h1>Total Users</h1>
+        <p>1000</p> 
+         </div>
+         <div className='admin_active'><h1>Active Users</h1>
+        <p>500</p> 
+         </div>
+         <div className='admin_unactive'><h1>Inactive Users</h1>
+        <p>500</p> 
+         </div>
+         <div className='admin_orders'><h1>Total Orders</h1>
+        <p>5000</p> 
+         </div> 
+         <div className='admin_pending'><h1>Pending Orders</h1>
+        <p>1000</p> 
+         </div>
+         <div className='admin_completed'> <h1>Completed Orders</h1>
+        <p>4000</p> 
+         </div>
+     
+      {/* <div style={{ width: '50%', margin: 'auto' }}>
+        <Bar data={chartData} options={{ maintainAspectRatio: false }} />
+      </div> */}
+      
+    </div>
     </div>
   );
 };

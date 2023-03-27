@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FiBell } from 'react-icons/fi';
-import { FaUserCircle } from 'react-icons/fa';
+import { FaBars, FaUserCircle } from 'react-icons/fa';
 import { AiFillSetting } from 'react-icons/ai';
 import { MdPayments } from 'react-icons/md';
 import { MdReportProblem } from 'react-icons/md';
@@ -16,6 +16,7 @@ import { GrUserManager } from 'react-icons/gr';
 import { GiProgression } from 'react-icons/gi';
 import LOGO from '../../../../src/aseets/logoproject.png';
 import '../../../css/shared.css';
+import SidebarHamb from './SidebarHamb';
 
 const Dashboard = () => {
   // const [sidebarOpen, setSidebarOpen] = React.useState(false);
@@ -24,21 +25,28 @@ const Dashboard = () => {
     // setSidebarOpen(!sidebarOpen);
   };
 
+  const styleone={
+    // backgroundColor: 'green',
+    // position:'fixed',
+    // left:0,
+    // color: 'red',
+  }
   return (
     <div className="dashboard">
       {/* Navbar */}
-      <nav className="navbar">
+      <nav className="navbar"  style={styleone}>
         <div className="navbar-left">
+          <SidebarHamb/>
         <div className="navbar-center">
-         <img src={LOGO} alt="connection  problem " />
-         <span className='teachme'>TEACH ME</span>
+          <img src={LOGO} alt="connection problem " />
+          <span className='teachme'>TEACH ME</span>
         </div>
           {/* <button className="menu-btn" onClick={handleSidebarToggle}>
             {sidebarOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
           </button> */}
         </div>
         <div className="seasrching">
-        <input type="text" id="search" name="search" placeholder="Search..."/>
+        {/* <input type="text" id="search" name="search" placeholder="Search..."/> */}
         {/* <button className='search-button' type="submit">Search</button> */}
         </div>
        
@@ -49,7 +57,7 @@ const Dashboard = () => {
           <button className="icon-btn">
             <FaUserCircle />
           </button>
-          <div className="dropdown">
+          <div className="  ">
             <button className="dropdown-btn">
               Settings <i className="fa fa-caret-down"></i>
             </button>
@@ -79,17 +87,9 @@ const Dashboard = () => {
         </div>
         <ul className="sidebar-menu">
           <li className="sidebar-item">
-            <Link to="/parentdashboard/setting"><AiFillSetting className='dashboard-icon'/>Setting</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to="/parentdashboard/payment"><MdPayments className='dashboard-icon'/>Payment</Link>
-          </li>
-          <li className="sidebar-item">
             <Link to="/parentdashboard/report"><MdReportProblem className='dashboard-icon'/>Schools Report</Link>
           </li>
-          <li className="sidebar-item">
-            <Link to="parentdashboard/request"><MdRequestQuote className='dashboard-icon'/>Request</Link>
-          </li>
+          
           <li className="sidebar-item">
             <Link to="parentdashboard/account"><MdAccountBalance className='dashboard-icon'/>Create account</Link>
           </li>
@@ -98,12 +98,6 @@ const Dashboard = () => {
           </li>
           <li className="sidebar-item">
             <Link to="parentdashboard/request"><ImProfile className='dashboard-icon'/>Teacher Profiles</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to="parentdashboard/request"><GrResources className='dashboard-icon'/>Resource Center</Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to="/parentdashboard/communication"><GiProgression className='dashboard-icon'/>Progress Tracking</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/parentdashboard/communication"><GiSatelliteCommunication className='dashboard-icon'/>Communication</Link>
