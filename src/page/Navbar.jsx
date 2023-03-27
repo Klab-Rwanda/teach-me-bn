@@ -1,6 +1,7 @@
 import '../css/Navbar.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'; // Import useState hook
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Initialize state for menu toggle
@@ -17,7 +18,10 @@ function Navbar() {
         </div>
      
         <button className="toggle-btn" onClick={toggleMenu}>
-          {isMenuOpen ? 'Close' : 'Menu'}
+          {isMenuOpen ?  
+        <FaTimes/>
+        :
+        <FaBars/>}
         </button>
         <div className={`link ${isMenuOpen ? 'show' : ''}`}>
           {/* Links for all devices */}
@@ -27,12 +31,11 @@ function Navbar() {
           <a href="#service">Service</a>
           <a href="#blog">Blog</a>
           <Link to="/teachers">Teachers</Link>
-
+          
           <bututon  className='pass'>
           <Link to="/login">Sign in</Link>
           <Link to="/regiter">Sign up</Link>
           </bututon>
-          
         </div>
       </div>
     </div>

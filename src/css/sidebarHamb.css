@@ -1,0 +1,71 @@
+.hambo{
+    width: 20vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    transition: all 0.5s ease-in-out;
+    display: none;
+}
+.sidebar-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #0062cc;
+    border-radius: 6px;
+    /* position: absolute;
+    left: 0; */
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+  
+  .sidebar-icon span {
+    display: block;
+    background-color: #333;
+    height: 3px;
+    border-radius: 3px;
+  }
+
+  .sidebar-menu {
+    background-color: #0062cc;
+    margin-top: 10%;
+    position: fixed;
+    top: 0;
+    /* left: -1px; */
+    /* width: 100%; */
+    /* width: 40vw; */
+    height: 10vh;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+    text-decoration:none ;
+  }
+  
+  .sidebar-menu ul {
+    background-color: #0062cc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .sidebar-menu.active {
+    left: 0;
+  }
+
+  /* Medium  */
+@media (max-width: 768px) {
+    .hambo{
+        display: block;
+    }
+   
+}

@@ -33,37 +33,44 @@ const StudentAccountPage = () => {
   };
 
   return (
-    <div>
-      <h1>Student Account Management</h1>
-      <form onSubmit={handleStudentAccountSubmit}>
-        <label>
-          Student Name:
-          <input type="text" value={studentName} onChange={handleStudentNameChange} />
-        </label>
-        <br />
-        <label>
-          Student Grade:
-          <input type="text" value={studentGrade} onChange={handleStudentGradeChange} />
-        </label>
-        <br />
-        <label>
-          Parent Name:
-          <input type="text" value={parentName} onChange={handleParentNameChange} />
-        </label>
-        <br />
-        <label>
-          Parent Email:
-          <input type="email" value={parentEmail} onChange={handleParentEmailChange} />
-        </label>
-        <br />
-        <label>
-          Parent Phone:
-          <input type="tel" value={parentPhone} onChange={handleParentPhoneChange} />
-        </label>
-        <br />
-        <button type="submit">Update Account</button>
-      </form>
-    </div>
+    <div className=''>
+    <table border={1} className="manage_table">
+      <th colSpan={5}>manage all children account</th>
+      <tr>
+      <td>Full Name</td>
+      <td>Email</td>
+      <td>Password</td>
+      <td colSpan={2}>Action</td></tr>
+      <tr>
+      <td>Nisingize Alle</td>
+      <td>parent@gmail.com</td>
+      <td>12345678</td>
+      <td>Update</td>
+      <td>Delete</td>
+      </tr>
+      <tr>
+      <td>Nisingize Alle</td>
+      <td>parent@gmail.com</td>
+      <td>12345678</td>
+      <td>Update</td>
+      <td>Delete</td>
+      </tr>
+      <tr>
+      <td>Nisingize Alle</td>
+      <td>parent@gmail.com</td>
+      <td>12345678</td>
+      <td>Update</td>
+      <td>Delete</td>
+      </tr>  
+      <tr>
+      <td>Nisingize Alle</td>
+      <td>parent@gmail.com</td>
+      <td>12345678</td>
+      <td>Update</td>
+      <td>Delete</td>
+      </tr>
+    </table>
+  </div>
   );
 };
 export default StudentAccountPage;

@@ -5,3 +5,41 @@
     background-color: royalblue;
     padding-left: 19vw;
 }
+.teacher_container{
+    /* background-color: royalblue; */
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+}
+.teacher_pic{
+background-color: white;
+width: 30%;
+height: 100%;
+margin-top: 1rem;
+}
+.teacher_info{
+    background-color: white;
+width: 30%;
+height: 100%;
+margin-top: 1rem;
+}
+.teacher_course{
+    background-color: white;
+width: 30%;
+height: 100%;
+margin-top: 1rem;
+
+}
+.teacher_pic img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+
+}
+.teacher_container h1{
+    margin-left: 2rem;
+  }
+  .teacher_container p{
+    margin-left: 2rem;
+  }

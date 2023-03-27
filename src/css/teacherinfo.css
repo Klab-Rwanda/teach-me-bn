@@ -9,6 +9,7 @@
 }
 .container5 h1{
     margin-top: 0rem;
+    text-align: center;
 }
 .container5 input[type="submit"]{
     background-color: #525FE1;
@@ -64,5 +65,50 @@
   .modal button:hover {
     background-color: #0062cc;
   }
+  .studentbody{
+    margin-left: 20rem;
+    font-family: fa2;
+  }
+  .container5 select{
+    width: 83.5%;
+    margin-left: 4rem;
+  }
+  .container5 input[type=submit]{
+    margin-left: 40%;
+  }
+
   
+  @media screen AND (max-width: 1024px){
+  
+    .studentbody{
+      margin-left: 5rem;
+      width: 100%;
+    } 
+    .container5 select{
+      width: 84%;
+      margin-left: 3rem;
+    }
+    .container5 input[type=submit]{
+      margin-left: 15rem;
+    }
+  }
+    
+  @media screen AND (max-width: 600px){
+    .studentbody{
+      margin-left: 0.5rem;
+      width: 100%;
+    } 
+    .container5{
+      width: 95%;
+      margin-left: 0rem;
+    }
+    .container5 select{
+      width: 89%;
+      margin-left: 1.5rem;
+    }
+    .container5 input[type=submit]{
+      margin-left: 5.5rem;
+    }
+    
+  }
   
