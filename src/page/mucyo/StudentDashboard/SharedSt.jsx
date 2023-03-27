@@ -85,10 +85,7 @@ const Dashboard = () => {
             <Link to="/studentdashboard/profile"><MdPayments className='dashboard-icon'/>profile </Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/studentdashboard/profile"><MdPayments className='dashboard-icon'/>live zooming </Link>
-          </li>
-          <li className="sidebar-item">
-            <Link to="/studentdashboard/wallet"><MdReportProblem className='dashboard-icon'/>wallet</Link>
+            <Link to="/studentdashboard/zoom"><MdPayments className='dashboard-icon'/>live zooming </Link>
           </li>
           <li className="sidebar-item">
             <Link to="/studentdashboard/anatyics"><MdRequestQuote className='dashboard-icon'/>Anatyics</Link>
@@ -97,7 +94,7 @@ const Dashboard = () => {
             <Link to="/studentdashboard/teahers"><MdAccountBalance className='dashboard-icon'/>My teachers</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/studentdashboard/assignment"><GrUserManager className='dashboard-icon'/>Assignment post</Link>
+            <Link to="/studentdashboard/assignmentteachers"><GrUserManager className='dashboard-icon'/>Assignment post</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/studentdashboard/quiz"><ImProfile className='dashboard-icon'/>Quiz post</Link>

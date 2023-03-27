@@ -1,90 +1,124 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import '../../../css2/teacherdashr.css';
+import React from 'react'
+import './Teacherdash.css'
+const Teacherdash = () => {
+  return (
+    <div className='teacherdah'>
+    
+<div className="teacherdashheader">
+    <div className="doctor">
+    <h2>Wellcome <span>Teachers</span><small> TeachMe E-learning platform</small></h2>
+    </div>
+   <div className="sidelinkright">
+    <a href="/">Home</a>
+    <a href="">Dashboard</a>
+   </div>
+</div>
+ <h3>See all your overview</h3>
+<div className="teacherdash_cards">
+    <div className="small_teacherdash_cards">
+        <h1>45+</h1>
+        <p>page book</p>
+        <button>More info </button>
+    </div>
 
-// const TeacherDashboard = () => {
-//   return (
-//     <div className="teacher-dashboard">
-//       <h1 className="teacher-dashboard__title">Welcome to your Teacher Dashboard</h1>
+    <div className="small_teacherdash_cards">
+        <h1>7</h1>
+        <p>student </p>
+        <button>More info </button>
+    </div>
 
-//       <div className="teacher-dashboard__stats">
-//         <div className="teacher-dashboard__stat">
-//           <h2>Number of Students</h2>
-//           <p className="teacher-dashboard__stat-number">24</p>
-//         </div>
-//         <div className="teacher-dashboard__stat">
-//           <h2>Number of Classes</h2>
-//           <p className="teacher-dashboard__stat-number">4</p>
-//         </div>
-//         <div className="teacher-dashboard__stat">
-//           <h2>Number of Assignments</h2>
-//           <p className="teacher-dashboard__stat-number">16</p>
-//         </div>
-//       </div>
+    <div className="small_teacherdash_cards">
+        <h1>7</h1>
+        <p>Parent Request</p>
+        <button>More info </button>
+    </div>
+    <div className="small_teacherdash_cards">
+        <h1>7</h1>
+        <p> Others parent restiomonial</p>
+        <button>More info </button>
+    </div>
+</div>
+<div className="below_all">
+    <div className="latest_user">
+    <h3> Lists of all student</h3> 
+    <table>
+  <thead>
+    <tr>
+      <th>Sn</th>
+      <th>Student</th>
+      <th>course</th>
+      <th>parent</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>student</td>
+      <td>mathematics</td>
+      <td>parent1</td>
+    
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>mukm</td>
+      <td>bioogy</td>
+      <td>parent2</td>
+    
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>student</td>
+      <td>english</td>
+      <td>parent3</td>
+   
+    </tr>
+  </tbody>
+</table>
 
-//       <div className="teacher-dashboard__classes">
-//         <h2>Your Classes</h2>
+    </div>
+    <div className="longlatest_user">
+        <h3> Lastest Payment</h3> 
+        <table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Course</th>
+      <th>Amount</th>
+      <th>Transaction</th>
+      <th>Invoice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John Doe</td>
+      <td>React Course</td>
+      <td>$50</td>
+      <td>123456789</td>
+      <td>Download</td>
+    </tr>
+    <tr>
+      <td>Jane Smith</td>
+      <td>Node.js Course</td>
+      <td>$75</td>
+      <td>987654321</td>
+      <td>Download</td>
+    </tr>
+    <tr>
+      <td>Bob Johnson</td>
+      <td>Python Course</td>
+      <td>$100</td>
+      <td>456123789</td>
+      <td>Download</td>
+    </tr>
+  </tbody>
+</table>
 
-//         <ul>
-//           <li>
-//             <Link to="/dashboard/classes/1" className="teacher-dashboard__class-link">
-//               <h3>Mathematics</h3>
-//               <p>Classroom 101</p>
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/dashboard/classes/2" className="teacher-dashboard__class-link">
-//               <h3>English</h3>
-//               <p>Classroom 102</p>
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/dashboard/classes/3" className="teacher-dashboard__class-link">
-//               <h3>Science</h3>
-//               <p>Classroom 103</p>
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/dashboard/classes/4" className="teacher-dashboard__class-link">
-//               <h3>History</h3>
-//               <p>Classroom 104</p>
-//             </Link>
-//           </li>
-//         </ul>
-//       </div>
+    </div>
+</div>
 
-//       <div className="teacher-dashboard__assignments">
-//         <h2>Your Assignments</h2>
+    </div>
+  )
+}
 
-//         <ul>
-//           <li>
-//             <Link to="/dashboard/assignments/1" className="teacher-dashboard__assignment-link">
-//               <h3>Math Quiz</h3>
-//               <p>Due: 3/25/2023</p>
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/dashboard/assignments/2" className="teacher-dashboard__assignment-link">
-//               <h3>English Essay</h3>
-//               <p>Due: 3/28/2023</p>
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/dashboard/assignments/3" className="teacher-dashboard__assignment-link">
-//               <h3>Science Project</h3>
-//               <p>Due: 4/5/2023</p>
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/dashboard/assignments/4" className="teacher-dashboard__assignment-link">
-//               <h3>History Presentation</h3>
-//               <p>Due: 4/10/2023</p>
-//             </Link>
-//           </li>
-//         </ul>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default TeacherDashboard;
+export default Teacherdash

@@ -1,0 +1,85 @@
+.marks {
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  select {
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  .form-row {
+    margin-bottom: 10px;
+  }
+  
+  .input[type="text"],
+  .input[type="number"] {
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  button {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 5px 10px;
+  }
+  
+  button[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .mark-list {
+    margin-top: 20px;
+  }
+  
+  .mark {
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .mark .subject {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .mark .score {
+    margin-right: 10px;
+  }
+  
+  .mark button {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 10px;
+  }
+  
+  .mark button:hover {
+    background-color: #666;
+  }
+  

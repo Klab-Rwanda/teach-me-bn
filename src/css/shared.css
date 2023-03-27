@@ -8,7 +8,6 @@
   background-color: #525FE1;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   position: fixed;
-  left: 0;
   width: 95vw;
   z-index: 1000;
   top: 0;
@@ -46,22 +45,11 @@
   color: #333;
   width: 300px;
 }
-/* .search-icon{
-  font-size: 23px;
-  cursor: pointer;
-  color: white;
-} */
 
-
-/* .seasrching input[type="search"]:focus {
-  outline: none;
-  box-shadow: 0 0 3px 3px rgba(0, 0, 255, 0.2);
-} *//* Style for the search input */
 .seasrching{
   display: flex;
   flex-direction: row;
 }
-
 
 #search {
   font-size: 16px;
@@ -70,20 +58,6 @@
   border-radius: 4px;
 }
 
-/* Style for the search button */
-/* .search-button {
-  font-size: 16px;
-  padding: 8px;
-
-  border-radius: 4px;
-  background-color: #007bff;
-  color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  height: 38px;
-  margin-top: 15px;
-} */
 
 /* Style for the search button on hover */
 #search-button:hover {
@@ -94,7 +68,6 @@
 .navbar-center {
   display: flex;
   align-items: center;
-  margin-left: 0;
 }
 
 .navbar-center img {
@@ -124,7 +97,6 @@
 
 .dropdown {
   position: relative;
-  display: block;
 }
 
 .dropdown-btn {
@@ -152,7 +124,7 @@
   padding: 12px 16px;
   border-radius: 4px;
   display: none;
-} 
+}
 
 .dropdown-content a {
   display: block;
@@ -169,23 +141,20 @@
   display: block;
 }
 
+
+
 /* Sidebar styles */
-    .sidebar {
-      position: fixed;
-      top: 80px;
-      left: 0;
-      bottom: 0;
-      width: 15%;
-      background-color: #fff;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-    
-    } 
+.sidebar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 
-/* .sidebar.open {
-  transform: translateX(0);
-
-} */
+}
 
 .sidebar-header {
   display: flex;
@@ -193,7 +162,6 @@
   margin: 0px 16px;
   
   height: 60px;
-  
 
   color:black;
   font-size: 20px;
@@ -204,9 +172,8 @@
   padding: 0;
   list-style: none;
 }
-.sidebar-item { 
+.sidebar-item {
   margin-bottom: 10px;
-  /* text-decoration: none; */
 }
 
 .sidebar-item:last-child {
@@ -219,8 +186,7 @@
   font-size: 1rem;
   display: inline-block;
   padding: 4px 10px;
-  /* font-weight: bold; */
-  /* background-color: #4caf50;  */
+ 
   border-radius: 4px; 
   transition: background-color 0.3s; 
 }
@@ -239,66 +205,6 @@
   color: #525FE1;
 }
 
-/* Sidebar styles */
-/* .sidebar {
-  position: fixed;
-  top: 80px;
-  left: 0;
-  bottom: 0;
-  width: 250px;
-  background-color: #fff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.sidebar.open {
-  transform: translateX(0);
-}
-
-.sidebar-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  border-bottom: 1px solid #ccc;
-  background-color: red;
-}
-
-.sidebar-header h3 {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-
-
-.sidebar-menu li {
-  margin-bottom: 10px;
-}
-
-.sidebar-menu li a {
-  display: block;
-  padding: 10px;
-  color: #333;
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.sidebar-menu li a:hover {
-  background-color: #f7f7f7;
-}
-
-.sidebar-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  background-color: #f7f7f7;
-  border-top: 1px solid #ccc;
-  text-align: center;
-} */
-
 
 .datas{
 background-color: #F5F5F5;
@@ -312,17 +218,4 @@ padding-top: 10vh;
 
 .dropdown-content.show {
   display: block;
-}
-
-@media (max-width: 768px) {
-  .sidebar{
-    display: none;
-  }
-  .navbar-center{
-    margin-left: 60px;
-  }
-  .dropdown{
-    display: none;
-  }
-    
 }

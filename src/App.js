@@ -18,7 +18,7 @@ import AllAssignmentsPage from "./page/mucyo/TeacherDashboard/AllAssignmentsPage
 import Shared from "./page/mucyo/ParentDashboard/Shared";
 import SharedT from "./page/mucyo/TeacherDashboard/SharedT";
 
-import Setting from "./page/mucyo/ParentDashboard/Setting";
+import Settinge from "./page/mucyo/StudentDashboard/Settinge";
 import Payment from "./page/mucyo/ParentDashboard/Payment";
 import Report from "./page/mucyo/ParentDashboard/Report";
 import Communication from "./page/mucyo/ParentDashboard/Communication";
@@ -32,6 +32,18 @@ import AdminDash from "./page/mucyo/Admin dashboard/AdminDash";
 import StudentDash from "./page/mucyo/StudentDashboard/StudentDash";
 import Support from "./page/mucyo/Admin dashboard/Support";
 import User from "./page/mucyo/Admin dashboard/User";
+import Allapplication from "./page/mucyo/Admin dashboard/Allapplication";
+
+
+import AllAssignTeacher from "./page/mucyo/StudentDashboard/AllAssignTeacher";
+import Zoom from "./page/mucyo/StudentDashboard/Zoom";
+import Zoome from "./page/mucyo/TeacherDashboard/Zoome";
+import CourseT from "./page/mucyo/TeacherDashboard/CourseT";
+import Course from "./page/mucyo/TeacherDashboard/CourseT";
+import Marks from "./page/mucyo/TeacherDashboard/Marks";
+import Mystudent from "./page/mucyo/TeacherDashboard/Mystudent";
+import Parentbooking from "./page/mucyo/Admin dashboard/Parentbooking";
+import StudentApplication from "./page/mucyo/Admin dashboard/StudentApplication";
 function App() {
   return (
     <div className="App">
@@ -53,7 +65,7 @@ function App() {
        <Route  path="/parentdashboard"   element={<Shared/> }>
         <Route index   element={<Parentdash/>}/>
       
-        <Route path={"/parentdashboard/setting"}element={<Setting/>} />
+       
         <Route path={"/parentdashboard/account"}element={<Studentinfo/>} />
         <Route path={"/parentdashboard/payment"}element={<Payment/>} />
         <Route path={"/parentdashboard/report"}element={<Report/>} />
@@ -64,21 +76,33 @@ function App() {
        
         </Route>
         <Route path={"/TeacherDashboard"} element={<SharedT/>}>
-        {/* <Route index   element={<Teacherdash/>}/> */}
+        <Route index   element={<Teacherdash/>}/>
         <Route path={"/TeacherDashboard/assignment"}element={<AssignmentForm/>} />
         <Route path={"/TeacherDashboard/notebook"}element={<QuizForm/>} />
         <Route path={"/TeacherDashboard/quizlist"}element={<QuizList/>} />
         <Route path={"/TeacherDashboard/allAssignmentsPage"}element={<AllAssignmentsPage/>} />
-
+        <Route path={"/TeacherDashboard/zoom"}element={<Zoome/>} />
+        <Route path={"/TeacherDashboard/course"}element={<CourseT/>} />
+        <Route path={"/TeacherDashboard/marks"}element={<Marks/>} />
+        <Route path={"/TeacherDashboard/mystudent"}element={<Mystudent/>} />
         </Route>
+
         <Route path={"/admindashboard"} element={<SharedA/>}>
-         <Route index   element={<AdminDash/>}/>
+         <Route index element={<AdminDash/>}/>
          <Route path={"/admindashboard/Teachers"}element={<Teachers/>} />
          <Route path={"/admindashboard/support"}element={<Support/>} />
          <Route path={"/admindashboard/user"}element={<User/>} />
+         <Route path={"/admindashboard/Allapplication"}element={<Allapplication/>} />
+         <Route path={"/admindashboard/Parentbooking"}element={<Parentbooking/>} />
+         <Route path={"/admindashboard/StudentApplication"}element={<StudentApplication/>} />
         </Route>
+
         <Route path={"/studentdashboard"} element={<SharedSt/>}>y
-        <Route index   element={<StudentDash/>}/>
+         <Route index  element={<StudentDash/>}/>
+        <Route path={"/studentdashboard/assignmentteachers"}element={<AllAssignTeacher/>} />
+        <Route path={"/studentdashboard/zoom"}element={<Zoom/>} />
+        <Route path={"/studentdashboard/setting"}element={<Settinge/>} />
+        <Route path={"/studentdashboard/courses"}element={<Course/>} />
         </Route>
        </Routes>
      </BrowserRouter>

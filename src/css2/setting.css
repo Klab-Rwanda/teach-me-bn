@@ -1,0 +1,100 @@
+
+.settings-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+  }
+  .flowerr_settings{
+    margin: 20px;
+  }
+  h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .setting-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .setting-option {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .setting-option label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .toggle input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .toggle label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    margin-right: 10px;
+  }
+  
+  .toggle label:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+  
+  .toggle input:checked + label {
+    background-color: #28a745;
+  }
+  
+  .toggle input:checked + label:before {
+    transform: translateX(26px);
+  }
+  
+  select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  option {
+    font-size: 16px;
+  }
+  
+  .student_settings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .over{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .blue-btn {
+    background-color: #525FE1;
+  }
+  .green-btn {
+    background-color: green;
+  }
+  .red-btn {
+    background-color: red;
+  }
