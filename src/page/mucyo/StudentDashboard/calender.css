@@ -1,0 +1,52 @@
+/* .calendar {
+    width: 250px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px #ccc;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #eee;
+  }
+  
+  td {
+    cursor: pointer;
+  }
+  
+  td:hover {
+    background-color: #eee;
+  }
+  
+  button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #eee;
+  }
+   */
