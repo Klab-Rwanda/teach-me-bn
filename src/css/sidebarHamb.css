@@ -54,8 +54,7 @@
   }
   
   .sidebar-menu li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+    padding: 5px;
   }
   
   .sidebar-menu.active {
