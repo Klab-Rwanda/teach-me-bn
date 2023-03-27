@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FiBell } from 'react-icons/fi';
 import { FaUserCircle } from 'react-icons/fa';
-import { AiFillSetting } from 'react-icons/ai';
+import { AiFillHome } from 'react-icons/ai';
 import { MdLiveTv } from 'react-icons/md';
 import { TfiNotepad } from 'react-icons/tfi';
 import { MdAssignmentAdd } from 'react-icons/md';
@@ -13,7 +13,7 @@ import { ImProfile } from 'react-icons/im';
 import { GrResources } from 'react-icons/gr';
 import { CgProfile } from 'react-icons/cg';
 import { GrUserManager } from 'react-icons/gr';
-import { GiProgression } from 'react-icons/gi';
+
 import LOGO from '../../../../src/aseets/logoproject.png';
 import '../../../css/shared.css';
 
@@ -77,14 +77,14 @@ const Dashboard = () => {
           <h3>Dashboard</h3>
         </div>
         <ul className="sidebar-menu">
-          <li className="sidebar-item">
-            <Link to="/parentdashboard/setting"><AiFillSetting className='dashboard-icon'/>Setting</Link>
+        <li className="sidebar-item">
+            <Link to="/"><AiFillHome className='dashboard-icon'/>Home</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><MdLiveTv className='dashboard-icon'/>live zooming</Link>
+            <Link to="/TeacherDashboard/zoom"><MdLiveTv className='dashboard-icon'/>live zooming</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><TfiNotepad className='dashboard-icon'/>Note</Link>
+            <Link to="/TeacherDashboard/course"><TfiNotepad className='dashboard-icon'/>Course</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/TeacherDashboard/assignment"><MdAssignmentAdd className='dashboard-icon'/>Assignment</Link>
@@ -102,10 +102,10 @@ const Dashboard = () => {
             <Link to=""><CgProfile className='dashboard-icon'/>my profile</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><GrUserManager className='dashboard-icon'/>Marks</Link>
+            <Link to="/TeacherDashboard/marks"><GrUserManager className='dashboard-icon'/>Marks</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><ImProfile className='dashboard-icon'/>My student</Link>
+            <Link to="/TeacherDashboard/mystudent"><ImProfile className='dashboard-icon'/>My student</Link>
           </li>
           <li className='sidebar_item'>
           <Link to=""><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>

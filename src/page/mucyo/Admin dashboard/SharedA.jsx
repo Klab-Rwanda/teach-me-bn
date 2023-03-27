@@ -46,9 +46,9 @@ const SharedA = () => {
          <img src={LOGO} alt="connection  problem " />
          <span className='teachme'>TEACH ME</span>
         </div>
-          {/* <button className="menu-btn" onClick={handleSidebarToggle}>
+          <button className="menu-btn" onClick={handleSidebarToggle}>
             {sidebarOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-          </button> */}
+          </button>
         </div>
         <div className="seasrching">
         <input type="text" id="search" name="search" placeholder="Search..."/>
@@ -91,24 +91,21 @@ const SharedA = () => {
           <h3>Dashboard</h3>
         </div>
         <ul className="sidebar-menu">
+          
           <li className="sidebar-item">
-            <Link to=""><AiFillSetting className='dashboard-icon'/>Setting</Link>
-          </li>
-         
-          <li className="sidebar-item">
-            <Link to="/admindashboard/Teachers"><TfiNotepad className='dashboard-icon'/>Teachers</Link>
+            <Link to="/admindashboard/Teachers"><TfiNotepad className='dashboard-icon'/> ALLTeachers</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><BsPersonWorkspace className='dashboard-icon'/>application</Link>
+            <Link to="/admindashboard/Allapplication"><BsPersonWorkspace className='dashboard-icon'/>application</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><TbBrandBooking className='dashboard-icon'/>Parents booking</Link>
+            <Link to="/admindashboard/Parentbooking"><TbBrandBooking className='dashboard-icon'/>Parents booking</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/admindashboard/user"><FaHouseUser className='dashboard-icon'/>Users</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><SiPrometheus className='dashboard-icon'/>Marketing</Link>
+            <Link to="/admindashboard/StudentApplication"><SiPrometheus className='dashboard-icon'/>Student Application</Link>
           </li>
           <li className="sidebar-item">
             <Link to=""><FcFeedIn className='dashboard-icon'/>Feedback</Link>
@@ -138,82 +135,5 @@ const SharedA = () => {
    </div>
   );
 };
-
 export default SharedA;
 
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import {Link, Outlet}  from "react-router-dom"
-// import { AiFillSetting } from "react-icons/ai";
-// import { MdSupervisorAccount } from "react-icons/md";
-// import { RiLogoutCircleFill } from "react-icons/ri";
-// import { TbGitPullRequest } from "react-icons/tb";
-// import { TbReportAnalytics } from "react-icons/tb";
-
-// import { BsFillBookmarkStarFill } from "react-icons/bs";
-// import { MdAssignmentAdd } from "react-icons/md";
-
-// const Shared = () => {
-//   return (
-//     <div className="body1">
-//     <div className="dash_container">
-//       <div className="dash_container1">
-//         <Link to="/parentdashboard/setting">
-//           <AiFillSetting className="react_icons" />
-//           Account Information
-//         </Link>
-
-//         <Link to="">
-//           <MdSupervisorAccount className="react_icons" />
-//           Available Courses
-//         </Link>
-//         <Link to="">
-//           <MdAssignmentAdd className="react_icons" />
-//           Create student account
-//         </Link>
-//         <Link to="">
-//           <BsFillBookmarkStarFill className="react_icons" />
-//           Teacher Profiles
-//         </Link>
-//         <Link to="">
-//           <TbReportAnalytics className="react_icons" />
-//           Course Progress
-//         </Link>
-//         <Link to="/dashboard/request">
-//           <TbGitPullRequest className="react_icons" />
-//           Schedule
-//         </Link>
-//         <Link to="/dashboard/request">
-//           <TbGitPullRequest className="react_icons" />
-//           Communication
-//         </Link>
-//         <Link to="/dashboard/request">
-//           <TbGitPullRequest className="react_icons" />
-//           Payment
-//         </Link>
-//         <Link to="/dashboard/request">
-//           <TbGitPullRequest className="react_icons" />
-//           Support
-//         </Link>
-//         <Link to="/logout">
-//           <RiLogoutCircleFill className="react_icons" />
-//           Logout
-//         </Link>
-//       </div>
-//      <Outlet/>
-//     </div>
-//   </div>
-//   )
-// }
-
-// export default Shared
