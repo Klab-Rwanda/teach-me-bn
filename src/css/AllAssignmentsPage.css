@@ -1,31 +1,53 @@
 .all-assignments-page {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
 }
 
 .assignment-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin-bottom: 20px;
-  width: 80%;
-  max-width: 600px;
+  width: 30%;
+  margin: 2rem;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   text-align: center;
 }
 
-h2 {
+.assignment-card h2 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
 }
 
-p {
-  margin-bottom: 10px;
+.assignment-card p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }
+
+.assignment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assignment-actions {
+  display: flex;
+}
+
+.edit-button,
+.delete-button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  color: red;
+}
+
+.edit-button:hover {
+  color: blue;
+}
+

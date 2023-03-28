@@ -1,49 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../../../css/teacherdash.css';
-const ParentDashHome = () => {
+import React, { useState, useEffect } from 'react';
+
+function ParentDash() {
+  const [childData, setChildData] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from API
+    fetch('https://teachmeapi.onrender.com/users')
+      .then(response => response.json())
+      .then(data => setChildData(data))
+      .catch(error => console.log(error));
+  }, []);
+
   return (
-    <div className='parent_dash'>
-      {/* <h1> ggggggggggggggggggg</h1> */}
-      <div className='cont1'>
-      <div className='cont1_sub1'><h1>Student Progress</h1><p>here is how your child is doing in school</p><p>math-A- </p><p>english-B+</p> <p>science-B</p>    </div>
-      <div className='cont1_sub2'><h1>Upcoming Event</h1><p>parent- teacher confeerence april 15 and 26</p><p>spting break -april 19 to 23</p><p>final exams -may 17 to 21</p>     </div>
-      <div className='cont1_sub3'><h1>Teachers</h1>
-      <ol>
-      <li>muhoza</li>
-      <li>muhoza</li>
-      <li>muhoza</li>
-      <li>muhoza</li>
-      <li>muhoza</li>
-      </ol>
-      </div>
-      </div>
-      <div className='cont2'>
-      <div className='cont2_sub1'><table  >
-        <th colSpan={4}>recent Payments</th>
-        <tr><td>knxknd</td><td>knxknd</td><td>knxknd</td><td>knxknd</td></tr>
-        <tr><td>knxknd</td><td>knxknd</td><td>knxknd</td><td>knxknd</td></tr>
-        <tr><td>knxknd</td><td>knxknd</td><td>knxknd</td><td>knxknd</td></tr>
-        <tr><td>knxknd</td><td>knxknd</td><td>knxknd</td><td>knxknd</td></tr>
-        <tr><td>knxknd</td><td>knxknd</td><td>knxknd</td><td>knxknd</td></tr>
-        <tr><td>knxknd</td><td>knxknd</td><td>knxknd</td><td>knxknd</td></tr>
-        <tr><td>knxknd</td><td>knxknd</td><td>knxknd</td><td>knxknd</td></tr>
-        </table></div>
-      <div className='cont2_sub2'><h1>Children</h1>
-      <ol>
-      <li>muhoza</li>
-      <li>muhoza</li>
-      <li>muhoza</li>
-      <li>muhoza</li>
-      <li>muhoza</li>
-      </ol>
-      </div>
-      </div>
-   
+    <div>
+      <h2>Parent Dashboard</h2>
+      <h3>My Children</h3>
+      <ul>
+        {childData.map(child => (
+          <li key={child.id}>
+            <h4>{child.name}</h4>
+            <p>Age: {child.age}</p>
+            <p>Grade: {child.grade}</p>
+          </li>
+        ))}
+      </ul>
+      {/* Add more components or sections as needed */}
     </div>
   );
-};
+}
 
-export default ParentDashHome;
-
-
+export default ParentDash;

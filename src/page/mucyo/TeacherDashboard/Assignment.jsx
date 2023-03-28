@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// import '../../css/Asssignment.css';
+import '../../css/Asssignment.css';
 
 function AssignmentForm({ onSave }) {
   const [image, setImage] = useState(null);
@@ -66,13 +66,16 @@ function AssignmentForm({ onSave }) {
   }
   
   return (
+    <div className="assignments">
     <form onSubmit={handleSubmit}>
+
      {error && <div className="error-message">{error}</div>}
       {success && <div className="success-message">{success}</div>}
       <h2>Create Assignment</h2>
       <div>
-        <label>Image:</label>
+        <label>Image:
         <input type="file" onChange={(e) => setImage(e.target.files[0])} />
+        </label>
       </div>
       <div>
         <label>Assignment Name:</label>
@@ -108,6 +111,7 @@ function AssignmentForm({ onSave }) {
       </div>
       <button type="submit">SEND</button>
     </form>
+    </div>
   );
 }
 export default AssignmentForm;

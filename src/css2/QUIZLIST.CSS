@@ -28,12 +28,6 @@
   .quiz-row > *:last-child > button:last-child {
     margin-left: 4px;
   }
-  .quizlist{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .all-quizzes-page {
     margin: 2rem auto;
     max-width: 80%;
@@ -67,7 +61,8 @@
   
   .quizlist {
     display: flex;
-    gap: 0.5rem;
+    flex-direction: row;
+    justify-content: space-between;
   }
   
   button {
@@ -83,4 +78,5 @@
   button:hover {
     background-color: #3e8e41;
   }
+
   

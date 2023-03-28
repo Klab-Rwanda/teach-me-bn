@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// import '../../css/QuizForm.css';
+import '../../css/QuizForm.css';
 
 function QuizForm({ onSave }) {
   const [image, setImage] = useState(null);
@@ -51,7 +51,7 @@ function QuizForm({ onSave }) {
         // Add the following line after the setTimeout function to automatically clear the success message when the user clicks on it
         setTimeout(() => {
           setSuccess('');
-        }, 1000); // Wait for 10 seconds before clearing the message
+        }, 1000); 
         
       } else {
         setError('Error creating quiz. Please try again later.');

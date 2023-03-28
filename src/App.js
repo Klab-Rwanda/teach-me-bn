@@ -65,7 +65,6 @@ function App() {
        <Route  path="/parentdashboard"   element={<Shared/> }>
         <Route index   element={<Parentdash/>}/>
       
-       
         <Route path={"/parentdashboard/account"}element={<Studentinfo/>} />
         <Route path={"/parentdashboard/payment"}element={<Payment/>} />
         <Route path={"/parentdashboard/report"}element={<Report/>} />
