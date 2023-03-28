@@ -96,12 +96,12 @@ function App() {
          <Route path={"/admindashboard/StudentApplication"}element={<StudentApplication/>} />
         </Route>
 
-        <Route path={"/studentdashboard"} element={<SharedSt/>}>y
+        <Route path={"/studentdashboard"} element={<SharedSt/>}>
          <Route index  element={<StudentDash/>}/>
         <Route path={"/studentdashboard/assignmentteachers"}element={<AllAssignTeacher/>} />
         <Route path={"/studentdashboard/zoom"}element={<Zoom/>} />
         <Route path={"/studentdashboard/setting"}element={<Settinge/>} />
-        <Route path={"/studentdashboard/courses"}element={<Course/>} />
+        {/* <Route path={"/studentdashboard/courses"}element={<Course/>} /> */}
         </Route>
        </Routes>
      </BrowserRouter>

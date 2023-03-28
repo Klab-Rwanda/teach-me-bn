@@ -1,30 +1,38 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function ParentDash() {
-  const [childData, setChildData] = useState([]);
+  const [users, setusers] = useState([]);
 
   useEffect(() => {
     // Fetch data from API
-    fetch('https://teachmeapi.onrender.com/users')
-      .then(response => response.json())
-      .then(data => setChildData(data))
+    console.log('Fetching data...');
+    axios.get('https://teachmeapi.onrender.com/users')
+      .then(response => {
+        console.log('Data received:', response.data.data.users);
+        setusers(response.data.data.users);
+      })
       .catch(error => console.log(error));
   }, []);
+
+  console.log('Rendering with users:', users);
 
   return (
     <div>
       <h2>Parent Dashboard</h2>
-      <h3>My Children</h3>
+      <h3>My student</h3>
       <ul>
-        {childData.map(child => (
-          <li key={child.id}>
-            <h4>{child.name}</h4>
-            <p>Age: {child.age}</p>
-            <p>Grade: {child.grade}</p>
+        {users.map(users => (
+          <li key={users.id}>
+            <h4>fullName:{users.fullName}</h4>
+            <p>course: {users.course}</p>
+            <p>email: {users.email}</p>
+            <p>level: {users.level}</p> 
+            <p>Grade: {users.grade}</p> 
           </li>
         ))}
       </ul>
-      {/* Add more components or sections as needed */}
+      
     </div>
   );
 }

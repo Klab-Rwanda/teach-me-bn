@@ -50,7 +50,7 @@ const handleApprove = async (id) => {
             <th>dateOfBirth</th>
             <th>Gender</th>
             <th>Fullname</th>
-            <th>Password</th>
+          
             <th>Status</th>
             <th>Studying</th>
             <th>Action</th>
@@ -64,7 +64,7 @@ const handleApprove = async (id) => {
               <td>{user.dateOfbirth}</td>
               <td>{user.gender}</td>
               <td>{user.fullName}</td>
-              <td>{user.password}</td>
+          
               <td>{user.status}</td>
               <td>{user.studyingStyle}</td>
               <td>

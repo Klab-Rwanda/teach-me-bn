@@ -1,76 +1,62 @@
-import React, { useState } from 'react';
-// import '../../../css2/manage.css';
-const StudentAccountPage = () => {
-  const [studentName, setStudentName] = useState('');
-  const [studentGrade, setStudentGrade] = useState('');
-  const [parentName, setParentName] = useState('');
-  const [parentEmail, setParentEmail] = useState('');
-  const [parentPhone, setParentPhone] = useState('');
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import "./manage.css";
 
-  const handleStudentNameChange = (e) => {
-    setStudentName(e.target.value);
-  };
+const Manage = () => {
+  const [users, setUsers] = useState([]);
 
-  const handleStudentGradeChange = (e) => {
-    setStudentGrade(e.target.value);
-  };
+  useEffect(() => {
+    axios.get('https://teachmeapi.onrender.com/users')
+      .then(response => {
+        setUsers(response.data.data.users);
+        console.log (response.data.data.users);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
 
-  const handleParentNameChange = (e) => {
-    setParentName(e.target.value);
-  };
-
-  const handleParentEmailChange = (e) => {
-    setParentEmail(e.target.value);
-  };
-
-  const handleParentPhoneChange = (e) => {
-    setParentPhone(e.target.value);
-  };
-
-  const handleStudentAccountSubmit = (e) => {
-    e.preventDefault();
-    // code to update student account
+  const handleDeleteUser = (userId) => {
+    axios.delete(`https://teachmeapi.onrender.com/users/${userId}`)
+      .then(response => {
+        // remove the deleted user from the local state
+        setUsers(users.filter(user => user.id !== userId));
+      })
+      .catch(error => {
+        console.error(error);
+      });
   };
 
   return (
-    <div className=''>
-    <table border={1} className="manage_table">
-      <th colSpan={5}>manage all children account</th>
-      <tr>
-      <td>Full Name</td>
-      <td>Email</td>
-      <td>Password</td>
-      <td colSpan={2}>Action</td></tr>
-      <tr>
-      <td>Nisingize Alle</td>
-      <td>parent@gmail.com</td>
-      <td>12345678</td>
-      <td>Update</td>
-      <td>Delete</td>
-      </tr>
-      <tr>
-      <td>Nisingize Alle</td>
-      <td>parent@gmail.com</td>
-      <td>12345678</td>
-      <td>Update</td>
-      <td>Delete</td>
-      </tr>
-      <tr>
-      <td>Nisingize Alle</td>
-      <td>parent@gmail.com</td>
-      <td>12345678</td>
-      <td>Update</td>
-      <td>Delete</td>
-      </tr>  
-      <tr>
-      <td>Nisingize Alle</td>
-      <td>parent@gmail.com</td>
-      <td>12345678</td>
-      <td>Update</td>
-      <td>Delete</td>
-      </tr>
-    </table>
-  </div>
+    <div>
+      <h1>Manage Users</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>FullName</th>
+            <th>level</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map(user => (
+            <tr key={user.id}>
+              <td>{user.fullName}</td>
+              <td>{user.level}</td>
+              <td>{user.email}</td>
+              <td>{user.gender}</td>
+              <td>
+              <button onClick={() => handleDeleteUser(user.id)}>Enable</button>
+              <button onClick={() => handleDeleteUser(user.id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
-export default StudentAccountPage;
+
+export default Manage;
