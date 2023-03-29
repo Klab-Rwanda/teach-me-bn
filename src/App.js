@@ -2,10 +2,12 @@ import "./App.css";
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Welcome from "./Welcome";
 import Teachers from "./page/mucyo/Admin dashboard/Teachers";
+import Approvedteachers from "./page/mucyo/Admin dashboard/Approvedteachers";
 import SingleTeachersProfile from "./page/SingleTeachersProfile";
 import PopUpform from "./page/PopUpform";
 import ContactFor from "./page/BLOG/ContactFor";
 import Login from "./page/mucyo/Login";
+// import Approvedteachers from "./page/mucyo/Approvedteachers";
 import Register from "./page/mucyo/Register";
 import Parentdash from "./page/mucyo/ParentDashboard/Parentdash";
 import Teacherinfo from "./page/mucyo/Teacherinfo";
@@ -22,7 +24,7 @@ import Settinge from "./page/mucyo/StudentDashboard/Settinge";
 import Payment from "./page/mucyo/ParentDashboard/Payment";
 import Report from "./page/mucyo/ParentDashboard/Report";
 import Communication from "./page/mucyo/ParentDashboard/Communication";
-import Request from "./page/mucyo/ParentDashboard/Request";
+import Request from "./page/mucyo/ParentDashboard/Result";
 import Manage from "./page/mucyo/ParentDashboard/Manage";
 import Studentinfo from "./page/mucyo/Studentinfo";
 import Teacherdash from "./page/mucyo/TeacherDashboard/Teacherdash";
@@ -45,16 +47,16 @@ import Mystudent from "./page/mucyo/TeacherDashboard/Mystudent";
 import Parentbooking from "./page/mucyo/Admin dashboard/Parentbooking";
 import StudentApplication from "./page/mucyo/Admin dashboard/StudentApplication";
 import Paymentmanage from "./page/mucyo/Admin dashboard/Paymentmanage";
+import Result from "./page/mucyo/ParentDashboard/Result";
 function App() {
   return (
     <div className="App">
      <BrowserRouter>
        <Routes>
         <Route path="/" element={<Welcome/>}/>
-        <Route path={"/teachers"}element={<Teachers/>}/>
         <Route path={"/signin"}element={<login/>} />
-        <Route path={"/teachers"}element={<Teachers/>} />
-        <Route path={"/:id"}element={<SingleTeachersProfile/>}/>
+        <Route path={"/approvedteachers"}element={<Approvedteachers/>} />
+        <Route path={"/:id"} element={<SingleTeachersProfile/>}/>
         <Route path={"/bookform"}element={<PopUpform/>}/>
         <Route path={"/contact"}element={<ContactFor/>}/>
         <Route path={"/login"}element={<Login/>}/>
@@ -71,6 +73,7 @@ function App() {
         <Route path={"/parentdashboard/request"}element={<Request/>} />
         <Route path={"/parentdashboard/communication"}element={<Communication/>}/>
         <Route path={"/parentdashboard/manage"}element={<Manage/>}/>
+        <Route path={"/parentdashboard/response"}element={<Result/>}/>
         <Route path={"students"}element={<StudentAccount/>} />
        
         </Route>

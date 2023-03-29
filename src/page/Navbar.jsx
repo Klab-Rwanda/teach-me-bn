@@ -25,7 +25,7 @@ function Navbar() {
           <a href="#contactfor">Contact</a>
           <a href="#service">Service</a>
           <a href="#blog">Blog</a>
-          <Link to="/teachers">Teachers</Link>
+          <Link to="/approvedteachers">Teachers</Link>
     
           <bututon  className='pass'>
           <Link to="/login">Sign in</Link>

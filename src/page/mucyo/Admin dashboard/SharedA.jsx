@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FiBell } from 'react-icons/fi';
 import { FaUserCircle } from 'react-icons/fa';
-import { AiFillSetting } from 'react-icons/ai';
+import { MdPayments } from 'react-icons/md';
 import { FcManager } from 'react-icons/fc';
 import { TfiNotepad } from 'react-icons/tfi';
 import { BsPersonWorkspace } from 'react-icons/bs';
@@ -112,7 +112,7 @@ const SharedA = () => {
           </li>
   
           <li className="sidebar-item">
-            <Link to="/admindashboard/Paymentmanage"><FcManager className='dashboard-icon'/>Payment Management</Link>
+            <Link to="/admindashboard/Paymentmanage"><MdPayments className='dashboard-icon'/>Payment Management</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/admindashboard/Allapplication"><FcManager className='dashboard-icon'/>Allapplication</Link>

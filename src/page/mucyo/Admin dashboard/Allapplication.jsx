@@ -1,8 +1,25 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+const url =  `https://teachmeapi.onrender.com/api/v1/`;
 function TeacherApplicationsTable() {
   const [teacherApplications, setTeacherApplications] = useState([]);
+const    handleApprove  = async (id,value) => {
+  console.log(value,id);
+   try {
+     const res   = await  axios.patch(`${url}profile/${id}`,{
+        status:value
+     })
+     console.log(res.data);
+     
+     setTimeout(() =>{
+       window.location.href="/admindashboard/Teachers"
+     },2000);
+   }
+   catch(error){
+     console.log(error.response);
+   }
+}
 
   useEffect(() => {
     const fetchTeacherApplications = async () => {
@@ -79,7 +96,7 @@ function TeacherApplicationsTable() {
               <select
                 value={Profile.status}
                 onChange={(e) =>
-                  handleStatusChange(Profile?.id, e.target.value)
+                  handleApprove(Profile?._id,e.target.value)
                 }
               >
                 <option value="pending">Pending</option>

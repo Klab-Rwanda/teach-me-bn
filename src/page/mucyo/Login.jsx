@@ -1,4 +1,4 @@
-import React from "react";
+import React,  {useState} from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios"; // import Axios library
@@ -8,9 +8,10 @@ import Navbar from "../Navbar";
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
+  const [loggedIn, setLoggedIn] = useState(false);
   
   const onSubmit = (data) => {
-    // Make a POST request to the API endpoint with user's email and password
+    
     axios.post("https://teachmeapi.onrender.com/api/v1/signin", {
       email: data.email,
       password: data.password,
@@ -18,7 +19,10 @@ const Login = () => {
     .then((response) => {
      console.log(response.data.userSign.Usertype );
      console.log(response.data.userSign.Usertype );
-     // Redirect to teacherinfo page if usertype is " Teachers", otherwise redirect to studentinfo page
+     localStorage.setItem("name", response.data.userSign.name)
+     const name = (response.data.userSign.Usertype);
+     console.log(response?.name);
+     console.log ("username");
       if (response.data.userSign.Usertype === "parents"  || response.data.userSign.Usertype === "PARENTS") {
         navigate("/parentdashboard");
       } else {
