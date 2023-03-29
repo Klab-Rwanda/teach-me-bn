@@ -80,107 +80,29 @@ span {
 .toggle-btn {
   display: none;
 }
-/* @media screen and (max-width: 768px) {
-  .menu {
-    display: flex;
-    flex-direction:column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1E90FF;
-    padding: 10px 20px;
-  }
-  
-  .logo {
-    color: #fff;
-  }
-  
-  .link {
-    display: none;
-    flex-direction: column;
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .link.show {
-    display: flex;
-  }
-  
-  .toggle-btn {
-    display: block;
-    font-size: 2rem;
-    margin-right: 20px;
-    color: #cf2020;
-    border: none;
-    background-color: transparent;
-  }
-  
-  .pass {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-} */
 
 @media screen and (max-width: 600px) {
-  
-  .menu .link {
-    /* display: flex;
-    flex-direction:column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1E90FF;
-    padding: 10px 20px; */
+  .menu {
+    flex-direction: column;
   }
-  
- 
+  .logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   .toggle-btn {
     display: block;
-    cursor: pointer;
-    margin-right: 20px;
-  }
-  
- 
-  .toggle-btn .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #000000;
-    margin: 5px auto;
-    transition: all 0.3s ease;
   }
   .link {
     display: none;
+    /* background-color: #525FE1; */
     flex-direction: column;
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
+    margin: 0;
+    padding: 0;
   }
   .link.show {
     display: flex;
-    flex-direction: column;
   }
-  .menu.toggled .link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-   
-  }
-  
-
-  .menu.toggled .link a {
+  .link a {
     margin: 10px 0;
   }
-
-  .menu.toggled .toggle-btn .bar.first {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .menu.toggled .toggle-btn .bar.second {
-    opacity: 0;
-  }
-  .menu.toggled .toggle-btn .bar.third {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-} 
+}

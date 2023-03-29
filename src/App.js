@@ -95,6 +95,7 @@ function App() {
          <Route path={"/admindashboard/Parentbooking"}element={<Parentbooking/>} />
          <Route path={"/admindashboard/StudentApplication"}element={<StudentApplication/>} />
         </Route>
+        
 
         <Route path={"/studentdashboard"} element={<SharedSt/>}>
          <Route index  element={<StudentDash/>}/>
