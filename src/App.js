@@ -44,6 +44,7 @@ import Marks from "./page/mucyo/TeacherDashboard/Marks";
 import Mystudent from "./page/mucyo/TeacherDashboard/Mystudent";
 import Parentbooking from "./page/mucyo/Admin dashboard/Parentbooking";
 import StudentApplication from "./page/mucyo/Admin dashboard/StudentApplication";
+import Paymentmanage from "./page/mucyo/Admin dashboard/Paymentmanage";
 function App() {
   return (
     <div className="App">
@@ -64,7 +65,6 @@ function App() {
 
        <Route  path="/parentdashboard"   element={<Shared/> }>
         <Route index   element={<Parentdash/>}/>
-      
         <Route path={"/parentdashboard/account"}element={<Studentinfo/>} />
         <Route path={"/parentdashboard/payment"}element={<Payment/>} />
         <Route path={"/parentdashboard/report"}element={<Report/>} />
@@ -94,6 +94,7 @@ function App() {
          <Route path={"/admindashboard/Allapplication"}element={<Allapplication/>} />
          <Route path={"/admindashboard/Parentbooking"}element={<Parentbooking/>} />
          <Route path={"/admindashboard/StudentApplication"}element={<StudentApplication/>} />
+         <Route path={"/admindashboard/Paymentmanage"}element={<Paymentmanage/>} />
         </Route>
         
 

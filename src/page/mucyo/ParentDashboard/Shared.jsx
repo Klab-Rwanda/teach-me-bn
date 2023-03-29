@@ -102,6 +102,9 @@ const Dashboard = () => {
           <li className="sidebar-item">
             <Link to="/parentdashboard/communication"><GiSatelliteCommunication className='dashboard-icon'/>Communication</Link>
           </li>
+          <li className="sidebar-item">
+            <Link to="/parentdashboard/payment"><GiSatelliteCommunication className='dashboard-icon'/>Payment</Link>
+          </li>
           <li className='sidebar_item'>
           <Link to="/parentdashboard/communication"><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>
           </li>

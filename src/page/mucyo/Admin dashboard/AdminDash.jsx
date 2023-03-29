@@ -17,7 +17,6 @@ import {
 import { Line } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
 
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -56,8 +55,6 @@ export const data = {
     },
   ],
 };
-
-
 const AdminDash = () => {
   const [showModal, setShowModal] = useState(false);
   const [title, setTitle] = useState("");
@@ -79,8 +76,7 @@ const AdminDash = () => {
       <div className="home_header">
         <h2>Welcome to the Admin Dashboard</h2>   
       </div>
-      <div>created announcement</div>
-      
+  
       <div className="admin_dash_container">
         <div className="options">
           <h3>User Update</h3>
@@ -131,7 +127,6 @@ const AdminDash = () => {
             </ul>
           </div>
         </section>
-
         <section>
           <h3>Announcement Management</h3>
           <div className="card">
@@ -164,7 +159,6 @@ const AdminDash = () => {
               required
             />
           </div>
-
           <div className="form-group">
             <label>Message</label>
             <textarea
@@ -183,7 +177,6 @@ const AdminDash = () => {
           </div>
         </div>
       )}
-
           </div>
         </section>
 

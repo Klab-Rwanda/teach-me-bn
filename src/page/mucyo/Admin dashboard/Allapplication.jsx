@@ -29,7 +29,7 @@ function TeacherApplicationsTable() {
       console.log(data); // log the response data for debugging
       // send a confirmation email to the user here
     } catch (error) {
-      console.log(error); // log any errors for debugging
+      console.log(error); 
     }
   }
 
