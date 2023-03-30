@@ -22,7 +22,12 @@ const Studentinfo = () => {
     try {
       const result = await axios.post(
         "https://teachmeapi.onrender.com/signup",
-        data
+        data,
+        {
+          headers: {
+            Authorization: `${localStorage.getItem("token")}`,
+          },
+        }
       );
       setSubmitSuccess(true);
       setTimeout(() => {
@@ -63,14 +68,14 @@ const Studentinfo = () => {
               className="input"
               type="text"
               placeholder="fullName"
-              name="fullName"
+              name="studentfullName"
               onChange={handleChange}
             />
             <input
               className="input"
               type="email"
               placeholder="email"
-              name="email"
+              name="studentemail"
               onChange={handleChange}
             />
             <br />

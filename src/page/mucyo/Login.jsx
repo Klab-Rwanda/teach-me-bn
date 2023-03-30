@@ -1,49 +1,60 @@
-import React,  {useState} from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios"; // import Axios library
-import '../../css/login.css';
+import "../../css/login.css";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar";
 import { AuthContext } from "../../context/AppProvider";
-import { useContext} from "react";
+import { useContext } from "react";
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
-  const {isLoged, setIsLoged} = useContext(AuthContext);
-  
+  const { isLoged, setIsLoged } = useContext(AuthContext);
+
   const onSubmit = (data) => {
-    
-    axios.post("https://teachmeapi.onrender.com/api/v1/signin", {
-      email: data.email,
-      password: data.password,
-    })
-    .then((response) => {
-     console.log(response.data.userSign.Usertype );
-     console.log(response.data.userSign.Usertype );
-     
-     const name = response.data.userSign.name;
-     localStorage.setItem("name", name);
-     console.log (name);
-      setIsLoged(true);
-      if (response.data.userSign.Usertype === "parents"  || response.data.userSign.Usertype === "PARENTS") {
-        navigate("/parentdashboard");
-      } else {
-        navigate("/teacherinfo");
-      }
-    })
-    .catch((error) => {
-      if (error.response && error.response.data && error.response.data.message) {
-        alert(error.response.data.message);
-      } else {
+    axios
+      .post("https://teachmeapi.onrender.com/api/v1/signin", {
+        email: data.email,
+        password: data.password,
+      })
+      .then((response) => {
+        console.log(response.data.userSign.Usertype);
+        console.log(response.data.userSign.Usertype);
+
+        const name = response.data.userSign.name;
+        localStorage.setItem("name", name);
+        const token = localStorage.getItem("token");
+
+        localStorage.setItem("token", response.data.token);
+        console.log(name);
+        setIsLoged(true);
+        if (
+          response.data.userSign.Usertype === "parents" ||
+          response.data.userSign.Usertype === "PARENTS"
+        ) {
+          navigate("/parentdashboard");
+        } else {
+          navigate("/teacherinfo");
+        }
+
+      })
+      .catch((error) => {
+        if (
+          error.response &&
+          error.response.data &&
+          error.response.data.message
+        ) {
+          alert(error.response.data.message);
+        } else {
+          console.log(error);
+        }
         console.log(error);
-      }
-      console.log(error);
-    });
+      });
   };
   return (
     <div className="main">
-      <Navbar/>
+      <Navbar />
       <div className="body">
         <div className="container1">
           <h1 className="h1">Welcome Back!</h1>
@@ -58,15 +69,24 @@ const Login = () => {
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="container2">
           <h1 className="h1">Login Here</h1>
-          <input className="input" {...register("email")} type="text" placeholder="Email" />
+          <input
+            className="input"
+            {...register("email")}
+            type="text"
+            placeholder="Email"
+          />
           <br />
-          <input className="input" {...register("password")} type="password" placeholder="Password" />
+          <input
+            className="input"
+            {...register("password")}
+            type="password"
+            placeholder="Password"
+          />
           <input className="input" type="submit" value="SIGN IN" />
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
 export default Login;
-

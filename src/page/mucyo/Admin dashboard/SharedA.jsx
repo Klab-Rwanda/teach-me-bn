@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+// import { useState, useContext } from 'react';
+
 import { Link, Outlet } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FiBell } from 'react-icons/fi';
@@ -9,7 +11,7 @@ import { TfiNotepad } from 'react-icons/tfi';
 import { BsPersonWorkspace } from 'react-icons/bs';
 import { TbBrandBooking } from 'react-icons/tb';
 import { FcCustomerSupport } from 'react-icons/fc';
-import { ImProfile } from 'react-icons/im';
+import { BsFillPersonVcardFill } from 'react-icons/bs';
 import { FaHouseUser } from 'react-icons/fa';
 import { FaAssistiveListeningSystems } from 'react-icons/fa';
 import { GrUserManager } from 'react-icons/gr';
@@ -18,8 +20,10 @@ import { FcFeedIn } from 'react-icons/fc';
 import { SiPrometheus } from 'react-icons/si';
 import LOGO from '../../../../src/aseets/logoproject.png';
 import '../../../css/shared.css';
+import { AuthContext } from '../../../context/AppProvider';
 
 const SharedA = () => {
+  const {isLoged, setIsLoged} = useContext(AuthContext);
   const [manageDropdown, setManageDropdown] = useState(false);
 
   const toggleManageDropdown = () => {
@@ -34,8 +38,12 @@ const SharedA = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const username = localStorage.getItem("name");
+  const handleLogout = () => {
 
- 
+    setIsLoged(false);
+    localStorage.removeItem("name");
+  }
 
   return (
     <div className="dashboard">
@@ -56,12 +64,8 @@ const SharedA = () => {
         </div>
        
         <div className="navbar-right">
-          <button className="icon-btn">
-            <FiBell />
-          </button>
-          <button className="icon-btn">
-            <FaUserCircle />
-          </button>
+         
+         
           <div className="dropdown">
             <button className="dropdown-btn">
               Settings <i className="fa fa-caret-down"></i>
@@ -79,6 +83,20 @@ const SharedA = () => {
             <div className="dropdown-content">
               <Link to="/">FAQs</Link>
               <Link to="/">Contact Us</Link>
+            </div>
+          </div>
+          <button className="icon-btn">
+            <FiBell />
+          </button>
+          <div className="dropdown">
+            <button className="dropdown-btn">
+            <button className="icon-btn">
+            <FaUserCircle />
+          </button> <i className="fa fa-caret-down"></i>
+            </button>
+            <div className="dropdown-content">
+            <Link to="/">Profile</Link>
+              <Link to="/">log out</Link>
             </div>
           </div>
         </div>

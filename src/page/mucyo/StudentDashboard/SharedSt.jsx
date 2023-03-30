@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+
 import { Link, Outlet } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FiBell } from 'react-icons/fi';
@@ -16,9 +17,11 @@ import { GrUserManager } from 'react-icons/gr';
 import { AiFillSchedule } from 'react-icons/ai';
 import LOGO from '../../../../src/aseets/logoproject.png';
 import '../../../css/shared.css';
+import { AuthContext } from '../../../context/AppProvider';
 
 const Dashboard = () => {
   // const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const {isLoged, setIsLoged} = useContext(AuthContext);
 
   const handleSidebarToggle = () => {
     // setSidebarOpen(!sidebarOpen);

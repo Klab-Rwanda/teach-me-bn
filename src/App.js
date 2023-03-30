@@ -81,6 +81,7 @@ function App() {
         <Route path={"/parentdashboard/communication"}element={<Communication/>}/>
         <Route path={"/parentdashboard/manage"}element={<Manage/>}/>
         <Route path={"/parentdashboard/response"}element={<Result/>}/>
+         <Route path={"/parentdashboard/approvedteachers"}element={<Approvedteachers/>}/>
         <Route path={"students"}element={<StudentAccount/>} />
       
         </Route>
@@ -108,7 +109,6 @@ function App() {
          <Route path={"/admindashboard/Paymentmanage"}element={<Paymentmanage/>} />
         </Route>
         
-
         <Route path={"/studentdashboard"} element={<SharedSt/>}>
          <Route index  element={<StudentDash/>}/>
         <Route path={"/studentdashboard/assignmentteachers"}element={<AllAssignTeacher/>} />

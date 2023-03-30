@@ -92,9 +92,10 @@ span {
 .BTN:hover .drop{
   display: block;
 }
-.logout{
-  background-color: transparent;
-  border:  1px  solid blueviolet;
+.logout{  
+  background-color: rgb(0, 193, 252);
+  color:white;
+  border:  2px  solid white;
 }
    
 @media screen and (max-width: 600px) {

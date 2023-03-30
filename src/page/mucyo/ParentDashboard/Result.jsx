@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from '../../../axios/axios';
 import { Table, TableHead, TableRow, TableCell, TableBody, Button } from '@material-ui/core';
 
-
 const Result = () => {
   const [bookings, setBookings] = useState([]);
 
@@ -20,7 +19,6 @@ const Result = () => {
   const handleRefresh = () => {
     window.location.reload();
   };
-
   return (
     <div>
       <Table>
@@ -49,5 +47,4 @@ const Result = () => {
     </div>
   );
 };
-
 export default Result;
