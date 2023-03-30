@@ -25,6 +25,9 @@ function SingleTeachersProfile() {
     fetchItems();
   }, [id]);
 
+  function handleBookNowWithId(id) {
+    handleBookNow(id);
+  }
 
   function BookingModal({ showModal, closeModal }) {
     return (
@@ -59,7 +62,7 @@ function SingleTeachersProfile() {
             <p><FcSms/>4.9(80 views)</p>
          
          
-            <button onClick={handleBookNow}>BOOK NOW</button>
+           <button onClick={() => handleBookNowWithId(id)}>BOOK NOW</button>
             <BookingModal showModal={showModal} closeModal={handleCloseModal} />
           
            </div>

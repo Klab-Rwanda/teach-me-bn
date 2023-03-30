@@ -1,13 +1,24 @@
 import '../css/Navbar.css'
-import { Link } from 'react-router-dom'
-import { useState } from 'react';
+import { Link, useParams } from 'react-router-dom'
+import { useState, useContext } from 'react';
+import { AuthContext } from '../context/AppProvider';
+
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const username = localStorage.getItem("name");
+  
+
+  const {isLoged, setIsLoged} = useContext(AuthContext);
 
   const handleToggle  = () => {
     setIsMenuOpen(!isMenuOpen);
+  }
+    const handleLogout = () => {
+
+    setIsLoged(false);
+    localStorage.removeItem("name");
   }
   return (
     <div className="container">
@@ -26,11 +37,17 @@ function Navbar() {
           <a href="#service">Service</a>
           <a href="#blog">Blog</a>
           <Link to="/approvedteachers">Teachers</Link>
-    
-          <bututon  className='pass'>
+         {isLoged ? (<div className='BTN'><p> Welcome {username[0]}</p>
+         <div className='drop'>
+         <Link to="/profile">Profile</Link>
+          <button className='logout' onClick={handleLogout}>Logout</button>
+         </div>
+         </div>
+         ) : ( <bututon  className='pass'>
+
           <Link to="/login">Sign in</Link>
           <Link to="/regiter">Sign up</Link>
-          </bututon>
+          </bututon>) }
         </div>
       </div>
     </div>

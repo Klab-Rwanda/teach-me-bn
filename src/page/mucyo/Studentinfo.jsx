@@ -5,15 +5,12 @@ import axios from "axios";
 const initialFormState = {
   fullName: "",
   email: "",
-  state: "",
-  profile: null,
   studyingStyle: "",
   password: "",
   dateOfbirth: "",
   gender: "",
   course: "",
   level: "",
-  moreInfo: "",
 };
 const Studentinfo = () => {
   const [data, setData] = useState([]);
@@ -69,22 +66,6 @@ const Studentinfo = () => {
               name="fullName"
               onChange={handleChange}
             />
-
-            <input
-              className="input"
-              type="text"
-              placeholder="FatherName"
-              name="fullName"
-              onChange={handleChange}
-            />
-            <br />
-            <input
-              className="input"
-              type="text"
-              placeholder="MotherName"
-              name="fullName"
-              onChange={handleChange}
-            />
             <input
               className="input"
               type="email"
@@ -95,42 +76,11 @@ const Studentinfo = () => {
             <br />
             <input
               className="input"
-              type="text"
-              placeholder="State"
-              name="state"
-              onChange={handleChange}
-            />
-            <input
-              className="input"
-              type="file"
-              placeholder="Profile"
-              name="profile"
-              onChange={handleChange}
-            />
-            <br />
-            <input
-              className="input"
-              type="text"
-              placeholder="StudyingStyle"
-              name="studyingStyle"
-              onChange={handleChange}
-            />
-            <input
-              className="input"
-              type="text"
-              placeholder="StudyingStyle"
-              name="studyingStyle"
-              onChange={handleChange}
-            />
-            <br />
-            <input
-              className="input"
               type="password"
               placeholder="password"
               name="password"
               onChange={handleChange}
             />
-
             <input
               className="input"
               type="date"
@@ -167,9 +117,10 @@ const Studentinfo = () => {
             </select>
             <input
               className="input"
-              type="textarea"
+              type="text"
+              placeholder="StudyingStyle"
+              name="studyingStyle"
               onChange={handleChange}
-              placeholder="MoreInformation"
             />
             <br />
             <input className="input" type="submit" value="SUBMIT" />

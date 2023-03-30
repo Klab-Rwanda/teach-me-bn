@@ -5,10 +5,12 @@ import axios from "axios"; // import Axios library
 import '../../css/login.css';
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar";
+import { AuthContext } from "../../context/AppProvider";
+import { useContext} from "react";
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
-  const [loggedIn, setLoggedIn] = useState(false);
+  const {isLoged, setIsLoged} = useContext(AuthContext);
   
   const onSubmit = (data) => {
     
@@ -19,10 +21,11 @@ const Login = () => {
     .then((response) => {
      console.log(response.data.userSign.Usertype );
      console.log(response.data.userSign.Usertype );
-     localStorage.setItem("name", response.data.userSign.name)
-     const name = (response.data.userSign.Usertype);
-     console.log(response?.name);
-     console.log ("username");
+     
+     const name = response.data.userSign.name;
+     localStorage.setItem("name", name);
+     console.log (name);
+      setIsLoged(true);
       if (response.data.userSign.Usertype === "parents"  || response.data.userSign.Usertype === "PARENTS") {
         navigate("/parentdashboard");
       } else {
@@ -65,6 +68,5 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;
 

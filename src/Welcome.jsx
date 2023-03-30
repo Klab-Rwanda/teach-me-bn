@@ -8,10 +8,10 @@ import Home from './page/Home'
 import Teacherdash from './page/mucyo/TeacherDashboard/Teacherdash'
 import Navbar from './page/Navbar'
 import Service from './page/service/Service'
-function Welcome() {
+function Welcome({name, setName}) {
   return (
     <div>
-    <Navbar/>
+    <Navbar name={name} setName={setName}/>
     <Home/>
     <About/>
     <Best/>

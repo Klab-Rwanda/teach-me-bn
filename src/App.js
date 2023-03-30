@@ -1,4 +1,5 @@
 import "./App.css";
+import React,  {useState} from "react";
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Welcome from "./Welcome";
 import Teachers from "./page/mucyo/Admin dashboard/Teachers";
@@ -44,28 +45,34 @@ import CourseT from "./page/mucyo/TeacherDashboard/CourseT";
 import Course from "./page/mucyo/TeacherDashboard/CourseT";
 import Marks from "./page/mucyo/TeacherDashboard/Marks";
 import Mystudent from "./page/mucyo/TeacherDashboard/Mystudent";
+import Profile from "./page/mucyo/TeacherDashboard/Profile";
+
 import Parentbooking from "./page/mucyo/Admin dashboard/Parentbooking";
 import StudentApplication from "./page/mucyo/Admin dashboard/StudentApplication";
 import Paymentmanage from "./page/mucyo/Admin dashboard/Paymentmanage";
 import Result from "./page/mucyo/ParentDashboard/Result";
 function App() {
+  const [name, setName] = useState(false);
+  console.log(name);
+
   return (
+  
     <div className="App">
      <BrowserRouter>
        <Routes>
-        <Route path="/" element={<Welcome/>}/>
-        <Route path={"/signin"}element={<login/>} />
+        <Route path="/" element={<Welcome name={name} setName={setName}/ >}/>
+        <Route path={"/signin"}element={<login name={name} setName={setName}/>} />
         <Route path={"/approvedteachers"}element={<Approvedteachers/>} />
         <Route path={"/:id"} element={<SingleTeachersProfile/>}/>
         <Route path={"/bookform"}element={<PopUpform/>}/>
         <Route path={"/contact"}element={<ContactFor/>}/>
-        <Route path={"/login"}element={<Login/>}/>
+        <Route path={"/login"}element={<Login name={name} setName={setName}/>}/>
         <Route path={"/regiter"}element={<Register/>}/>
       
         <Route path={"/teacherinfo"}element={<Teacherinfo/>}/>
         <Route path={"/teacherinfo"}element={<Teacherinfo/>}/>
 
-       <Route  path="/parentdashboard"   element={<Shared/> }>
+       <Route  path="/parentdashboard"   element={<Shared/>}>
         <Route index   element={<Parentdash/>}/>
         <Route path={"/parentdashboard/account"}element={<Studentinfo/>} />
         <Route path={"/parentdashboard/payment"}element={<Payment/>} />
@@ -75,7 +82,7 @@ function App() {
         <Route path={"/parentdashboard/manage"}element={<Manage/>}/>
         <Route path={"/parentdashboard/response"}element={<Result/>}/>
         <Route path={"students"}element={<StudentAccount/>} />
-       
+      
         </Route>
         <Route path={"/TeacherDashboard"} element={<SharedT/>}>
         <Route index   element={<Teacherdash/>}/>
@@ -87,6 +94,7 @@ function App() {
         <Route path={"/TeacherDashboard/course"}element={<CourseT/>} />
         <Route path={"/TeacherDashboard/marks"}element={<Marks/>} />
         <Route path={"/TeacherDashboard/mystudent"}element={<Mystudent/>} />
+        <Route path={"/TeacherDashboard/account"}element={<Profile/>} />
         </Route>
 
         <Route path={"/admindashboard"} element={<SharedA/>}>
@@ -94,7 +102,7 @@ function App() {
          <Route path={"/admindashboard/Teachers"}element={<Teachers/>} />
          <Route path={"/admindashboard/support"}element={<Support/>} />
          <Route path={"/admindashboard/user"}element={<User/>} />
-         <Route path={"/admindashboard/Allapplication"}element={<Allapplication/>} />
+         <Route path={"/admindashboard/Allapplication"}element={<Allapplication/>}/>
          <Route path={"/admindashboard/Parentbooking"}element={<Parentbooking/>} />
          <Route path={"/admindashboard/StudentApplication"}element={<StudentApplication/>} />
          <Route path={"/admindashboard/Paymentmanage"}element={<Paymentmanage/>} />

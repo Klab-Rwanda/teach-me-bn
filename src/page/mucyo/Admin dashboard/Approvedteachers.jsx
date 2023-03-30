@@ -48,19 +48,6 @@ const Teachers = () => {
                       View More
                     </Link>
                   </button>
-                  <button
-                    className="button"
-                    onClick={() => {
-                      alert(`Book now with ${Profile?._fullname}`);
-                    }}
-                  >
-                    <Link
-                      to={`/bookform/${Profile.id}`}
-                      style={{ color: "inherit", textDecoration: "inherit" }}
-                    >
-                      Book Now
-                    </Link>
-                  </button>
                 </div>
             </div>
           </div>

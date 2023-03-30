@@ -1,5 +1,6 @@
 .menu {
   display: flex;
+  flex-direction: row;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -80,7 +81,22 @@ span {
 .toggle-btn {
   display: none;
 }
+.BTN {
+   cursor: pointer;
+   
+}
+.BTN .drop{
+  display: none;
 
+}
+.BTN:hover .drop{
+  display: block;
+}
+.logout{
+  background-color: transparent;
+  border:  1px  solid blueviolet;
+}
+   
 @media screen and (max-width: 600px) {
   .menu {
     flex-direction: column;
@@ -94,7 +110,7 @@ span {
   }
   .link {
     display: none;
-    /* background-color: #525FE1; */
+  
     flex-direction: column;
     margin: 0;
     padding: 0;
