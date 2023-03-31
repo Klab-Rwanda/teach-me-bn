@@ -41,15 +41,19 @@ const Manage = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map(user => (
+          {users.map((user) => (
             <tr key={user.id}>
-              <td>{user.fullName}</td>
+              <td>{user.studentfullName}</td>
               <td>{user.level}</td>
-              <td>{user.email}</td>
+              <td>{user.studentemail}</td>
               <td>{user.gender}</td>
               <td>
-              <button onClick={() => handleDeleteUser(user.id)}>Enable</button>
-              <button onClick={() => handleDeleteUser(user.id)}>Delete</button>
+                <button onClick={() => handleDeleteUser(user.id)}>
+                  Enable
+                </button>
+                <button onClick={() => handleDeleteUser(user.id)}>
+                  Delete
+                </button>
               </td>
             </tr>
           ))}

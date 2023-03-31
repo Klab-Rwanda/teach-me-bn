@@ -75,19 +75,7 @@ function SingleTeachersProfile() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <h1>Form to book a student </h1>
             <label>
-              {/* <select
-                onChange={(event) => {
-                  setStudentId(
-                    users?.find((item) => item.fullName === event.target.value)
-                      ._id
-                  );
-                }}
-              >
-                <option>Select--- </option>
-                {users?.map((student, index) => (
-                  <option key={users}>{student?.fullName}</option>
-                ))}
-              </select> */}
+             
               <select
                 onChange={(e) => {
                   setStudentId(
@@ -215,7 +203,7 @@ function SingleTeachersProfile() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
