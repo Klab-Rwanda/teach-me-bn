@@ -1,6 +1,6 @@
 import "./App.css";
-import React,  {useState} from "react";
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Welcome from "./Welcome";
 import Teachers from "./page/mucyo/Admin dashboard/Teachers";
 import Approvedteachers from "./page/mucyo/Admin dashboard/Approvedteachers";
@@ -37,7 +37,6 @@ import Support from "./page/mucyo/Admin dashboard/Support";
 import User from "./page/mucyo/Admin dashboard/User";
 import Allapplication from "./page/mucyo/Admin dashboard/Allapplication";
 
-
 import AllAssignTeacher from "./page/mucyo/StudentDashboard/AllAssignTeacher";
 import Zoom from "./page/mucyo/StudentDashboard/Zoom";
 import Zoome from "./page/mucyo/TeacherDashboard/Zoome";
@@ -51,73 +50,136 @@ import Parentbooking from "./page/mucyo/Admin dashboard/Parentbooking";
 import StudentApplication from "./page/mucyo/Admin dashboard/StudentApplication";
 import Paymentmanage from "./page/mucyo/Admin dashboard/Paymentmanage";
 import Result from "./page/mucyo/ParentDashboard/Result";
+import ProtectDash from "./context/ProtectDash";
+import Protectedstudent from "./context/Protectedstudent";
+import ControlsUsers from "./context/ControlsUsers";
 function App() {
   const [name, setName] = useState(false);
   console.log(name);
 
   return (
-  
     <div className="App">
-     <BrowserRouter>
-       <Routes>
-        <Route path="/" element={<Welcome name={name} setName={setName}/ >}/>
-        <Route path={"/signin"}element={<login name={name} setName={setName}/>} />
-        <Route path={"/approvedteachers"}element={<Approvedteachers/>} />
-        <Route path={"/:id"} element={<SingleTeachersProfile/>}/>
-        <Route path={"/bookform"}element={<PopUpform/>}/>
-        <Route path={"/contact"}element={<ContactFor/>}/>
-        <Route path={"/login"}element={<Login name={name} setName={setName}/>}/>
-        <Route path={"/regiter"}element={<Register/>}/>
-      
-        <Route path={"/teacherinfo"}element={<Teacherinfo/>}/>
-        <Route path={"/teacherinfo"}element={<Teacherinfo/>}/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Welcome name={name} setName={setName} />} />
+          <Route
+            path={"/signin"}
+            element={<login name={name} setName={setName} />}
+          />
+          <Route path={"/approvedteachers"} element={<Approvedteachers />} />
+          <Route path={"/:id"} element={<SingleTeachersProfile />} />
+          <Route path={"/bookform"} element={<PopUpform />} />
+          <Route path={"/contact"} element={<ContactFor />} />
+          <Route
+            path={"/login"}
+            element={<Login name={name} setName={setName} />}
+          />
+          <Route path={"/regiter"} element={<Register />} />
 
-       <Route  path="/parentdashboard"   element={<Shared/>}>
-        <Route index   element={<Parentdash/>}/>
-        <Route path={"/parentdashboard/account"}element={<Studentinfo/>} />
-        <Route path={"/parentdashboard/payment"}element={<Payment/>} />
-        <Route path={"/parentdashboard/report"}element={<Report/>} />
-        <Route path={"/parentdashboard/request"}element={<Request/>} />
-        <Route path={"/parentdashboard/communication"}element={<Communication/>}/>
-        <Route path={"/parentdashboard/manage"}element={<Manage/>}/>
-        <Route path={"/parentdashboard/response"}element={<Result/>}/>
-         <Route path={"/parentdashboard/approvedteachers"}element={<Approvedteachers/>}/>
-        <Route path={"students"}element={<StudentAccount/>} />
-      
-        </Route>
-        <Route path={"/TeacherDashboard"} element={<SharedT/>}>
-        <Route index   element={<Teacherdash/>}/>
-        <Route path={"/TeacherDashboard/assignment"}element={<AssignmentForm/>} />
-        <Route path={"/TeacherDashboard/notebook"}element={<QuizForm/>} />
-        <Route path={"/TeacherDashboard/quizlist"}element={<QuizList/>} />
-        <Route path={"/TeacherDashboard/allAssignmentsPage"}element={<AllAssignmentsPage/>} />
-        <Route path={"/TeacherDashboard/zoom"}element={<Zoome/>} />
-        <Route path={"/TeacherDashboard/course"}element={<CourseT/>} />
-        <Route path={"/TeacherDashboard/marks"}element={<Marks/>} />
-        <Route path={"/TeacherDashboard/mystudent"}element={<Mystudent/>} />
-        <Route path={"/TeacherDashboard/account"}element={<Profile/>} />
-        </Route>
+          {/* <Route path={"/teacherinfo"} element={<Teacherinfo />} /> */}
 
-        <Route path={"/admindashboard"} element={<SharedA/>}>
-         <Route index element={<AdminDash/>}/>
-         <Route path={"/admindashboard/Teachers"}element={<Teachers/>} />
-         <Route path={"/admindashboard/support"}element={<Support/>} />
-         <Route path={"/admindashboard/user"}element={<User/>} />
-         <Route path={"/admindashboard/Allapplication"}element={<Allapplication/>}/>
-         <Route path={"/admindashboard/Parentbooking"}element={<Parentbooking/>} />
-         <Route path={"/admindashboard/StudentApplication"}element={<StudentApplication/>} />
-         <Route path={"/admindashboard/Paymentmanage"}element={<Paymentmanage/>} />
-        </Route>
-        
-        <Route path={"/studentdashboard"} element={<SharedSt/>}>
-         <Route index  element={<StudentDash/>}/>
-        <Route path={"/studentdashboard/assignmentteachers"}element={<AllAssignTeacher/>} />
-        <Route path={"/studentdashboard/zoom"}element={<Zoom/>} />
-        <Route path={"/studentdashboard/setting"}element={<Settinge/>} />
-        {/* <Route path={"/studentdashboard/courses"}element={<Course/>} /> */}
-        </Route>
-       </Routes>
-     </BrowserRouter>
+          <Route
+            path={"/teacherinfo"}
+            element={
+              <ControlsUsers>
+                <Teacherinfo />
+              </ControlsUsers>
+            }
+          />
+
+          <Route path="/parentdashboard" element={<Shared />}>
+            <Route index element={<Parentdash />} />
+            <Route
+              path={"/parentdashboard/account"}
+              element={<Studentinfo />}
+            />
+            <Route path={"/parentdashboard/payment"} element={<Payment />} />
+            <Route path={"/parentdashboard/report"} element={<Report />} />
+            <Route path={"/parentdashboard/request"} element={<Request />} />
+            <Route
+              path={"/parentdashboard/communication"}
+              element={<Communication />}
+            />
+            <Route path={"/parentdashboard/manage"} element={<Manage />} />
+            <Route path={"/parentdashboard/response"} element={<Result />} />
+            <Route
+              path={"/parentdashboard/approvedteachers"}
+              element={<Approvedteachers />}
+            />
+            <Route path={"students"} element={<StudentAccount />} />
+          </Route>
+          <Route
+            path={"/TeacherDashboard"}
+            element={
+              <ProtectDash>
+                <SharedT />
+              </ProtectDash>
+            }
+          >
+            <Route index element={<Teacherdash />} />
+            <Route
+              path={"/TeacherDashboard/assignment"}
+              element={<AssignmentForm />}
+            />
+            <Route path={"/TeacherDashboard/notebook"} element={<QuizForm />} />
+            <Route path={"/TeacherDashboard/quizlist"} element={<QuizList />} />
+            <Route
+              path={"/TeacherDashboard/allAssignmentsPage"}
+              element={<AllAssignmentsPage />}
+            />
+            <Route path={"/TeacherDashboard/zoom"} element={<Zoome />} />
+            <Route path={"/TeacherDashboard/course"} element={<CourseT />} />
+            <Route path={"/TeacherDashboard/marks"} element={<Marks />} />
+            <Route
+              path={"/TeacherDashboard/mystudent"}
+              element={<Mystudent />}
+            />
+            <Route path={"/TeacherDashboard/account"} element={<Profile />} />
+          </Route>
+
+          <Route path={"/admindashboard"} element={<SharedA />}>
+            <Route index element={<AdminDash />} />
+            <Route path={"/admindashboard/Teachers"} element={<Teachers />} />
+            <Route path={"/admindashboard/support"} element={<Support />} />
+            <Route path={"/admindashboard/user"} element={<User />} />
+            <Route
+              path={"/admindashboard/Allapplication"}
+              element={<Allapplication />}
+            />
+            <Route
+              path={"/admindashboard/Parentbooking"}
+              element={<Parentbooking />}
+            />
+            <Route
+              path={"/admindashboard/StudentApplication"}
+              element={<StudentApplication />}
+            />
+            <Route
+              path={"/admindashboard/Paymentmanage"}
+              element={<Paymentmanage />}
+            />
+          </Route>
+          {/*     student dashard */}
+
+          <Route
+            path={"/studentdashboard"}
+            element={
+              <Protectedstudent>
+                <SharedSt />
+              </Protectedstudent>
+            }
+          >
+            <Route index element={<StudentDash />} />
+            <Route
+              path={"/studentdashboard/assignmentteachers"}
+              element={<AllAssignTeacher />}
+            />
+            <Route path={"/studentdashboard/zoom"} element={<Zoom />} />
+            <Route path={"/studentdashboard/setting"} element={<Settinge />} />
+            {/* <Route path={"/studentdashboard/courses"}element={<Course/>} /> */}
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

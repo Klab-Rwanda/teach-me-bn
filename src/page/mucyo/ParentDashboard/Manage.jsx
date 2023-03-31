@@ -1,32 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./manage.css";
 
 const Manage = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('https://teachmeapi.onrender.com/users')
-      .then(response => {
+    axios
+      .get("https://teachmeapi.onrender.com/users")
+      .then((response) => {
         setUsers(response.data.data.users);
-        console.log (response.data.data.users);
+        console.log(response.data.data.users);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   }, []);
 
-  const handleDeleteUser = (userId) => {
-    axios.delete(`https://teachmeapi.onrender.com/users/${userId}`)
-      .then(response => {
-        // remove the deleted user from the local state
-        setUsers(users.filter(user => user.id !== userId));
+  const handleDeleteUser = (id) => {
+    axios
+      .delete(`https://teachmeapi.onrender.com/users/${id}`)
+      .then((response) => {
+        setUsers(users.filter((user) => user.id !== id));
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   };
-
+  const handleEnableUser = (id) => {
+    axios
+      .patch(`https://teachmeapi.onrender.com/users/${id}`)
+      .then((response) => {
+        setUsers(users.filter((user) => user.id !== id));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <div>
       <h1>Manage Users</h1>
@@ -48,10 +58,10 @@ const Manage = () => {
               <td>{user.studentemail}</td>
               <td>{user.gender}</td>
               <td>
-                <button onClick={() => handleDeleteUser(user.id)}>
+                <button onClick={() => handleEnableUser(user._id)}>
                   Enable
                 </button>
-                <button onClick={() => handleDeleteUser(user.id)}>
+                <button onClick={() => handleDeleteUser(user._id)}>
                   Delete
                 </button>
               </td>
