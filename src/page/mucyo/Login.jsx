@@ -8,9 +8,12 @@ import Navbar from "../Navbar";
 import { AuthContext } from "../../context/AppProvider";
 import { useContext } from "react";
 const Login = () => {
+  
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
   const { isLoged, setIsLoged } = useContext(AuthContext);
+
+  console.log("heeloo");
 
   const onSubmit = (data) => {
     axios
@@ -19,6 +22,7 @@ const Login = () => {
         password: data.password,
       })
       .then((response) => {
+        console.log("alain");
         console.log(response.data.userSign.Usertype);
         console.log(response.data.userSign.Usertype);
 
@@ -27,7 +31,8 @@ const Login = () => {
         const token = localStorage.getItem("token");
 
         localStorage.setItem("token", response.data.token);
-        console.log(name);
+        // console.log(name);
+        console.log(response);
         setIsLoged(true);
         if (
           response.data.userSign.Usertype === "parents" ||
@@ -37,7 +42,6 @@ const Login = () => {
         } else {
           navigate("/teacherinfo");
         }
-
       })
       .catch((error) => {
         if (
@@ -57,7 +61,7 @@ const Login = () => {
       <Navbar />
       <div className="body">
         <div className="container1">
-          <h1 className="h1">Welcome Back!</h1>
+          <h1 className="h1">Welcome Back !</h1>
           <p className="p">
             “You've been through a lot and we're
             <br />

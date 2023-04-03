@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "./AppProvider";
 
-const Protectedstudent = ({ children }) => {
+const Studentdahpro = ({ children }) => {
   const navigate = useNavigate();
 
   const { user, Profile } = useContext(AuthContext);
@@ -12,8 +12,8 @@ const Protectedstudent = ({ children }) => {
     if (!user) {
       return;
     } else if (
-      user?.Usertype === "teacher" &&
-      Profile?.find((teacher) => teacher.email === user.email)
+      user?.Usertype === "students" &&
+     Profile?.find((teacher) => teacher === user.email)
     ) {
       console.log("user");
       return <div>{children}</div>;
@@ -23,6 +23,5 @@ const Protectedstudent = ({ children }) => {
   }
   return;
 };
-export default Protectedstudent;
 
-;
+export default Studentdahpro;

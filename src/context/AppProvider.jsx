@@ -9,6 +9,7 @@ const AppProvider = ({ children }) => {
   const token = localStorage.getItem("token");
   const { decodedToken, isExpired } = useJwt(token);
   const [Profile, setTeachers] = useState([]);
+  const [studentparents, setStudentParents] = useState([]);
   const [user, setUser] = useState();
 
   const [isLoged, setIsLoged] = useState(false);
@@ -24,7 +25,6 @@ const AppProvider = ({ children }) => {
       .catch((error) => console.log(error));
   }, []);
 
-  //     getting one user by id from aip
   // feching approved teachers on
 
   async function ApprovedTeachres() {
@@ -39,20 +39,23 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     ApprovedTeachres();
   }, []);
-  console.log(Profile);
-  //  getting all student account created by his/her parent 
+  // console.log(Profile);
 
-   async function getStudentAccount(){
+  //  getting all student account created by his/her parent
 
+  async function getStudentAccount() {
     try {
-        const response = await axios.get(`https://teachmeapi.onrender.com/users`)
-        
-    } catch (error) {
-      
-    }
-   }
+      const response = await axios.get(`https://teachmeapi.onrender.com/users`);
+      // console.log(response.data.users);
+      studentparents(response.data.users);
+    } catch (error) {}
+  }
+  useEffect(() => {
+    getStudentAccount();
+  }, []);
+  // console.log(studentparents);
 
-
+  //   getting one student by id
 
   async function GetOneUser() {
     if (decodedToken) {
@@ -71,10 +74,10 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     GetOneUser();
   }, [decodedToken]);
-  console.log(user);
-
+  // console.log(user);
+  //  console.log(studentparents);
   return (
-    <AuthContext.Provider value={{ isLoged, setIsLoged, user,Profile }}>
+    <AuthContext.Provider value={{ isLoged, setIsLoged, user, Profile }}>
       {children}
     </AuthContext.Provider>
   );

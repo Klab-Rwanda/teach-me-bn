@@ -109,7 +109,7 @@ const Dashboard = () => {
             <Link to="/studentdashboard/schedule"><AiFillSchedule className='dashboard-icon'/>schedule</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/studentdashboard/help_center"><GiSatelliteCommunication className='dashboard-icon'/>help center</Link>
+            <Link to="/studentdashboard/myquiz"><GiSatelliteCommunication className='dashboard-icon'/>Myquiz</Link>
           </li>
           <li className='sidebar_item'>
           <Link to="/studentdashboard/logout"><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>

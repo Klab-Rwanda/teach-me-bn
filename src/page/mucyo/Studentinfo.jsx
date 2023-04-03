@@ -29,6 +29,8 @@ const Studentinfo = () => {
           },
         }
       );
+        
+      console.log('success')
       setSubmitSuccess(true);
       setTimeout(() => {
         setSubmitSuccess(false);
@@ -48,7 +50,6 @@ const Studentinfo = () => {
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
-
   return (
     <div className="main">
       <div className="body1">
@@ -81,6 +82,15 @@ const Studentinfo = () => {
             <br />
             <input
               className="input"
+              type="text"
+              placeholder="StudyingStyle"
+              name="studyingStyle"
+              onChange={handleChange}
+            />
+            <br />
+
+            <input
+              className="input"
               type="password"
               placeholder="password"
               name="password"
@@ -110,23 +120,24 @@ const Studentinfo = () => {
               <option value="Math">Math</option>
               <option value="Geography">Geography</option>
             </select>
+
             <br />
+
             <select name="level" onChange={handleChange}>
               <option value="" className="placeholder">
-                Level
+                Levels
               </option>
               <option value="Level1">Level1</option>
               <option value="Level2">Level2</option>
               <option value="Level3">Level3</option>
               <option value="Level4">Level4</option>
             </select>
-            <input
-              className="input"
-              type="text"
-              placeholder="StudyingStyle"
-              name="studyingStyle"
-              onChange={handleChange}
-            />
+            <select name="Usertype" onChange={handleChange}>
+              <option value="student" className="placeholder">
+                student
+              </option>
+            </select>
+
             <br />
             <input className="input" type="submit" value="SUBMIT" />
           </form>

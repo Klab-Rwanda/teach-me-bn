@@ -8,6 +8,7 @@ import SingleTeachersProfile from "./page/SingleTeachersProfile";
 import PopUpform from "./page/PopUpform";
 import ContactFor from "./page/BLOG/ContactFor";
 import Login from "./page/mucyo/Login";
+
 // import Approvedteachers from "./page/mucyo/Approvedteachers";
 import Register from "./page/mucyo/Register";
 import Parentdash from "./page/mucyo/ParentDashboard/Parentdash";
@@ -22,6 +23,7 @@ import Shared from "./page/mucyo/ParentDashboard/Shared";
 import SharedT from "./page/mucyo/TeacherDashboard/SharedT";
 
 import Settinge from "./page/mucyo/StudentDashboard/Settinge";
+import Myquiz from "./page/mucyo/StudentDashboard/Myquiz";
 import Payment from "./page/mucyo/ParentDashboard/Payment";
 import Report from "./page/mucyo/ParentDashboard/Report";
 import Communication from "./page/mucyo/ParentDashboard/Communication";
@@ -53,6 +55,7 @@ import Result from "./page/mucyo/ParentDashboard/Result";
 import ProtectDash from "./context/ProtectDash";
 import Protectedstudent from "./context/Protectedstudent";
 import ControlsUsers from "./context/ControlsUsers";
+import LoginPortal from "./page/LoginPortal";
 function App() {
   const [name, setName] = useState(false);
   console.log(name);
@@ -66,6 +69,11 @@ function App() {
             path={"/signin"}
             element={<login name={name} setName={setName} />}
           />
+          <Route
+            path={"/loginpportal"}
+            element={<LoginPortal name={name} setName={setName} />}
+          />
+
           <Route path={"/approvedteachers"} element={<Approvedteachers />} />
           <Route path={"/:id"} element={<SingleTeachersProfile />} />
           <Route path={"/bookform"} element={<PopUpform />} />
@@ -89,10 +97,7 @@ function App() {
 
           <Route path="/parentdashboard" element={<Shared />}>
             <Route index element={<Parentdash />} />
-            <Route
-              path={"/parentdashboard/account"}
-              element={<Studentinfo />}
-            />
+            <Route path={"parentdashboard/account"} element={<Studentinfo />} />
             <Route path={"/parentdashboard/payment"} element={<Payment />} />
             <Route path={"/parentdashboard/report"} element={<Report />} />
             <Route path={"/parentdashboard/request"} element={<Request />} />
@@ -161,14 +166,7 @@ function App() {
           </Route>
           {/*     student dashard */}
 
-          <Route
-            path={"/studentdashboard"}
-            element={
-              <Protectedstudent>
-                <SharedSt />
-              </Protectedstudent>
-            }
-          >
+          <Route path={"/studentdashboard"} element={<SharedSt />}>
             <Route index element={<StudentDash />} />
             <Route
               path={"/studentdashboard/assignmentteachers"}
@@ -176,6 +174,7 @@ function App() {
             />
             <Route path={"/studentdashboard/zoom"} element={<Zoom />} />
             <Route path={"/studentdashboard/setting"} element={<Settinge />} />
+            <Route path={"/studentdashboard/myquiz"} element={<Myquiz />} />
             {/* <Route path={"/studentdashboard/courses"}element={<Course/>} /> */}
           </Route>
         </Routes>
