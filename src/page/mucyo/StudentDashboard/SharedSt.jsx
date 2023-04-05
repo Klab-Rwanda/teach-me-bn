@@ -103,7 +103,7 @@ const Dashboard = () => {
             <Link to="/studentdashboard/quiz"><ImProfile className='dashboard-icon'/>Quiz post</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/studentdashboard/courses"><MdPlayLesson className='dashboard-icon'/>My courses</Link>
+            <Link to="/studentdashboard/amasomo"><MdPlayLesson className='dashboard-icon'/>My courses</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/studentdashboard/schedule"><AiFillSchedule className='dashboard-icon'/>schedule</Link>

@@ -1,31 +1,55 @@
-import React, { useState } from 'react';
-import StripeCheckout from 'react-stripe-checkout';
 
-const Payment = () => {
-  const [amount, setAmount] = useState(0);
+import React, { useState } from "react";
 
-  const handleToken = (token) => {
-    console.log(token);
-    // Here, you can handle the token object returned by Stripe to process the payment on your server.
+function PaymentForm() {
+  const [name, setName] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+  const [expiryDate, setExpiryDate] = useState("");
+  const [cvv, setCvv] = useState("");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    // Add payment processing logic here
   }
-
   return (
-    <div>
-      <h2>Payment Page</h2>
-      <input type="number" placeholder="Enter Amount" value={amount} onChange={(e) => setAmount(e.target.value)} />
-      <StripeCheckout
-        stripeKey="your_stripe_publishable_key"
-        token={handleToken}
-        amount={amount * 100}
-        name="Payment"
-        currency="USD"
-      >
-        <button>Pay now</button>
-      </StripeCheckout>
+    <div className="payment">
+    <form onSubmit={handleSubmit}>
+      <label>
+        Name on Card:
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <label>
+        Card Number:
+        <input
+          type="text"
+          value={cardNumber}
+          onChange={(e) => setCardNumber(e.target.value)}
+        />
+      </label>
+      <label>
+        Expiry Date:
+        <input
+          type="text"
+          value={expiryDate}
+          onChange={(e) => setExpiryDate(e.target.value)}
+        />
+      </label>
+      <label>
+        CVV:
+        <input
+          type="text"
+          value={cvv}
+          onChange={(e) => setCvv(e.target.value)}
+        />
+      </label>
+      <button type="submit">Pay Now</button>
+    </form>
     </div>
   );
 }
 
-export default Payment;
-
-
+export default PaymentForm;

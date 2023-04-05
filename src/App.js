@@ -24,6 +24,8 @@ import SharedT from "./page/mucyo/TeacherDashboard/SharedT";
 
 import Settinge from "./page/mucyo/StudentDashboard/Settinge";
 import Myquiz from "./page/mucyo/StudentDashboard/Myquiz";
+import Anatyics from "./page/mucyo/StudentDashboard/Anatyics";
+import Coursestude from "./page/mucyo/StudentDashboard/Coursestude";
 import Payment from "./page/mucyo/ParentDashboard/Payment";
 import Report from "./page/mucyo/ParentDashboard/Report";
 import Communication from "./page/mucyo/ParentDashboard/Communication";
@@ -175,7 +177,9 @@ function App() {
             <Route path={"/studentdashboard/zoom"} element={<Zoom />} />
             <Route path={"/studentdashboard/setting"} element={<Settinge />} />
             <Route path={"/studentdashboard/myquiz"} element={<Myquiz />} />
+            <Route path={"/studentdashboard/anatyics"} element={<Anatyics />} />
             {/* <Route path={"/studentdashboard/courses"}element={<Course/>} /> */}
+            <Route path={"/studentdashboard/amasomo"} element={<Coursestude />} />
           </Route>
         </Routes>
       </BrowserRouter>
