@@ -1,10 +1,8 @@
-
-
 import React, { useState } from "react";
 import "../../../css2/mystudent.css";
 
 const Mystudent = () => {
-  // Set up some sample data for the students
+  // Set up some sample data for the student
   const [students, setStudents] = useState([
     {
       id: 1,
@@ -12,7 +10,7 @@ const Mystudent = () => {
       course: "Math",
       parent: "Jane Doe",
       age: 15,
-      level: "Intermediate",
+      level: "Intermediate"
     },
     {
       id: 2,
@@ -175,7 +173,6 @@ const Mystudent = () => {
       {editing && <button type="reset">Cancel</button>}
     </div>
   </form>
-
   <div className="student-list">
     {students.map((student) => (
       <div className="student" key={student.id}>

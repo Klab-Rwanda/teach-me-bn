@@ -22,7 +22,7 @@ const Teacherdash = () => {
     </div>
 
     <div className="small_teacherdash_cards">
-        <h1>7</h1>
+        <h1>7+</h1>
         <p>student </p>
         <button>More info </button>
     </div>
@@ -92,21 +92,21 @@ const Teacherdash = () => {
   <tbody>
     <tr>
       <td>John Doe</td>
-      <td>React Course</td>
+      <td>biology</td>
       <td>$50</td>
       <td>123456789</td>
       <td>Download</td>
     </tr>
     <tr>
       <td>Jane Smith</td>
-      <td>Node.js Course</td>
+      <td>Mathematics</td>
       <td>$75</td>
       <td>987654321</td>
       <td>Download</td>
     </tr>
     <tr>
       <td>Bob Johnson</td>
-      <td>Python Course</td>
+      <td>enterpenuership</td>
       <td>$100</td>
       <td>456123789</td>
       <td>Download</td>

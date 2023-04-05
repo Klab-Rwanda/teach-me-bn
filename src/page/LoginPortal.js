@@ -32,17 +32,17 @@ const LoginPortal = () => {
           email: data.email,
           password: data.password,
         }
-      );
+        );
+        console.log(response);
 
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
-        navigate("/studentdashboard");
+        // navigate("/studentdashboard");
       }
     } catch (error) {
       console.log(error.response.data);
     }
   };
-
   return (
     <div className="main">
       <Navbar />
