@@ -1,0 +1,61 @@
+.assignments-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.assignments-container .page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.assignments-container .assignments-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.assignments-container .assignment-item {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.assignments-container .assignment-item h3 {
+  margin-top: 0;
+}
+
+.assignments-container .attempt-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.assignments-container .attempt-button:hover {
+  background-color: #3e8e41;
+}
+
+.assignments-container .modal-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.assignments-container .modal-body p {
+  margin-bottom: 1rem;
+}
+.assignments-container .modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.assignments-container .modal-footer button {
+  margin-right: 1rem;
+}

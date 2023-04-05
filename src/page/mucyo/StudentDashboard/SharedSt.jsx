@@ -73,7 +73,6 @@ const Dashboard = () => {
           </div>
         </div>
       </nav>
-
       {/* Sidebar */}
       {/* <aside className={`sidebar ${sidebarOpen ? 'open' : ''}`}> */}
       <aside className='sidebarOpen sidebar'>
@@ -91,7 +90,7 @@ const Dashboard = () => {
             <Link to="/studentdashboard/zoom"><MdPayments className='dashboard-icon'/>live zooming </Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/studentdashboard/anatyics"><MdRequestQuote className='dashboard-icon'/>Anatyics</Link>
+            <Link to="/studentdashboard/attems"><MdRequestQuote className='dashboard-icon'/>attempt</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/studentdashboard/teahers"><MdAccountBalance className='dashboard-icon'/>My teachers</Link>

@@ -39,7 +39,7 @@ const Coursestude = () => {
 
   return (
     <div className="Coursestude">
-      <h1> hello student Courses for Students</h1>
+      <h1> Hello student Courses for Students</h1>
 
       <div className="filters">
         <button onClick={() => handleCategorySelect("all")}>All</button>
@@ -47,7 +47,7 @@ const Coursestude = () => {
         <button onClick={() => handleCategorySelect("nodejs")}>mathematics </button>
         <button onClick={() => handleCategorySelect("python")}> technonlogy</button>
       </div>
-
+      
       <div className="course-cards">
         {filteredCourses.map((course) => (
           <div key={course.id}>

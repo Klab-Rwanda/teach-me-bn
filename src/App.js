@@ -58,6 +58,7 @@ import ProtectDash from "./context/ProtectDash";
 import Protectedstudent from "./context/Protectedstudent";
 import ControlsUsers from "./context/ControlsUsers";
 import LoginPortal from "./page/LoginPortal";
+import Attempts from "./page/mucyo/StudentDashboard/Attempts";
 function App() {
   const [name, setName] = useState(false);
   console.log(name);
@@ -75,7 +76,7 @@ function App() {
             path={"/loginpportal"}
             element={<LoginPortal name={name} setName={setName} />}
           />
-
+          <Route path={"/attempt/assignment"} element={<SharedSt />} />
           <Route path={"/approvedteachers"} element={<Approvedteachers />} />
           <Route path={"/:id"} element={<SingleTeachersProfile />} />
           <Route path={"/bookform"} element={<PopUpform />} />
@@ -96,7 +97,6 @@ function App() {
               </ControlsUsers>
             }
           />
-
           <Route path="/parentdashboard" element={<Shared />}>
             <Route index element={<Parentdash />} />
             <Route path={"parentdashboard/account"} element={<Studentinfo />} />
@@ -178,8 +178,12 @@ function App() {
             <Route path={"/studentdashboard/setting"} element={<Settinge />} />
             <Route path={"/studentdashboard/myquiz"} element={<Myquiz />} />
             <Route path={"/studentdashboard/anatyics"} element={<Anatyics />} />
+            <Route path={"/studentdashboard/Attemts"} element={<Attempts />} />
             {/* <Route path={"/studentdashboard/courses"}element={<Course/>} /> */}
-            <Route path={"/studentdashboard/amasomo"} element={<Coursestude />} />
+            <Route
+              path={"/studentdashboard/amasomo"}
+              element={<Coursestude />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>
