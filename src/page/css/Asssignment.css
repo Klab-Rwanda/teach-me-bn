@@ -1,0 +1,94 @@
+.assignments {
+    background-color: #F7FAFC;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 32px;
+  }
+  
+  .assignments h2 {
+    color: #4A5568;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  
+  .assignments form {
+    display: grid;
+    grid-gap: 16px;
+  }
+  
+  .assignments label {
+    color: #4A5568;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .assignments input,
+  .assignments select,
+  .assignments textarea {
+    border: 2px solid #E2E8F0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 8px;
+    /* max-width: 100%; */
+  }
+  
+  .assignments input[type="file"] {
+    display: flex;
+  }
+  
+  .assignments input[type="file"] + label {
+    background-color: #4299E1;
+    border-radius: 4px;
+    color: #0e0d0d;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+  }
+  
+  .assignments input[type="file"] + label:hover {
+    background-color: #3182CE;
+  }
+  
+  .assignments .success-message {
+    background-color: #C6F6D5;
+    border: 1px solid #9AE6B4;
+    border-radius: 4px;
+    color: #48BB78;
+    font-size: 16px;
+    margin-bottom: 16px;
+    padding: 8px;
+  }
+  
+  .assignments .error-message {
+    background-color: #FEB2B2;
+    border: 1px solid #F56565;
+    border-radius: 4px;
+    color: #C53030;
+    font-size: 16px;
+    margin-bottom: 16px;
+    padding: 8px;
+  }
+  
+  .assignments button[type="submit"] {
+    background-color: #4299E1;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .assignments button[type="submit"]:hover {
+    background-color: #3182CE;
+  }
+  

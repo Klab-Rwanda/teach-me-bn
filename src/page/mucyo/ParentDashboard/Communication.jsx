@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import '../../../css/Communication.css';
+import '../../../css/Communication.css';
 const Communication = () => {
   const [selectedTeacher, setSelectedTeacher] = useState('');
   const [messageSubject, setMessageSubject] = useState('');
@@ -16,7 +16,7 @@ const Communication = () => {
   };
 
   return (
-    <div>
+    <div className='communication'>
       <h1> Direct Communication with Teacher</h1>
       <form>
         <label>
@@ -31,7 +31,7 @@ const Communication = () => {
         <br />
         <label>
           Message Subject:
-          <input type="text" value={messageSubject} onChange={handleMessageSubjectChange} />
+          <textarea name="message" id="" cols="30" rows="10" value={messageSubject} onChange={handleMessageSubjectChange}></textarea>
         </label>
         <br />
         <button type="button" onClick={handleSendMessage}>Send Message</button>
@@ -39,6 +39,5 @@ const Communication = () => {
     </div>
   );
 };
-
 export default Communication;
 

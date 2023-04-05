@@ -66,7 +66,6 @@ function AllQuizzesPage() {
                   <button onClick={() => handleEditQuiz(quiz._id)}>Edit</button>
                   <button onClick={() => handleDeleteQuiz(quiz._id)}>Delete</button>
                   </div>
-                 
                 </td>
               </tr>
             ))}

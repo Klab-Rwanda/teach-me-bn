@@ -3,7 +3,10 @@ import "../css/Home.css";
 import LOGO from "../aseets/alainlogo.png";
 import ME from "../aseets/rightsphoto.jpg";
 import { BsFillPlayCircleFill } from "react-icons/bs"
+
 function Home() {
+
+
   return (
    <div>
     <div className=" container" id="home">

@@ -1,117 +1,70 @@
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h2 {
-    font-size: 2rem;
-  }
-  
-  form .label {
-    display: block;
-    width: 90%;
-    padding: 12px;
-    font-size: 1.1rem;
-    border: 1px solid #01abfa;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  
-  .form input,
-  form textarea {
-    display: block;
-    width: 90%;
-    padding: 12px;
-    font-size: 1.1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  
-  form input:focus,
-  form textarea:focus {
-    outline: none;
-    border-color: #0077b6;
-  }
-  
-  form button {
-    display: block;
-    margin: 0 auto;
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    background-color: #0077b6;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  form button:hover {
-    background-color: #023e8a;
-  }
-  
-  .module {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 30px;
-  }
-  
-  .module h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-  
-  .module label {
-    font-weight: bold;
-  }
-  
-  .module input,
-  .module textarea {
-    margin-bottom: 20px;
-  }
-  
-  .module input:focus,
-  .module textarea:focus {
-    outline: none;
-    border-color: #0077b6;
-  }
-  
-  .module hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 30px 0;
-  }
-  
-  .module button {
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    background-color: #0077b6;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-right: 10px;
-  }
-  
-  .module button:hover {
-    background-color: #023e8a;
-  }
-  
-  .module button[type="submit"] {
-    background-color: #02a18c;
-  }
-  .form_button{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
+.Course {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.Course .label {
+  display: block;
+  margin-bottom: 10px;
+}
+.module{
+  display: flex;
+  flex-direction: row;
+}
+.Course .form {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.Course textarea.form {
+  height: 100px;
+}
+
+.Course.module {
+  margin-top: 20px;
+}
+
+.Course.module input {
+  display: block;
+  margin-bottom: 10px;
+  max-width: 90%;
+}
+
+ .Course .module textarea {
+  height: 100px;
+}
+
+ .Course hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+.form_button{
+  display: flex;
+  flex-direction: row;
+}
+.Course button {
+  background-color: #4d82be;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.Course button:hover {
+  background-color: #3e8e41;
+}
+
+ .Course .form_button {
+  margin-top: 20px;
+}
+
+.Course .form_button button {
+  margin-right: 20px;
+}

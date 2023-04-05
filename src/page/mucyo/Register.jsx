@@ -1,13 +1,13 @@
 import React from "react";
-import { useNavigate,Link} from 'react-router-dom'
+import { useNavigate, Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar";
 // import  {yupResolver} from "@hookform/resolvers/yup"
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 // import * as yup  from "yup"
 import axios from "axios";
 
-const REGISTER_URL =  "https://teachmeapi.onrender.com/api/v1/signup";
+const REGISTER_URL = "https://teachmeapi.onrender.com/api/v1/signup";
 
 // const schema = yup
 //   .object()
@@ -20,25 +20,27 @@ const REGISTER_URL =  "https://teachmeapi.onrender.com/api/v1/signup";
 //   })
 
 const Register = () => {
- 
-  const  {register ,handleSubmit ,formState :{errors}} =  useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     // resolver:yupResolver(schema)
-  })
- 
-  const navigate  = useNavigate();
-  const   onSubmit  = async  (data) =>{
+  });
+
+  const navigate = useNavigate();
+  const onSubmit = async (data) => {
+    console.log(data);
+
+    try {
+      const response = await axios.post(REGISTER_URL, data);
+      console.log(response);
+      navigate("/login");
+    } catch (error) {
       console.log(data);
-
-      try {
-        const  response  = await  axios.post(REGISTER_URL,data)
-        console.log(response);
-        navigate("/login")
-
-      } catch (error) {
-        console.log(data);
-        console.log(error.response);
-      }
-  }
+      console.log(error.response);
+    }
+  };
 
   return (
     <div className="main">
@@ -62,8 +64,8 @@ const Register = () => {
               className="input"
               type="text"
               placeholder="Name"
-             autoComplete="off"
-             {...register("name")}
+              autoComplete="off"
+              {...register("name")}
             />
             <br />
             <input
@@ -82,21 +84,20 @@ const Register = () => {
               {...register("password")}
             />
             <br />
-            <select 
+            <select
               name="usertype"
               placeholder="User Type"
-
-            {...register("Usertype")}
-
+              {...register("Usertype")}
             >
               <option value="" className="placeholder">
                 User Type
               </option>
               <option value="parents">parents</option>
               <option value="teacher">teacher</option>
+              <option value="admin">Admin</option>
             </select>
             <br />
-           {/* <select
+            {/* <select
               name="gender"
               placeholder="Gender"
             {...register("gender")}
@@ -120,4 +121,3 @@ const Register = () => {
 };
 
 export default Register;
-

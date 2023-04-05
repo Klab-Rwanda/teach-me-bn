@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FiBell } from 'react-icons/fi';
@@ -16,11 +16,13 @@ import { GrUserManager } from 'react-icons/gr';
 
 import LOGO from '../../../../src/aseets/logoproject.png';
 import '../../../css/shared.css';
+import { AuthContext } from '../../../context/AppProvider';
+
 
 const Dashboard = () => {
  
  
-
+  const {isLoged, setIsLoged} = useContext(AuthContext);
  
 
   return (
@@ -67,6 +69,7 @@ const Dashboard = () => {
               <Link to="/">Contact Us</Link>
             </div>
           </div>
+          
         </div>
       </nav>
 
@@ -99,7 +102,7 @@ const Dashboard = () => {
             <Link to="/TeacherDashboard/quizlist"><GiSatelliteCommunication className='dashboard-icon'/>allquiz</Link>
           </li>
           <li className="sidebar-item">
-            <Link to=""><CgProfile className='dashboard-icon'/>my profile</Link>
+            <Link to="/TeacherDashboard/account"><CgProfile className='dashboard-icon'/>Account</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/TeacherDashboard/marks"><GrUserManager className='dashboard-icon'/>Marks</Link>

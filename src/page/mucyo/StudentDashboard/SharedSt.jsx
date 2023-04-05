@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+
 import { Link, Outlet } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FiBell } from 'react-icons/fi';
@@ -16,9 +17,11 @@ import { GrUserManager } from 'react-icons/gr';
 import { AiFillSchedule } from 'react-icons/ai';
 import LOGO from '../../../../src/aseets/logoproject.png';
 import '../../../css/shared.css';
+import { AuthContext } from '../../../context/AppProvider';
 
 const Dashboard = () => {
   // const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const {isLoged, setIsLoged} = useContext(AuthContext);
 
   const handleSidebarToggle = () => {
     // setSidebarOpen(!sidebarOpen);
@@ -100,13 +103,13 @@ const Dashboard = () => {
             <Link to="/studentdashboard/quiz"><ImProfile className='dashboard-icon'/>Quiz post</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/studentdashboard/courses"><MdPlayLesson className='dashboard-icon'/>My courses</Link>
+            <Link to="/studentdashboard/amasomo"><MdPlayLesson className='dashboard-icon'/>My courses</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/studentdashboard/schedule"><AiFillSchedule className='dashboard-icon'/>schedule</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/studentdashboard/help_center"><GiSatelliteCommunication className='dashboard-icon'/>help center</Link>
+            <Link to="/studentdashboard/myquiz"><GiSatelliteCommunication className='dashboard-icon'/>Myquiz</Link>
           </li>
           <li className='sidebar_item'>
           <Link to="/studentdashboard/logout"><RiLogoutCircleFill className='dashboard-icon'/>Logout</Link>
