@@ -88,7 +88,7 @@ function App() {
           <Route path={"/regiter"} element={<Register />} />
 
           {/* <Route path={"/teacherinfo"} element={<Teacherinfo />} /> */}
-
+     
           <Route
             path={"/teacherinfo"}
             element={
