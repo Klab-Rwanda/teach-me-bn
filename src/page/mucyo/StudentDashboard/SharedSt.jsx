@@ -107,6 +107,7 @@ const Dashboard = () => {
           <li className="sidebar-item">
             <Link to="/studentdashboard/schedule"><AiFillSchedule className='dashboard-icon'/>schedule</Link>
           </li>
+          {/* ggggg */}
           <li className="sidebar-item">
             <Link to="/studentdashboard/myquiz"><GiSatelliteCommunication className='dashboard-icon'/>Myquiz</Link>
           </li>
