@@ -1,59 +1,57 @@
-.quiz-form {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .quiz-form h2 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .quiz-form input[type="text"],
-  .quiz-form input[type="number"],
-  .quiz-form textarea {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 4px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .quiz-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  
-  .quiz-form input[type="submit"] {
-    background-color: #FF6B6B;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .quiz-form input[type="submit"]:hover {
-    background-color: #FF4C4C;
-  }
-  .div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .divv {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
+.quiz_preparation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
 
-  }
+.quiz_preparation .form {
+  width: 400px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.quiz_preparation .form__group {
+  margin-bottom: 20px;
+}
+
+.quiz_preparation .form__label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.quiz_preparation .form__input,
+.quiz_preparation .form__textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f5f5f5;
+  transition: background-color 0.2s ease;
+}
+
+.quiz_preparation .form__input:focus,
+.quiz_preparation .form__textarea:focus {
+  background-color: #fff;
+}
+
+.quiz_preparation .button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #0077ff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}

@@ -28,6 +28,7 @@
   .small_card_teachers:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    /* background-color: rgb(83, 22, 22); */
   }
   
   .small_card_teachers img {
@@ -52,14 +53,12 @@
     justify-content: space-between;
     align-items: center;
   }
-  
   .hours p {
     display: flex;
     align-items: center;
     font-size: 14px;
     font-weight: bold;
   }
-  
   .hours svg {
     margin-right: 5px;
   }

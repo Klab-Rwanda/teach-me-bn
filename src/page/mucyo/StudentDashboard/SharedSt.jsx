@@ -120,7 +120,7 @@ const Dashboard = () => {
         <Outlet/>
       </div>
      
-   
+
    </div>
   );
 };

@@ -33,13 +33,13 @@ function Home() {
           </div>
         </div>
         <div className="right">
-          <img src={ME} alt="homeside" />
+          <img src={ME} alt="homeside connection" />
         </div>
       </div>
     </div>
     <div className="sub_container">
       <span className="experts">8K+<br/><p className="sub_container_experts">Success Stories</p></span>
-      <span className="experts">200+<br/><p className="sub_container_experts">Expert instructor</p></span>
+      <span className="experts">200k+<br/><p className="sub_container_experts">Expert instructor</p></span>
       <span className="experts">108K+<br/><p className="sub_container_experts">Worldwide Students</p></span>
       <span className="experts">310K+<br/><p className="sub_container_experts">Trendy Subjects</p></span>
     </div>

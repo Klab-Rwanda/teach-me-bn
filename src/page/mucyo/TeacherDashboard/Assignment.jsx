@@ -47,7 +47,6 @@ function AssignmentForm({ onSave }) {
       setSuccess('Assignment created successfully!');
       e.target.reset(); // reset the form
     
-      
 
        setTimeout(() => {
         setSuccess(''); 
