@@ -1,54 +1,12 @@
-// import React, { useState } from "react";
-// import "./quizform.css";
-// function QuizPreparationForm() {
-//   const [quizTitle, setQuizTitle] = useState("");
-//   const [quizdescription, setquizdescription] = useState("");
-
-//   const handleQuizTitleChange = (event) => {
-//     setQuizTitle(event.target.value);
-//   };
-
-//   const handleQuizDescriptionChange = (event) => {
-//     setQuizDescription(event.target.value);
-//   };
-
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-    
-//   };
-
-//   return (
-//     <div className="quiz_prepartion">
-//     <form onSubmit={handleSubmit}>
-//       <label>
-//         Quiz Title:
-//         <input type="text" 
-//         value={quizTitle} onChange={handleQuizTitleChange}/>
-//       </label>
-//       <br />
-//       <label>
-//         Quiz Description:
-//         <textarea
-//           value={quizDescription}
-//           onChange={handleQuizDescriptionChange}
-//         />
-//       </label>
-//       <br />
-//       <button type="submit">Submit</button>
-//     </form>
-//     </div>
-//   );
-// }
-
-// export default QuizPreparationForm;
-
 import React, { useState } from "react";
 import axios from "axios";
 import "./quizform.css";
 
 function QuizPreparationForm() {
-  const [quiztopic, setQuizTitle] = useState("");
+  const [quizname, setQuizTitle] = useState("");
   const [quizdescription, setquizdescription] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleQuizTitleChange = (event) => {
     setQuizTitle(event.target.value);
@@ -62,21 +20,25 @@ function QuizPreparationForm() {
     event.preventDefault();
 
     const quizData = {
-      title: quiztopic,
-      description: quizdescription,
+      quizname: quizname,
+      quizdescription: quizdescription,
     };
 
     axios
-      .post("https://teachmeapi.onrender.com/api/v1/CreateQiuz", quizData)
+      .post("https://teachmeapi.onrender.com/api/v1/createquiz", quizData)
       .then((response) => {
-        console.log(response.data);
+        setSuccessMessage("Quiz created successfully!");
+        setErrorMessage("");
       })
       .catch((error) => {
-        console.log(error);
+        setSuccessMessage("");
+        setErrorMessage("Error creating quiz. Please try again.");
       });
   };
   return (
     <div className="quiz_preparation">
+      {successMessage && <div className="success">{successMessage}</div>}
+      {errorMessage && <div className="error">{errorMessage}</div>}
       <form className="form" onSubmit={handleSubmit}>
         <div className="form__group">
           <label className="form__label" htmlFor="quizTitle">
@@ -86,7 +48,7 @@ function QuizPreparationForm() {
             className="form__input"
             id="quizTitle"
             type="text"
-            value={quiztopic}
+            value={quizname}
             onChange={handleQuizTitleChange}
             required
           />
@@ -112,5 +74,3 @@ function QuizPreparationForm() {
 }
 
 export default QuizPreparationForm;
-
-

@@ -7,14 +7,30 @@ function Modal({ isOpen, onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can handle the submission of the questions
-    console.log(questions);
-    // Reset the form
-    setQuestions([{ question: "", answers: [], correctAnswer: "" }]);
-    // Close the modal
-    onClose();
-  };
 
+    const quizId = "your-quiz-id";
+
+    fetch(`https://teachmeapi.onrender.com/api/v1/addquestion/${quizId}`, 
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(questions),
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log("Question(s) added successfully!");
+          setQuestions([{ question: "", answers: [], correctAnswer: "" }]);
+          onClose();
+        } else {
+          console.error("Failed to add question(s).");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   const handleQuestionChange = (e, questionIndex) => {
     const newQuestions = [...questions];
     newQuestions[questionIndex].question = e.target.value;

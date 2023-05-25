@@ -62,5 +62,66 @@ const Coursestude = () => {
     </div>
   );
 };
-
 export default Coursestude;
+
+
+
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
+// import "./Coursestude.css";
+
+// const Coursestude = () => {
+//   const [courses, setCourses] = useState([]);
+//   const [selectedCategory, setSelectedCategory] = useState("all");
+
+//   const handleCategorySelect = (category) => {
+//     setSelectedCategory(category);
+//   };
+
+//   useEffect(() => {
+//     axios
+//       .get("https://teachmeapi.onrender.com/api/v1/getAllCourse")
+//       .then((response) => {
+//         setCourses(response.data);
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//       });
+//   }, []);
+
+//   const filteredCourses =
+//     selectedCategory === "all"
+//       ? courses
+//       : courses.filter((course) => course.category === selectedCategory);
+
+//   return (
+//     <div className="Coursestude">
+//       <h1> Hello student Courses for Students</h1>
+
+//       <div className="filters">
+//         <button onClick={() => handleCategorySelect("all")}>All</button>
+//         <button onClick={() => handleCategorySelect("science")}>Science</button>
+//         <button onClick={() => handleCategorySelect("mathematics")}>
+//           Mathematics
+//         </button>
+//         <button onClick={() => handleCategorySelect("technology")}>
+//           Technology
+//         </button>
+//       </div>
+
+//       <div className="course-cards">
+//         {filteredCourses.map((course) => (
+//           <div key={course.id}>
+//             <img src={course.image} alt={course.title} />
+//             <h2>{course.title}</h2>
+//             <p>{course.description}</p>
+//             <p>Teacher: {course.teacher}</p>
+//             <button>Enroll Now</button>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Coursestude;

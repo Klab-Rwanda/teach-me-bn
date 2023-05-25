@@ -1,5 +1,11 @@
+
+
+
+
 import React, { useState } from "react";
+import axios from "axios";
 import "./Course.css";
+
 const Course = () => {
   const [title, setTitle] = useState("");
   const [code, setCode] = useState("");
@@ -13,12 +19,15 @@ const Course = () => {
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value);
   };
-  const handleModuleCodeChange = (event) => {
-    setCode(event.target.value);
+
+  const handleModuleCodeChange = (event, index) => {
+    const newModules = [...modules];
+    newModules[index].code = event.target.value;
+    setModules(newModules);
   };
 
   const handleModuleAdd = () => {
-    setModules([...modules, { title: "", description: "" }]);
+    setModules([...modules, { title: "", description: "", code: "" }]);
   };
 
   const handleModuleTitleChange = (event, index) => {
@@ -33,9 +42,31 @@ const Course = () => {
     setModules(newModules);
   };
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
-    // TODO: Submit form data to server
+
+    try {
+      // Prepare the request payload
+      const payload = {
+        title,
+        code,
+        description,
+        modules,
+      };
+
+      // Send a POST request to the API endpoint  ***** alain//
+      const response = await axios.post(
+        "https://teachmeapi.onrender.com/api/v1/CreateCourse",
+        payload
+      );
+
+      // Handle the response from the server
+      console.log("Course created successfully:", response.data);
+      // TODO: Handle success, show a success message, or redirect the user
+    } catch (error) {
+      console.error("Error creating course:", error);
+      // TODO: Handle error, show an error message to the user
+    }
   };
 
   return (
@@ -54,12 +85,12 @@ const Course = () => {
         </label>
 
         <label className="label">
-          CODE:
+          Code:
           <input
             className="form input"
             type="text"
-            value={title}
-            onChange={handleTitleChange}
+            value={code}
+            onChange={(event) => setCode(event.target.value)}
             style={{ width: "200px" }}
           />
         </label>
@@ -82,17 +113,15 @@ const Course = () => {
                 className="form input"
                 type="text"
                 value={module.title}
-                onChange={(event) => handleModuleTitleChange(event, index)}
-              />
+                onChange={(event) => handleModuleTitleChange(event, index)} />
             </label>
             <label>
-              code:
+              Code:
               <input
                 className="form input"
                 type="text"
                 value={module.code}
-                onChange={(event) => handleModuleCodeChange(event, index)}
-              />
+                onChange={(event) => handleModuleCodeChange(event, index)} />
             </label>
             <br />
             <label>
@@ -101,8 +130,7 @@ const Course = () => {
                 className="form input"
                 value={module.description}
                 onChange={(event) =>
-                  handleModuleDescriptionChange(event, index)
-                }
+                  handleModuleDescriptionChange(event, index)}
               />
             </label>
             <hr />
@@ -123,5 +151,4 @@ const Course = () => {
     </div>
   );
 };
-
 export default Course;
