@@ -48,7 +48,7 @@ import CourseT from "./page/mucyo/TeacherDashboard/CourseT";
 import Course from "./page/mucyo/TeacherDashboard/CourseT";
 import Marks from "./page/mucyo/TeacherDashboard/Marks";
 import Mystudent from "./page/mucyo/TeacherDashboard/Mystudent";
-import Profile from "./page/mucyo/TeacherDashboard/Profile";
+import Profile from "./page/mucyo/TeacherDashboard/Coursetechers";
 
 import Parentbooking from "./page/mucyo/Admin dashboard/Parentbooking";
 import StudentApplication from "./page/mucyo/Admin dashboard/StudentApplication";
@@ -115,6 +115,9 @@ function App() {
             />
             <Route path={"students"} element={<StudentAccount />} />
           </Route>
+
+
+
           <Route
             path={"/TeacherDashboard"}
             element={
