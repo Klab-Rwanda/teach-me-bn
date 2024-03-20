@@ -29,7 +29,7 @@ const ContactFor = () => {
       return;
     }
    
-     // check if email is valid
+    
   const emailRegex = /^\S+@\S+\.\S+$/;
   if (!emailRegex.test(formData.email)) {
     alert('Please enter a valid email address.');

@@ -1,6 +1,6 @@
-import React, {useState}from "react";
-import ME from '../../../aseets/isimbi.jpg';
-import { AiFillLike } from 'react-icons/ai';
+import React, { useState } from "react";
+import ME from "../../../aseets/isimbi.jpg";
+import { AiFillLike } from "react-icons/ai";
 import "./admindash.css";
 import "./Modal.css";
 import {
@@ -42,14 +42,13 @@ export const options = {
 };
 const labels = ["January", "February", "March", "April", "May", "June", "July"];
 
-
 export const data = {
   labels,
   datasets: [
     {
       fill: true,
       label: "Dataset 2",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 100})),
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
       borderColor: "rgb(53, 162, 235)",
       backgroundColor: "rgba(53, 162, 235, 0.5)",
     },
@@ -74,9 +73,9 @@ const AdminDash = () => {
   return (
     <div className="admin-dash">
       <div className="home_header">
-        <h2>Welcome to the Admin Dashboard</h2>   
+        <h2>Welcome to the Admin Dashboard</h2>
       </div>
-  
+
       <div className="admin_dash_container">
         <div className="options">
           <h3>User Update</h3>
@@ -131,52 +130,50 @@ const AdminDash = () => {
           <h3>Announcement Management</h3>
           <div className="card">
             <ul>
-  
-          <li className="course" onClick={handleOpenModal}>
-             create announcement to all users
-          </li>
-          <li>Send announcement to all users</li>
+              <li className="course" onClick={handleOpenModal}>
+                create announcement to all users
+              </li>
+              <li>Send announcement to all users</li>
               <li>Send announcement to specific groups of users</li>
-
-              </ul>
-              {showModal && (
-        <div
-          className="modal"
-          style={{ display: !showModal ? "none" : "flex" }}
-        >
-          <div className="modal-content">
-            <span className="close" onClick={handleCloseModal}>
-              &times;
-            </span>
-            <h2>Create new announcement</h2>
-            <form onSubmit={handleSubmit}>
-            <div className="form-group">
-            <label>Title</label>
-            <input
-              type="text"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label>Message</label>
-            <textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-            ></textarea>
-          </div>
-              <div className="add_course">
-              <button type="submit">Create</button>
-                <button type="button" onClick={handleCloseModal}>
-                  Cancel
-                </button>
+            </ul>
+            {showModal && (
+              <div
+                className="modal"
+                style={{ display: !showModal ? "none" : "flex" }}
+              >
+                <div className="modal-content">
+                  <span className="close" onClick={handleCloseModal}>
+                    &times;
+                  </span>
+                  <h2>Create new announcement</h2>
+                  <form onSubmit={handleSubmit}>
+                    <div className="form-group">
+                      <label>Title</label>
+                      <input
+                        type="text"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label>Message</label>
+                      <textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                      ></textarea>
+                    </div>
+                    <div className="add_course">
+                      <button type="submit">Create</button>
+                      <button type="button" onClick={handleCloseModal}>
+                        Cancel
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
-            </form>
-          </div>
-        </div>
-      )}
+            )}
           </div>
         </section>
 

@@ -88,7 +88,7 @@ function App() {
           <Route path={"/regiter"} element={<Register />} />
 
           {/* <Route path={"/teacherinfo"} element={<Teacherinfo />} /> */}
-     
+
           <Route
             path={"/teacherinfo"}
             element={
@@ -115,8 +115,6 @@ function App() {
             />
             <Route path={"students"} element={<StudentAccount />} />
           </Route>
-
-
 
           <Route
             path={"/TeacherDashboard"}
@@ -169,6 +167,7 @@ function App() {
               element={<Paymentmanage />}
             />
           </Route>
+
           {/*     student dashard */}
 
           <Route path={"/studentdashboard"} element={<SharedSt />}>

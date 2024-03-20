@@ -1,5 +1,5 @@
-
 // import React from "react";
+
 
 // const Coursetechers = () => {
 //   const courseData = [
@@ -15,12 +15,12 @@
 //       description: "This is the description of Course 2.",
 //       instructor: "Jane Smith",
 //     },
-//     // Add more course objects as needed
+    
 //   ];
 
 //   const Course = ({ title, description, instructor }) => {
 //     return (
-//       <div>
+//       <div className="course">
 //         <h3>{title}</h3>
 //         <p>{description}</p>
 //         <p>Instructor: {instructor}</p>
@@ -29,7 +29,7 @@
 //   };
 
 //   return (
-//     <div>
+//     <div className="container">
 //       <h2>All Courses for Students</h2>
 //       {courseData.map((course) => (
 //         <Course
@@ -44,8 +44,6 @@
 // };
 
 // export default Coursetechers;
-
-
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";

@@ -1,54 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./StudentQuizList.css";
+
 function StudentQuizList() {
-  const [quizzes, setQuizzes] = useState([
-    {
-      id: 1,
-      name: "Quiz 1",
-      description: "This is the first quiz",
-      teacherId: 1,
-    },
-    {
-      id: 2,
-      name: "Quiz 2",
-      description: "This is the second quiz",
-      teacherId: 1,
-    },
-    {
-      id: 3,
-      name: "Quiz 3",
-      description: "This is the third quiz",
-      teacherId: 2,
-    },
-    {
-      id: 4,
-      name: "Quiz 4",
-      description: "This is the fourth quiz",
-      teacherId: 2,
-    },
-  ]);
+  const [quizzes, setQuizzes] = useState([]);
+
+  useEffect(() => {
+    // Fetch quizzes from the API
+    axios
+      .get("https://teachmeapi.onrender.com/api/v1/getallquiz")
+      .then((response) => {
+        setQuizzes(response.data.quizzes); // Assuming the API response has a "quizzes" property containing an array of quizzes
+      })
+      .catch((error) => {
+        console.error("Error fetching quizzes:", error);
+      });
+  }, []);
 
   const handlePlayQuiz = (quizId) => {
-    console.log(`Play quiz ${quizId}`);
-    // assuming you have a way to navigate to the quiz page for the selected quiz
-    // you can use history.push() or Link component from React Router
+    const selectedQuiz = quizzes.find((quiz) => quiz.id === quizId);
+    console.log("Selected Quiz:", selectedQuiz);
+    // Assuming you have a way to navigate to the quiz page for the selected quiz
+    // You can use history.push() or Link component from React Router
   };
-
-  const filteredQuizzes = quizzes.filter((quiz) => quiz.teacherId === 1); // assuming you want to display quizzes for teacher ID 1
-
   return (
     <div className="student_quiz_list">
-      <h1>Quiz List for Teacher 1</h1>
-      {filteredQuizzes.length === 0 ? (
+      <h1>Quiz List</h1>
+      {quizzes.length === 0 ? (
         <p>No quizzes available</p>
       ) : (
         <ul>
-          {filteredQuizzes.map((quiz) => (
+          {quizzes.map((quiz) => (
             <li key={quiz.id}>
               {quiz.name} - {quiz.description}{" "}
-              <button onClick={() => handlePlayQuiz(quiz.id)}>
-                Play Quiz
-                </button>
+              <button onClick={() => handlePlayQuiz(quiz.id)}>Play Quiz</button>
             </li>
           ))}
         </ul>
@@ -56,5 +41,4 @@ function StudentQuizList() {
     </div>
   );
 }
-
 export default StudentQuizList;

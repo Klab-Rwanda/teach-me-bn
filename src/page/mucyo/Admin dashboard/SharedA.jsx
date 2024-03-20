@@ -47,6 +47,7 @@ const SharedA = () => {
 
   return (
     <div className="dashboard">
+      
       {/* Navbar */}
       <nav className="navbar">
         <div className="navbar-left">
