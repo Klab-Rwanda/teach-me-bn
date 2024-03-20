@@ -8,7 +8,7 @@ const StudentDashboard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("https://api.example.com/grades");
+      const result = await axios("https://teachmeapi.onrender.com/api/v1/attempt");
       setGrades(result.data.grades);
       setIsLoading(false);
     };

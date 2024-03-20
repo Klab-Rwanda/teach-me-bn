@@ -1,10 +1,8 @@
-
-
 import React, { useState } from "react";
 import "../../../css2/mystudent.css";
 
 const Mystudent = () => {
-  // Set up some sample data for the students
+  // Set up some sample data for the student
   const [students, setStudents] = useState([
     {
       id: 1,
@@ -130,68 +128,68 @@ const Mystudent = () => {
         <button></button>
 
         <div className="form-row">
-      <label htmlFor="age">Age:</label>
-      <input
-        type="number"
-        id="age"
-        min="0"
-        value={newStudent.age}
-        onChange={(event) =>
-          setNewStudent({ ...newStudent, age: event.target.value })
-        }
-      />
-    </div>
+          <label htmlFor="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            min="0"
+            value={newStudent.age}
+            onChange={(event) =>
+              setNewStudent({ ...newStudent, age: event.target.value })
+            }
+          />
+        </div>
 
-    <div className="form-row">
-      <label htmlFor="parent">Parent:</label>
-      <input
-        type="text"
-        id="parent"
-        value={newStudent.parent}
-        onChange={(event) =>
-          setNewStudent({ ...newStudent, parent: event.target.value })
-        }
-      />
-    </div>
+        <div className="form-row">
+          <label htmlFor="parent">Parent:</label>
+          <input
+            type="text"
+            id="parent"
+            value={newStudent.parent}
+            onChange={(event) =>
+              setNewStudent({ ...newStudent, parent: event.target.value })
+            }
+          />
+        </div>
 
-    <div className="form-row">
-      <label htmlFor="level">Level:</label>
-      <select
-        id="level"
-        value={newStudent.level}
-        onChange={(event) =>
-          setNewStudent({ ...newStudent, level: event.target.value })
-        }
-      >
-        <option value="">Select a level</option>
-        <option value="1">Level 1</option>
-        <option value="2">Level 2</option>
-        <option value="3">Level 3</option>
-      </select>
-    </div>
-     <form>
-    <div className="form-row">
-      <button type="submit">{editing ? "Save" : "Add"}</button>
-      {editing && <button type="reset">Cancel</button>}
-    </div>
-  </form>
-
-  <div className="student-list">
-    {students.map((student) => (
-      <div className="student" key={student.id}>
-        <span className="name">{student.name}</span>
-        <span className="age">{student.age} years old</span>
-        <span className="parent">Parent: {student.parent}</span>
-        <span className="level">Level: {student.level}</span>
-        <button onClick={() => handleEditStudent(student)}>Edit</button>
-        <button onClick={() => handleDeleteStudent(student.id)}>Delete</button>
+        <div className="form-row">
+          <label htmlFor="level">Level:</label>
+          <select
+            id="level"
+            value={newStudent.level}
+            onChange={(event) =>
+              setNewStudent({ ...newStudent, level: event.target.value })
+            }
+          >
+            <option value="">Select a level</option>
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+          </select>
+        </div>
+        <form onSubmit={handleSubmit} onReset={handleReset}>
+          <div className="form-row">
+            <button type="submit">{editing ? "Save" : "Add"}</button>
+            {editing && <button type="reset">Cancel</button>}
+          </div>
+        </form>
+        <div className="student-list">
+          {students.map((student) => (
+            <div className="student" key={student.id}>
+              <span className="name">{student.name}</span>
+              <span className="age">{student.age} years old</span>
+              <span className="parent">Parent: {student.parent}</span>
+              <span className="level">Level: {student.level}</span>
+              <button onClick={() => handleEditStudent(student)}>Edit</button>
+              <button onClick={() => handleDeleteStudent(student.id)}>
+                Delete
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-  </div>
-</div>
-
-);
+    </div>
+  );
 };
 
-export default Mystudent;      
+export default Mystudent;

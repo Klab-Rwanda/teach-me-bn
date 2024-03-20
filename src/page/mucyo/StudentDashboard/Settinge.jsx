@@ -1,5 +1,5 @@
 import React from "react";
-// import "../../../css2/setting.css";
+import "../../../css2/setting.css";
 
 const Settinge = () => {
   return (

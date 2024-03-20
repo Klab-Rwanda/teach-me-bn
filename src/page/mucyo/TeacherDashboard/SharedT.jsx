@@ -102,7 +102,7 @@ const Dashboard = () => {
             <Link to="/TeacherDashboard/quizlist"><GiSatelliteCommunication className='dashboard-icon'/>allquiz</Link>
           </li>
           <li className="sidebar-item">
-            <Link to="/TeacherDashboard/account"><CgProfile className='dashboard-icon'/>Account</Link>
+            <Link to="/TeacherDashboard/account"><CgProfile className='dashboard-icon'/>My Course</Link>
           </li>
           <li className="sidebar-item">
             <Link to="/TeacherDashboard/marks"><GrUserManager className='dashboard-icon'/>Marks</Link>

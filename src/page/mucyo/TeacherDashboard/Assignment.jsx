@@ -19,8 +19,8 @@ function AssignmentForm({ onSave }) {
     e.preventDefault();
     try {
       const formData = new FormData();
-      formData.append('image', image);
-      formData.append('assignmentName', assignmentName);
+      formData.append("image", image);
+      formData.append("assignmentName", assignmentName);
       formData.append('publishDate', publishDate);
       formData.append('courseName', courseName);
       formData.append('courseCategory', courseCategory);
@@ -47,14 +47,13 @@ function AssignmentForm({ onSave }) {
       setSuccess('Assignment created successfully!');
       e.target.reset(); // reset the form
     
-       // Reset the form after 2 seconds
 
        setTimeout(() => {
         setSuccess(''); 
         e.target.reset(); 
       }, 5000); 
       
-      // Add the following line after the setTimeout function to automatically clear the success message when the user clicks on it
+      
       setTimeout(() => {
         setSuccess('');
       }, 1000); 

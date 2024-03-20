@@ -6,6 +6,7 @@
   align-items: center;
   background-color: #f5f5f5;
   padding: 10px;
+  position: fixed;
 }
 .logo {
   font-size: 24px;

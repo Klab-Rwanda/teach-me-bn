@@ -1,80 +1,65 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../../../css2/QUIZLIST.CSS";
+import Modal from "./Modal";
+import "./QuizList.css";
 
-function AllQuizzesPage() {
+function QuizList() {
   const [quizzes, setQuizzes] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    async function fetchQuizzes() {
-      try {
-        const response = await axios.get(
-          "https://teachmeapi.onrender.com/api/v1/getAllQuiz"
-        );
-        console.log(response.data.Quiz)
-        setQuizzes(response.data.Quiz);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    fetchQuizzes();
+  useEffect(() =>
+  {
+    axios
+      .get("https://teachmeapi.onrender.com/api/v1/getallquiz")
+      .then((response) => {
+        setQuizzes(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => console.log(error));
   }, []);
-  const handleDeleteQuiz = async (id) => {
-    try {
-      await axios.delete(
-        `https://teachmeapi.onrender.com/api/v1/quiz/${id}`
-      );
-      console.log("alaalll")
-      const newQuizzes = quizzes.filter((quiz) => quiz._id !== id);
-      setQuizzes(newQuizzes);
-    } catch (error) {
-      console.error(error);
-    }
+
+  const handleSeeQuestions = (quizId) => {
+    console.log(`See questions for quiz ${quizId}`);
   };
 
-  const handleEditQuiz = async (id) => {
-    // implement your edit quiz functionality here
+  const handleAddQuestion = (quizId) => {
+    setShowModal(true);
   };
+
+  const handleUpload = (quizId) => {
+    console.log(`Upload quiz ${quizId}`);
+  };
+
+  const handleDelete = (quizId) => {
+    console.log(`Delete quiz ${quizId}`);
+  };
+
 
   return (
-    <>
-    { quizzes.length < 0 ? (<h1>Loading...</h1>):(
-    <div className="all-quizzes-page">
-      <h1>All Quizzes</h1>
-      <div className="table-responsive">
-        <table className="quiz-table">
-          <thead>
-            <tr className="quiz-row quiz-header">
-              <th>Topic</th>
-              <th>Description</th>
-              <th>Mark</th>
-              <th>Published Date</th>
-              <th>Due Date</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {quizzes.map((quiz) => (
-              <tr className="quiz-row" key={quiz?._id}>
-                <td>{quiz.quiztopic}</td>
-                <td>{quiz.quizdescription}</td>
-                <td>{quiz.mark}</td>
-                <td>{quiz.date}</td>
-                <td>{quiz.date}</td>
-                <td>
-                  <div className="quizlist">
-                  <button onClick={() => handleEditQuiz(quiz._id)}>Edit</button>
-                  <button onClick={() => handleDeleteQuiz(quiz._id)}>Delete</button>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>)}
-    </>
+    <div className="quiz_list">
+      {quizzes.map((quiz) => (
+        <div className="quiz_item" key={quiz.id}>
+          <h2>{quiz.quizname}</h2>
+          <p>{quiz.quizdescription}</p>
+          <div className="quiz_actions">
+            <button onClick={() => handleSeeQuestions(quiz.id)}>
+              See Questions
+            </button>
+            <button onClick={() => handleAddQuestion(quiz.id)}>
+              Add Question
+            </button>
+            <button onClick={() => handleUpload(quiz.id)}>Upload</button>
+            <button onClick={() => handleDelete(quiz.id)}>Delete</button>
+          </div>
+        </div>
+      ))}
+      {showModal && (
+        <Modal onClose={() => setShowModal(false)}>
+        <h2>Add Question Form</h2>
+        </Modal>
+      )}
+    </div>
   );
 }
 
-export default AllQuizzesPage;
+export default QuizList;

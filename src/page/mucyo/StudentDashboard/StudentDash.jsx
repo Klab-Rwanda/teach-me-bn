@@ -15,6 +15,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
+import { Link } from "react-router-dom";
 
 ChartJS.register(
   CategoryScale,
@@ -137,10 +138,10 @@ const StudentDash = () => {
           </a>
         </div>
         <div className="cards">
-          <a href="/assignments" className="assignment-link">
+          <Link to ='/attempt/assignment' className="assignment-link">
             <h3>Upcoming Assignments</h3>
             <p>View and manage your upcoming assignments and due dates.</p>
-          </a>
+          </Link>
         </div>
         <div className="cards">
           <a href="/grades" className="grades-link">
@@ -162,17 +163,17 @@ const StudentDash = () => {
             <tbody>
               <tr>
                 <td>1</td>
-                <td>React</td>
+                <td>biology</td>
                 <td>John Doe</td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>JavaScript</td>
+                <td>mathematics</td>
                 <td>Jane Smith</td>
               </tr>
               <tr>
                 <td>3</td>
-                <td>HTML</td>
+                <td> technology</td>
                 <td>Bob Johnson</td>
               </tr>
             </tbody>

@@ -1,39 +1,68 @@
-form {
+.payment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  margin: 0 auto;
+}
+
+.payment form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-label {
+.payment label {
   display: flex;
   flex-direction: column;
   margin: 10px;
   font-size: 16px;
+  font-weight: bold;
   text-align: left;
-  width: 400px;
+  width: 100%;
 }
 
-input {
+.payment input {
   padding: 10px;
   margin-top: 5px;
-  font-size: 16px;
-  border: 1px solid gray;
-  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid #ccc;
   width: 100%;
   box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
 }
 
-button {
+.payment input:focus {
+  outline: none;
+  border-bottom: 2px solid #525FE1;
+}
+
+.payment button {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
+  font-weight: bold;
+  background-color: #525FE1;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-button:hover {
-  background-color: #3e8e41;
+.payment button:hover {
+  background-color: #525FE1;
+}
+
+@media only screen and (max-width: 480px) {
+  .payment {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
 }

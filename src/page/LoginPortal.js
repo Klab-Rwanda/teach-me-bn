@@ -13,7 +13,9 @@ const LoginPortal = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }, reset, } = useForm();
+    formState: { errors },
+    reset,
+  } = useForm();
   const navigate = useNavigate();
 
   const handleEmailChange = (event) => {
@@ -29,10 +31,11 @@ const LoginPortal = () => {
       const response = await axios.post(
         "https://teachmeapi.onrender.com/signin",
         {
-          email: data.email,
+          studentemail: data.studentemail,
           password: data.password,
         }
       );
+      console.log(response);
 
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
@@ -42,7 +45,6 @@ const LoginPortal = () => {
       console.log(error.response.data);
     }
   };
-
   return (
     <div className="main">
       <Navbar />
@@ -61,10 +63,12 @@ const LoginPortal = () => {
             className="input"
             type="text"
             placeholder="Email"
-            {...register("email", { required: true })}
+            {...register("studentemail", { required: true })}
             onChange={handleEmailChange}
           />
-          {errors.email && <span>This field is required</span>}
+          {errors.email && (
+            <span className="error">This field is required</span>
+          )}
           <br />
           <input
             className="input"
@@ -73,7 +77,9 @@ const LoginPortal = () => {
             placeholder="Password"
             onChange={handlePasswordChange}
           />
-          {errors.password && <span>This field is required</span>}
+          {errors.password && (
+            <span className="error">This field is required</span>
+          )}
           <input className="input" type="submit" value="SIGN IN" />
         </form>
       </div>
